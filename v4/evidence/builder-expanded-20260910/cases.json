@@ -1,0 +1,3102 @@
+[
+  {
+    "id": "recent_followup-00",
+    "group": "recent_followup",
+    "input": {
+      "text": "Stock?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Chai?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Chai in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Chang?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Chang in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Chang",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "explicit_switch-00",
+    "group": "explicit_switch",
+    "input": {
+      "text": "Actually, give me the unit price of Chang.",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Chai?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Chai in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Chang",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "explicit_backreference-00",
+    "group": "explicit_backreference",
+    "input": {
+      "text": "Go back to Chai: what is its stock count?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Chai?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Chai in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Chang?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Chang in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Chai",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "ambiguous-00",
+    "group": "ambiguous",
+    "input": {
+      "text": "What is its stock?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "I want to compare Chai and Chang."
+        },
+        {
+          "role": "assistant",
+          "content": "Chai and Chang are both candidates. Which one would you like details about?"
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "unsupported-00",
+    "group": "unsupported",
+    "input": {
+      "text": "Reset my password.",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Chai?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Chai in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "short_explicit-00",
+    "group": "short_explicit",
+    "input": {
+      "text": "Chai price?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Chang?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Chang in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Chai",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "duplicate_phase-00",
+    "group": "duplicate_phase",
+    "input": {
+      "text": "What is the price of Chai?",
+      "confirmed_context": [],
+      "previous_queries": [
+        {
+          "name": "Chai"
+        }
+      ],
+      "final": false
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "explicit_constraints-00",
+    "group": "explicit_constraints",
+    "input": {
+      "text": "List the 5 cheapest products in category 1, price between 10 and 30 inclusive, in stock and not discontinued.",
+      "confirmed_context": [],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": null,
+        "category_id": 1,
+        "min_price": 10,
+        "max_price": 30,
+        "in_stock": true,
+        "discontinued": false,
+        "order": "price_asc",
+        "limit": 5
+      }
+    }
+  },
+  {
+    "id": "constraint_revision-00",
+    "group": "constraint_revision",
+    "input": {
+      "text": "Keep the category and other settings, but change the maximum price to 30 and require out-of-stock products.",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "Find in-stock products in category 1, with price at most 20, cheapest first, limit 5."
+        },
+        {
+          "role": "assistant",
+          "content": "I will use those filters."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": null,
+        "category_id": 1,
+        "min_price": null,
+        "max_price": 30,
+        "in_stock": false,
+        "discontinued": null,
+        "order": "price_asc",
+        "limit": 5
+      }
+    }
+  },
+  {
+    "id": "long_history_focus-00",
+    "group": "long_history_focus",
+    "input": {
+      "text": "What is its inventory?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Chai? I am planning a detailed review of this sample product. Please distinguish unit prices from inventory valuation and do not treat sample values as current prices."
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Chai in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Ikura?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Ikura in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Tofu?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Tofu in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Chang?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Chang in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Chang",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "recent_followup-01",
+    "group": "recent_followup",
+    "input": {
+      "text": "How many are in stock?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Chang?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Chang in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Ikura?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Ikura in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Ikura",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "explicit_switch-01",
+    "group": "explicit_switch",
+    "input": {
+      "text": "Actually, give me the unit price of Ikura.",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Chang?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Chang in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Ikura",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "explicit_backreference-01",
+    "group": "explicit_backreference",
+    "input": {
+      "text": "Go back to Chang: what is its stock count?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Chang?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Chang in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Ikura?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Ikura in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Chang",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "ambiguous-01",
+    "group": "ambiguous",
+    "input": {
+      "text": "它还有多少库存？",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "I want to compare Chang and Ikura."
+        },
+        {
+          "role": "assistant",
+          "content": "Chang and Ikura are both candidates. Which one would you like details about?"
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "unsupported-01",
+    "group": "unsupported",
+    "input": {
+      "text": "Where is my order?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Chang?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Chang in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "short_explicit-01",
+    "group": "short_explicit",
+    "input": {
+      "text": "Chang价格？",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Ikura?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Ikura in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Chang",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "duplicate_phase-01",
+    "group": "duplicate_phase",
+    "input": {
+      "text": "What is the price of Chang?",
+      "confirmed_context": [],
+      "previous_queries": [
+        {
+          "name": "Chang"
+        }
+      ],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Chang",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "explicit_constraints-01",
+    "group": "explicit_constraints",
+    "input": {
+      "text": "List the 5 cheapest products in category 2, price between 11 and 31 inclusive, in stock and not discontinued.",
+      "confirmed_context": [],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": null,
+        "category_id": 2,
+        "min_price": 11,
+        "max_price": 31,
+        "in_stock": true,
+        "discontinued": false,
+        "order": "price_asc",
+        "limit": 5
+      }
+    }
+  },
+  {
+    "id": "constraint_revision-01",
+    "group": "constraint_revision",
+    "input": {
+      "text": "Keep the category and other settings, but change the maximum price to 30 and require out-of-stock products.",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "Find in-stock products in category 2, with price at most 20, cheapest first, limit 5."
+        },
+        {
+          "role": "assistant",
+          "content": "I will use those filters."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": null,
+        "category_id": 2,
+        "min_price": null,
+        "max_price": 30,
+        "in_stock": false,
+        "discontinued": null,
+        "order": "price_asc",
+        "limit": 5
+      }
+    }
+  },
+  {
+    "id": "long_history_focus-01",
+    "group": "long_history_focus",
+    "input": {
+      "text": "Units available?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Chang? I am planning a detailed review of this sample product. Please distinguish unit prices from inventory valuation and do not treat sample values as current prices."
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Chang in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Tofu?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Tofu in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Geitost?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Geitost in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Ikura?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Ikura in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Ikura",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "recent_followup-02",
+    "group": "recent_followup",
+    "input": {
+      "text": "库存呢？",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Ikura?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Ikura in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Tofu?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Tofu in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Tofu",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "explicit_switch-02",
+    "group": "explicit_switch",
+    "input": {
+      "text": "Actually, give me the unit price of Tofu.",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Ikura?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Ikura in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Tofu",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "explicit_backreference-02",
+    "group": "explicit_backreference",
+    "input": {
+      "text": "Go back to Ikura: what is its stock count?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Ikura?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Ikura in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Tofu?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Tofu in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Ikura",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "ambiguous-02",
+    "group": "ambiguous",
+    "input": {
+      "text": "What is its stock?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "I want to compare Ikura and Tofu."
+        },
+        {
+          "role": "assistant",
+          "content": "Ikura and Tofu are both candidates. Which one would you like details about?"
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "unsupported-02",
+    "group": "unsupported",
+    "input": {
+      "text": "取消我的订阅。",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Ikura?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Ikura in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "short_explicit-02",
+    "group": "short_explicit",
+    "input": {
+      "text": "Ikura price?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Tofu?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Tofu in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Ikura",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "duplicate_phase-02",
+    "group": "duplicate_phase",
+    "input": {
+      "text": "What is the price of Ikura?",
+      "confirmed_context": [],
+      "previous_queries": [
+        {
+          "name": "Ikura"
+        }
+      ],
+      "final": false
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "explicit_constraints-02",
+    "group": "explicit_constraints",
+    "input": {
+      "text": "List the 5 cheapest products in category 3, price between 12 and 32 inclusive, in stock and not discontinued.",
+      "confirmed_context": [],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": null,
+        "category_id": 3,
+        "min_price": 12,
+        "max_price": 32,
+        "in_stock": true,
+        "discontinued": false,
+        "order": "price_asc",
+        "limit": 5
+      }
+    }
+  },
+  {
+    "id": "constraint_revision-02",
+    "group": "constraint_revision",
+    "input": {
+      "text": "Keep the category and other settings, but change the maximum price to 30 and require out-of-stock products.",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "Find in-stock products in category 3, with price at most 20, cheapest first, limit 5."
+        },
+        {
+          "role": "assistant",
+          "content": "I will use those filters."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": null,
+        "category_id": 3,
+        "min_price": null,
+        "max_price": 30,
+        "in_stock": false,
+        "discontinued": null,
+        "order": "price_asc",
+        "limit": 5
+      }
+    }
+  },
+  {
+    "id": "long_history_focus-02",
+    "group": "long_history_focus",
+    "input": {
+      "text": "有多少库存？",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Ikura? I am planning a detailed review of this sample product. Please distinguish unit prices from inventory valuation and do not treat sample values as current prices."
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Ikura in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Geitost?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Geitost in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Queso Cabrales?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Queso Cabrales in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Tofu?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Tofu in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Tofu",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "recent_followup-03",
+    "group": "recent_followup",
+    "input": {
+      "text": "What is its inventory?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Tofu?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Tofu in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Geitost?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Geitost in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Geitost",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "explicit_switch-03",
+    "group": "explicit_switch",
+    "input": {
+      "text": "Actually, give me the unit price of Geitost.",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Tofu?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Tofu in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Geitost",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "explicit_backreference-03",
+    "group": "explicit_backreference",
+    "input": {
+      "text": "Go back to Tofu: what is its stock count?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Tofu?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Tofu in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Geitost?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Geitost in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Tofu",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "ambiguous-03",
+    "group": "ambiguous",
+    "input": {
+      "text": "它还有多少库存？",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "I want to compare Tofu and Geitost."
+        },
+        {
+          "role": "assistant",
+          "content": "Tofu and Geitost are both candidates. Which one would you like details about?"
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "unsupported-03",
+    "group": "unsupported",
+    "input": {
+      "text": "Tell me the weather tomorrow.",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Tofu?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Tofu in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "short_explicit-03",
+    "group": "short_explicit",
+    "input": {
+      "text": "Tofu价格？",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Geitost?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Geitost in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Tofu",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "duplicate_phase-03",
+    "group": "duplicate_phase",
+    "input": {
+      "text": "What is the price of Tofu?",
+      "confirmed_context": [],
+      "previous_queries": [
+        {
+          "name": "Tofu"
+        }
+      ],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Tofu",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "explicit_constraints-03",
+    "group": "explicit_constraints",
+    "input": {
+      "text": "List the 5 cheapest products in category 4, price between 13 and 33 inclusive, in stock and not discontinued.",
+      "confirmed_context": [],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": null,
+        "category_id": 4,
+        "min_price": 13,
+        "max_price": 33,
+        "in_stock": true,
+        "discontinued": false,
+        "order": "price_asc",
+        "limit": 5
+      }
+    }
+  },
+  {
+    "id": "constraint_revision-03",
+    "group": "constraint_revision",
+    "input": {
+      "text": "Keep the category and other settings, but change the maximum price to 30 and require out-of-stock products.",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "Find in-stock products in category 4, with price at most 20, cheapest first, limit 5."
+        },
+        {
+          "role": "assistant",
+          "content": "I will use those filters."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": null,
+        "category_id": 4,
+        "min_price": null,
+        "max_price": 30,
+        "in_stock": false,
+        "discontinued": null,
+        "order": "price_asc",
+        "limit": 5
+      }
+    }
+  },
+  {
+    "id": "long_history_focus-03",
+    "group": "long_history_focus",
+    "input": {
+      "text": "Stock level?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Tofu? I am planning a detailed review of this sample product. Please distinguish unit prices from inventory valuation and do not treat sample values as current prices."
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Tofu in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Queso Cabrales?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Queso Cabrales in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Pavlova?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Pavlova in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Geitost?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Geitost in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Geitost",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "recent_followup-04",
+    "group": "recent_followup",
+    "input": {
+      "text": "Units available?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Geitost?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Geitost in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Queso Cabrales?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Queso Cabrales in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Queso Cabrales",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "explicit_switch-04",
+    "group": "explicit_switch",
+    "input": {
+      "text": "Actually, give me the unit price of Queso Cabrales.",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Geitost?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Geitost in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Queso Cabrales",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "explicit_backreference-04",
+    "group": "explicit_backreference",
+    "input": {
+      "text": "Go back to Geitost: what is its stock count?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Geitost?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Geitost in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Queso Cabrales?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Queso Cabrales in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Geitost",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "ambiguous-04",
+    "group": "ambiguous",
+    "input": {
+      "text": "What is its stock?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "I want to compare Geitost and Queso Cabrales."
+        },
+        {
+          "role": "assistant",
+          "content": "Geitost and Queso Cabrales are both candidates. Which one would you like details about?"
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "unsupported-04",
+    "group": "unsupported",
+    "input": {
+      "text": "Refund my payment.",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Geitost?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Geitost in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "short_explicit-04",
+    "group": "short_explicit",
+    "input": {
+      "text": "Geitost price?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Queso Cabrales?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Queso Cabrales in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Geitost",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "duplicate_phase-04",
+    "group": "duplicate_phase",
+    "input": {
+      "text": "What is the price of Geitost?",
+      "confirmed_context": [],
+      "previous_queries": [
+        {
+          "name": "Geitost"
+        }
+      ],
+      "final": false
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "explicit_constraints-04",
+    "group": "explicit_constraints",
+    "input": {
+      "text": "List the 5 cheapest products in category 5, price between 14 and 34 inclusive, in stock and not discontinued.",
+      "confirmed_context": [],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": null,
+        "category_id": 5,
+        "min_price": 14,
+        "max_price": 34,
+        "in_stock": true,
+        "discontinued": false,
+        "order": "price_asc",
+        "limit": 5
+      }
+    }
+  },
+  {
+    "id": "constraint_revision-04",
+    "group": "constraint_revision",
+    "input": {
+      "text": "Keep the category and other settings, but change the maximum price to 30 and require out-of-stock products.",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "Find in-stock products in category 5, with price at most 20, cheapest first, limit 5."
+        },
+        {
+          "role": "assistant",
+          "content": "I will use those filters."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": null,
+        "category_id": 5,
+        "min_price": null,
+        "max_price": 30,
+        "in_stock": false,
+        "discontinued": null,
+        "order": "price_asc",
+        "limit": 5
+      }
+    }
+  },
+  {
+    "id": "long_history_focus-04",
+    "group": "long_history_focus",
+    "input": {
+      "text": "How many units remain in stock?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Geitost? I am planning a detailed review of this sample product. Please distinguish unit prices from inventory valuation and do not treat sample values as current prices."
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Geitost in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Pavlova?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Pavlova in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Konbu?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Konbu in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Queso Cabrales?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Queso Cabrales in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Queso Cabrales",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "recent_followup-05",
+    "group": "recent_followup",
+    "input": {
+      "text": "有多少库存？",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Queso Cabrales?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Queso Cabrales in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Pavlova?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Pavlova in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Pavlova",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "explicit_switch-05",
+    "group": "explicit_switch",
+    "input": {
+      "text": "Actually, give me the unit price of Pavlova.",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Queso Cabrales?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Queso Cabrales in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Pavlova",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "explicit_backreference-05",
+    "group": "explicit_backreference",
+    "input": {
+      "text": "Go back to Queso Cabrales: what is its stock count?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Queso Cabrales?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Queso Cabrales in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Pavlova?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Pavlova in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Queso Cabrales",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "ambiguous-05",
+    "group": "ambiguous",
+    "input": {
+      "text": "它还有多少库存？",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "I want to compare Queso Cabrales and Pavlova."
+        },
+        {
+          "role": "assistant",
+          "content": "Queso Cabrales and Pavlova are both candidates. Which one would you like details about?"
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "unsupported-05",
+    "group": "unsupported",
+    "input": {
+      "text": "Book a flight.",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Queso Cabrales?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Queso Cabrales in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "short_explicit-05",
+    "group": "short_explicit",
+    "input": {
+      "text": "Queso Cabrales价格？",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Pavlova?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Pavlova in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Queso Cabrales",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "duplicate_phase-05",
+    "group": "duplicate_phase",
+    "input": {
+      "text": "What is the price of Queso Cabrales?",
+      "confirmed_context": [],
+      "previous_queries": [
+        {
+          "name": "Queso Cabrales"
+        }
+      ],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Queso Cabrales",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "explicit_constraints-05",
+    "group": "explicit_constraints",
+    "input": {
+      "text": "List the 5 cheapest products in category 6, price between 15 and 35 inclusive, in stock and not discontinued.",
+      "confirmed_context": [],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": null,
+        "category_id": 6,
+        "min_price": 15,
+        "max_price": 35,
+        "in_stock": true,
+        "discontinued": false,
+        "order": "price_asc",
+        "limit": 5
+      }
+    }
+  },
+  {
+    "id": "constraint_revision-05",
+    "group": "constraint_revision",
+    "input": {
+      "text": "Keep the category and other settings, but change the maximum price to 30 and require out-of-stock products.",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "Find in-stock products in category 6, with price at most 20, cheapest first, limit 5."
+        },
+        {
+          "role": "assistant",
+          "content": "I will use those filters."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": null,
+        "category_id": 6,
+        "min_price": null,
+        "max_price": 30,
+        "in_stock": false,
+        "discontinued": null,
+        "order": "price_asc",
+        "limit": 5
+      }
+    }
+  },
+  {
+    "id": "long_history_focus-05",
+    "group": "long_history_focus",
+    "input": {
+      "text": "它的库存数量呢？",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Queso Cabrales? I am planning a detailed review of this sample product. Please distinguish unit prices from inventory valuation and do not treat sample values as current prices."
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Queso Cabrales in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Konbu?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Konbu in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Carnarvon Tigers?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Carnarvon Tigers in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Pavlova?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Pavlova in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Pavlova",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "recent_followup-06",
+    "group": "recent_followup",
+    "input": {
+      "text": "Stock level?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Pavlova?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Pavlova in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Konbu?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Konbu in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Konbu",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "explicit_switch-06",
+    "group": "explicit_switch",
+    "input": {
+      "text": "Actually, give me the unit price of Konbu.",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Pavlova?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Pavlova in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Konbu",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "explicit_backreference-06",
+    "group": "explicit_backreference",
+    "input": {
+      "text": "Go back to Pavlova: what is its stock count?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Pavlova?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Pavlova in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Konbu?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Konbu in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Pavlova",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "ambiguous-06",
+    "group": "ambiguous",
+    "input": {
+      "text": "What is its stock?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "I want to compare Pavlova and Konbu."
+        },
+        {
+          "role": "assistant",
+          "content": "Pavlova and Konbu are both candidates. Which one would you like details about?"
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "unsupported-06",
+    "group": "unsupported",
+    "input": {
+      "text": "What is my bank balance?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Pavlova?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Pavlova in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "short_explicit-06",
+    "group": "short_explicit",
+    "input": {
+      "text": "Pavlova price?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Konbu?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Konbu in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Pavlova",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "duplicate_phase-06",
+    "group": "duplicate_phase",
+    "input": {
+      "text": "What is the price of Pavlova?",
+      "confirmed_context": [],
+      "previous_queries": [
+        {
+          "name": "Pavlova"
+        }
+      ],
+      "final": false
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "explicit_constraints-06",
+    "group": "explicit_constraints",
+    "input": {
+      "text": "List the 5 cheapest products in category 7, price between 16 and 36 inclusive, in stock and not discontinued.",
+      "confirmed_context": [],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": null,
+        "category_id": 7,
+        "min_price": 16,
+        "max_price": 36,
+        "in_stock": true,
+        "discontinued": false,
+        "order": "price_asc",
+        "limit": 5
+      }
+    }
+  },
+  {
+    "id": "constraint_revision-06",
+    "group": "constraint_revision",
+    "input": {
+      "text": "Keep the category and other settings, but change the maximum price to 30 and require out-of-stock products.",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "Find in-stock products in category 7, with price at most 20, cheapest first, limit 5."
+        },
+        {
+          "role": "assistant",
+          "content": "I will use those filters."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": null,
+        "category_id": 7,
+        "min_price": null,
+        "max_price": 30,
+        "in_stock": false,
+        "discontinued": null,
+        "order": "price_asc",
+        "limit": 5
+      }
+    }
+  },
+  {
+    "id": "long_history_focus-06",
+    "group": "long_history_focus",
+    "input": {
+      "text": "Inventory count?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Pavlova? I am planning a detailed review of this sample product. Please distinguish unit prices from inventory valuation and do not treat sample values as current prices."
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Pavlova in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Carnarvon Tigers?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Carnarvon Tigers in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Gorgonzola Telino?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Gorgonzola Telino in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Konbu?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Konbu in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Konbu",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "recent_followup-07",
+    "group": "recent_followup",
+    "input": {
+      "text": "How many units remain in stock?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Konbu?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Konbu in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Carnarvon Tigers?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Carnarvon Tigers in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Carnarvon Tigers",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "explicit_switch-07",
+    "group": "explicit_switch",
+    "input": {
+      "text": "Actually, give me the unit price of Carnarvon Tigers.",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Konbu?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Konbu in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Carnarvon Tigers",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "explicit_backreference-07",
+    "group": "explicit_backreference",
+    "input": {
+      "text": "Go back to Konbu: what is its stock count?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Konbu?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Konbu in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Carnarvon Tigers?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Carnarvon Tigers in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Konbu",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "ambiguous-07",
+    "group": "ambiguous",
+    "input": {
+      "text": "它还有多少库存？",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "I want to compare Konbu and Carnarvon Tigers."
+        },
+        {
+          "role": "assistant",
+          "content": "Konbu and Carnarvon Tigers are both candidates. Which one would you like details about?"
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "unsupported-07",
+    "group": "unsupported",
+    "input": {
+      "text": "给我开一张发票。",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Konbu?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Konbu in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "short_explicit-07",
+    "group": "short_explicit",
+    "input": {
+      "text": "Konbu价格？",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Carnarvon Tigers?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Carnarvon Tigers in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Konbu",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "duplicate_phase-07",
+    "group": "duplicate_phase",
+    "input": {
+      "text": "What is the price of Konbu?",
+      "confirmed_context": [],
+      "previous_queries": [
+        {
+          "name": "Konbu"
+        }
+      ],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Konbu",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "explicit_constraints-07",
+    "group": "explicit_constraints",
+    "input": {
+      "text": "List the 5 cheapest products in category 8, price between 17 and 37 inclusive, in stock and not discontinued.",
+      "confirmed_context": [],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": null,
+        "category_id": 8,
+        "min_price": 17,
+        "max_price": 37,
+        "in_stock": true,
+        "discontinued": false,
+        "order": "price_asc",
+        "limit": 5
+      }
+    }
+  },
+  {
+    "id": "constraint_revision-07",
+    "group": "constraint_revision",
+    "input": {
+      "text": "Keep the category and other settings, but change the maximum price to 30 and require out-of-stock products.",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "Find in-stock products in category 8, with price at most 20, cheapest first, limit 5."
+        },
+        {
+          "role": "assistant",
+          "content": "I will use those filters."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": null,
+        "category_id": 8,
+        "min_price": null,
+        "max_price": 30,
+        "in_stock": false,
+        "discontinued": null,
+        "order": "price_asc",
+        "limit": 5
+      }
+    }
+  },
+  {
+    "id": "long_history_focus-07",
+    "group": "long_history_focus",
+    "input": {
+      "text": "Stock?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Konbu? I am planning a detailed review of this sample product. Please distinguish unit prices from inventory valuation and do not treat sample values as current prices."
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Konbu in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Gorgonzola Telino?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Gorgonzola Telino in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Chai?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Chai in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Carnarvon Tigers?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Carnarvon Tigers in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Carnarvon Tigers",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "recent_followup-08",
+    "group": "recent_followup",
+    "input": {
+      "text": "它的库存数量呢？",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Carnarvon Tigers?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Carnarvon Tigers in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Gorgonzola Telino?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Gorgonzola Telino in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Gorgonzola Telino",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "explicit_switch-08",
+    "group": "explicit_switch",
+    "input": {
+      "text": "Actually, give me the unit price of Gorgonzola Telino.",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Carnarvon Tigers?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Carnarvon Tigers in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Gorgonzola Telino",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "explicit_backreference-08",
+    "group": "explicit_backreference",
+    "input": {
+      "text": "Go back to Carnarvon Tigers: what is its stock count?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Carnarvon Tigers?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Carnarvon Tigers in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Gorgonzola Telino?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Gorgonzola Telino in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Carnarvon Tigers",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "ambiguous-08",
+    "group": "ambiguous",
+    "input": {
+      "text": "What is its stock?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "I want to compare Carnarvon Tigers and Gorgonzola Telino."
+        },
+        {
+          "role": "assistant",
+          "content": "Carnarvon Tigers and Gorgonzola Telino are both candidates. Which one would you like details about?"
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "unsupported-08",
+    "group": "unsupported",
+    "input": {
+      "text": "Change my shipping address.",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Carnarvon Tigers?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Carnarvon Tigers in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "short_explicit-08",
+    "group": "short_explicit",
+    "input": {
+      "text": "Carnarvon Tigers price?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Gorgonzola Telino?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Gorgonzola Telino in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Carnarvon Tigers",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "duplicate_phase-08",
+    "group": "duplicate_phase",
+    "input": {
+      "text": "What is the price of Carnarvon Tigers?",
+      "confirmed_context": [],
+      "previous_queries": [
+        {
+          "name": "Carnarvon Tigers"
+        }
+      ],
+      "final": false
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "explicit_constraints-08",
+    "group": "explicit_constraints",
+    "input": {
+      "text": "List the 5 cheapest products in category 9, price between 18 and 38 inclusive, in stock and not discontinued.",
+      "confirmed_context": [],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": null,
+        "category_id": 9,
+        "min_price": 18,
+        "max_price": 38,
+        "in_stock": true,
+        "discontinued": false,
+        "order": "price_asc",
+        "limit": 5
+      }
+    }
+  },
+  {
+    "id": "constraint_revision-08",
+    "group": "constraint_revision",
+    "input": {
+      "text": "Keep the category and other settings, but change the maximum price to 30 and require out-of-stock products.",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "Find in-stock products in category 9, with price at most 20, cheapest first, limit 5."
+        },
+        {
+          "role": "assistant",
+          "content": "I will use those filters."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": null,
+        "category_id": 9,
+        "min_price": null,
+        "max_price": 30,
+        "in_stock": false,
+        "discontinued": null,
+        "order": "price_asc",
+        "limit": 5
+      }
+    }
+  },
+  {
+    "id": "long_history_focus-08",
+    "group": "long_history_focus",
+    "input": {
+      "text": "How many are in stock?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Carnarvon Tigers? I am planning a detailed review of this sample product. Please distinguish unit prices from inventory valuation and do not treat sample values as current prices."
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Carnarvon Tigers in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Chai?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Chai in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Chang?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Chang in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Gorgonzola Telino?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Gorgonzola Telino in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Gorgonzola Telino",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "recent_followup-09",
+    "group": "recent_followup",
+    "input": {
+      "text": "Inventory count?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Gorgonzola Telino?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Gorgonzola Telino in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Chai?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Chai in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Chai",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "explicit_switch-09",
+    "group": "explicit_switch",
+    "input": {
+      "text": "Actually, give me the unit price of Chai.",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Gorgonzola Telino?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Gorgonzola Telino in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Chai",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "explicit_backreference-09",
+    "group": "explicit_backreference",
+    "input": {
+      "text": "Go back to Gorgonzola Telino: what is its stock count?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Gorgonzola Telino?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Gorgonzola Telino in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Chai?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Chai in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Gorgonzola Telino",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "ambiguous-09",
+    "group": "ambiguous",
+    "input": {
+      "text": "它还有多少库存？",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "I want to compare Gorgonzola Telino and Chai."
+        },
+        {
+          "role": "assistant",
+          "content": "Gorgonzola Telino and Chai are both candidates. Which one would you like details about?"
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "unsupported-09",
+    "group": "unsupported",
+    "input": {
+      "text": "What is the current exchange rate?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Gorgonzola Telino?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Gorgonzola Telino in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "short_explicit-09",
+    "group": "short_explicit",
+    "input": {
+      "text": "Gorgonzola Telino价格？",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Chai?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Chai in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Gorgonzola Telino",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "duplicate_phase-09",
+    "group": "duplicate_phase",
+    "input": {
+      "text": "What is the price of Gorgonzola Telino?",
+      "confirmed_context": [],
+      "previous_queries": [
+        {
+          "name": "Gorgonzola Telino"
+        }
+      ],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Gorgonzola Telino",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  },
+  {
+    "id": "explicit_constraints-09",
+    "group": "explicit_constraints",
+    "input": {
+      "text": "List the 5 cheapest products in category 10, price between 19 and 39 inclusive, in stock and not discontinued.",
+      "confirmed_context": [],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": null,
+        "category_id": 10,
+        "min_price": 19,
+        "max_price": 39,
+        "in_stock": true,
+        "discontinued": false,
+        "order": "price_asc",
+        "limit": 5
+      }
+    }
+  },
+  {
+    "id": "constraint_revision-09",
+    "group": "constraint_revision",
+    "input": {
+      "text": "Keep the category and other settings, but change the maximum price to 30 and require out-of-stock products.",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "Find in-stock products in category 10, with price at most 20, cheapest first, limit 5."
+        },
+        {
+          "role": "assistant",
+          "content": "I will use those filters."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": null,
+        "category_id": 10,
+        "min_price": null,
+        "max_price": 30,
+        "in_stock": false,
+        "discontinued": null,
+        "order": "price_asc",
+        "limit": 5
+      }
+    }
+  },
+  {
+    "id": "long_history_focus-09",
+    "group": "long_history_focus",
+    "input": {
+      "text": "库存呢？",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Gorgonzola Telino? I am planning a detailed review of this sample product. Please distinguish unit prices from inventory valuation and do not treat sample values as current prices."
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Gorgonzola Telino in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Chang?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Chang in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Ikura?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Ikura in the sample catalog."
+        },
+        {
+          "role": "user",
+          "content": "What is the price of Chai?"
+        },
+        {
+          "role": "assistant",
+          "content": "We are discussing Chai in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Chai",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null
+      }
+    }
+  }
+]

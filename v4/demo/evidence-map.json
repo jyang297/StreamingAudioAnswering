@@ -1,0 +1,62 @@
+{
+  "E01": [
+    "Pipeline control flow",
+    "../rag_poc/pipeline.py",
+    "Observed: scheduler, final selection, shared retrieval and bounded rewrite. Ordered turns only."
+  ],
+  "E02": [
+    "LiveKit adapter",
+    "../rag_poc/livekit_adapter.py",
+    "Observed: one scripted STT stream, EOT hook, temporary bundle pointer, custom LLM consumer."
+  ],
+  "E03": [
+    "Experiment controls",
+    "../rag_poc/cli.py",
+    "Observed: baseline default; time trigger when enabled; Builder v1; LLM Checker."
+  ],
+  "E04": [
+    "Builder v2/v3 experiment",
+    "../evidence/builder-fidelity-20260910/README.md",
+    "Observed: 36 primary inputs per version, 108 calls with repeats; development data, field oracle only."
+  ],
+  "E05": [
+    "Real semantic Checker diagnostic",
+    "../evidence/semantic-20260910/README.md",
+    "Observed: 12 frozen Query pairs; actual MiniLM ONNX/cosine, not hash similarity."
+  ],
+  "E06": [
+    "Recorded integration failures",
+    "../evidence/triggers-20260910/README.md",
+    "Observed: incorrect follow-up entity and database timeouts. No demonstrated end-to-end speedup."
+  ],
+  "E07": [
+    "Clean export verification",
+    "../handoff-verification.json",
+    "Observed: tracked-source export, existing runtime, 74 tests passed and 3 database tests skipped. Fresh OS setup unverified."
+  ],
+  "R01": [
+    "Stream RAG \u00b7 \u00a73.1\u20133.2",
+    "https://arxiv.org/html/2510.02044v1#S3",
+    "Source: separate query/answer stages; fixed-interval reflector and model-triggered query emission are distinct variants."
+  ],
+  "R02": [
+    "MoshiRAG \u00b7 \u00a73.1\u20133.2",
+    "https://arxiv.org/html/2604.12928v3#S3",
+    "Source: asynchronous knowledge retrieval and model-level reference injection for full-duplex speech."
+  ],
+  "R03": [
+    "LiveKit \u00b7 nodes and hooks",
+    "https://docs.livekit.io/agents/logic/nodes/",
+    "Official integration surfaces; verify the installed SDK in the target project."
+  ],
+  "R04": [
+    "LiveKit \u00b7 preemptive options",
+    "https://docs.livekit.io/reference/agents/turn-handling-options/",
+    "Official reference: preemptive generation starts response generation before confirmed turn completion; separate from early retrieval."
+  ],
+  "U01": [
+    "Company migration plan",
+    "../COMPANY-AGENT-HANDOFF.md",
+    "Unknown: company SDK, STT semantics, schema and latency. Integration and rollout are proposed work."
+  ]
+}

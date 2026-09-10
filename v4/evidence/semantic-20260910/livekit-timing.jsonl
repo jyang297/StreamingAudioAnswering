@@ -1,0 +1,61 @@
+{"step": "database_connect", "span_id": "f5a71590e4eb", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"step": "database_connect", "span_id": "f5a71590e4eb", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 41.84}
+{"model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2", "revision": "faf4aa4225822f3bc6376869cb1164e8e3feedd0", "step": "embedding_model_load", "span_id": "7913a692300c", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]Fetching 7 files: 100%|██████████| 7/7 [00:00<00:00, 848.46it/s]
+/Users/codingleo/Documents/LearningVault/40-Exercises/Sandbox/LiveKitAnticipationPoC/v4/rag_poc/semantic.py:44: UserWarning: The model sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 now uses mean pooling instead of CLS embedding. In order to preserve the previous behaviour, consider either pinning fastembed version to 0.5.1 or using `add_custom_model` functionality.
+  model = TextEmbedding(model_name=MODEL, specific_model_path=path, threads=2,
+{"model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2", "revision": "faf4aa4225822f3bc6376869cb1164e8e3feedd0", "step": "embedding_model_load", "span_id": "7913a692300c", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 5892.799}
+{"step": "embedding_warmup", "span_id": "85293cf6f370", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"step": "embedding_inference", "span_id": "17902fd67754", "parent_span_id": "85293cf6f370", "status": "ok", "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2", "texts": 1, "event": "start", "time_spent_ms": 0}
+{"step": "embedding_inference", "span_id": "17902fd67754", "parent_span_id": "85293cf6f370", "status": "ok", "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2", "texts": 1, "event": "end", "time_spent_ms": 199.014}
+{"step": "embedding_warmup", "span_id": "85293cf6f370", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 199.317}
+{"turn": 1, "stt_event": "start_of_speech", "step": "stt_event_dispatch", "span_id": "7ca373239ac1", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "stt_event": "start_of_speech", "step": "stt_event_dispatch", "span_id": "7ca373239ac1", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 0.515}
+{"turn": 1, "stt_event": "interim_transcript", "step": "stt_event_dispatch", "span_id": "cb856d37d293", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "candidate": 1, "step": "speculative_builder_task", "span_id": "515f23a77ba0", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "candidate": 1, "step": "builder_queue_wait", "span_id": "21c9f809f1cf", "parent_span_id": "515f23a77ba0", "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "candidate": 1, "step": "builder_queue_wait", "span_id": "21c9f809f1cf", "parent_span_id": "515f23a77ba0", "status": "ok", "event": "end", "time_spent_ms": 0.059}
+{"turn": 1, "candidate": 1, "step": "partial_query_builder", "span_id": "3fedca839615", "parent_span_id": "515f23a77ba0", "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "candidate": 1, "step": "llm_http", "span_id": "9adeba116b10", "parent_span_id": "3fedca839615", "status": "ok", "role": "builder", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "stt_event": "interim_transcript", "step": "stt_event_dispatch", "span_id": "cb856d37d293", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 56.427}
+{"turn": 1, "candidate": 1, "step": "llm_http", "span_id": "9adeba116b10", "parent_span_id": "3fedca839615", "status": "ok", "role": "builder", "event": "end", "time_spent_ms": 741.096}
+{"turn": 1, "candidate": 1, "step": "partial_query_builder", "span_id": "3fedca839615", "parent_span_id": "515f23a77ba0", "status": "ok", "event": "end", "time_spent_ms": 741.759}
+{"turn": 1, "candidate": 1, "step": "speculative_builder_task", "span_id": "515f23a77ba0", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 742.075}
+{"turn": 1, "candidate": 1, "step": "retrieval_task", "span_id": "0479d0afcd56", "parent_span_id": "515f23a77ba0", "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "candidate": 1, "step": "retrieval_queue_wait", "span_id": "0e8e1a924684", "parent_span_id": "0479d0afcd56", "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "candidate": 1, "step": "retrieval_queue_wait", "span_id": "0e8e1a924684", "parent_span_id": "0479d0afcd56", "status": "ok", "event": "end", "time_spent_ms": 0.031}
+{"turn": 1, "candidate": 1, "step": "database_search", "span_id": "a0ffcb47e7dd", "parent_span_id": "0479d0afcd56", "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "candidate": 1, "step": "database_search", "span_id": "a0ffcb47e7dd", "parent_span_id": "0479d0afcd56", "status": "ok", "event": "end", "time_spent_ms": 773.117}
+{"turn": 1, "candidate": 1, "step": "retrieval_task", "span_id": "0479d0afcd56", "parent_span_id": "515f23a77ba0", "status": "ok", "event": "end", "time_spent_ms": 773.69}
+{"turn": 1, "step": "final_to_full_answer", "span_id": "3fca253fcc48", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "step": "stt_event_dispatch", "span_id": "46419a2b0b72", "parent_span_id": "3fca253fcc48", "status": "ok", "stt_event": "final_transcript", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "step": "stt_event_dispatch", "span_id": "46419a2b0b72", "parent_span_id": "3fca253fcc48", "status": "ok", "stt_event": "final_transcript", "event": "end", "time_spent_ms": 13.63}
+{"turn": 1, "step": "stt_event_dispatch", "span_id": "4092773952fb", "parent_span_id": "3fca253fcc48", "status": "ok", "stt_event": "end_of_speech", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "step": "stt_event_dispatch", "span_id": "4092773952fb", "parent_span_id": "3fca253fcc48", "status": "ok", "stt_event": "end_of_speech", "event": "end", "time_spent_ms": 2.691}
+{"turn": 1, "step": "final_resolution", "span_id": "34b6ff5fecb5", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "step": "final_query_reuse", "span_id": "4e683cdf7c1d", "parent_span_id": "34b6ff5fecb5", "status": "ok", "candidate": 1, "event": "start", "time_spent_ms": 0}
+{"turn": 1, "step": "final_query_reuse", "span_id": "4e683cdf7c1d", "parent_span_id": "34b6ff5fecb5", "status": "ok", "candidate": 1, "event": "end", "time_spent_ms": 0.182}
+{"turn": 1, "step": "checker", "span_id": "550b0259bf9d", "parent_span_id": "34b6ff5fecb5", "status": "ok", "checker_type": "SemanticChecker", "candidate_count": 1, "event": "start", "time_spent_ms": 0}
+{"turn": 1, "step": "embedding_inference", "span_id": "97fe6fd98178", "parent_span_id": "550b0259bf9d", "status": "ok", "checker_type": "SemanticChecker", "candidate_count": 1, "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2", "texts": 2, "event": "start", "time_spent_ms": 0}
+{"turn": 1, "step": "embedding_inference", "span_id": "97fe6fd98178", "parent_span_id": "550b0259bf9d", "status": "ok", "checker_type": "SemanticChecker", "candidate_count": 1, "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2", "texts": 2, "event": "end", "time_spent_ms": 129.032}
+{"turn": 1, "step": "cosine_comparison", "span_id": "92b82364bce4", "parent_span_id": "550b0259bf9d", "status": "ok", "checker_type": "SemanticChecker", "candidate_count": 1, "threshold": 0.99, "event": "start", "time_spent_ms": 0}
+{"turn": 1, "step": "cosine_comparison", "span_id": "92b82364bce4", "parent_span_id": "550b0259bf9d", "status": "ok", "checker_type": "SemanticChecker", "candidate_count": 1, "threshold": 0.99, "scores": [{"candidate_id": 1, "cosine": 0.9999999999999998, "accepted": true, "completed": true}], "selected_candidate": 1, "event": "end", "time_spent_ms": 0.183}
+{"turn": 1, "step": "checker", "span_id": "550b0259bf9d", "parent_span_id": "34b6ff5fecb5", "status": "ok", "checker_type": "SemanticChecker", "candidate_count": 1, "selected_candidate": 1, "event": "end", "time_spent_ms": 130.237}
+{"turn": 1, "step": "selected_retrieval_wait", "span_id": "45277e7333f1", "parent_span_id": "34b6ff5fecb5", "status": "ok", "candidate": 1, "event": "start", "time_spent_ms": 0}
+{"turn": 1, "step": "selected_retrieval_wait", "span_id": "45277e7333f1", "parent_span_id": "34b6ff5fecb5", "status": "ok", "candidate": 1, "event": "end", "time_spent_ms": 0.17}
+{"turn": 1, "step": "final_resolution", "span_id": "34b6ff5fecb5", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 132.049}
+{"turn": 1, "step": "answer_total", "span_id": "90aad87cbf34", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "step": "answer_llm", "span_id": "c13ecc033be8", "parent_span_id": "90aad87cbf34", "status": "ok", "attempt": 0, "event": "start", "time_spent_ms": 0}
+{"turn": 1, "step": "llm_http", "span_id": "93697b6fac12", "parent_span_id": "c13ecc033be8", "status": "ok", "attempt": 0, "role": "answer", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "step": "llm_http", "span_id": "93697b6fac12", "parent_span_id": "c13ecc033be8", "status": "ok", "attempt": 0, "role": "answer", "event": "end", "time_spent_ms": 929.556}
+{"turn": 1, "step": "answer_llm", "span_id": "c13ecc033be8", "parent_span_id": "90aad87cbf34", "status": "ok", "attempt": 0, "event": "end", "time_spent_ms": 937.382}
+{"turn": 1, "step": "answer_total", "span_id": "90aad87cbf34", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 941.701}
+{"turn": 1, "step": "final_to_full_answer", "span_id": "3fca253fcc48", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 1210.25}
+{"turn": 1, "step": "pipeline_cleanup", "span_id": "20846716957b", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "step": "pipeline_cleanup", "span_id": "20846716957b", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 0.648}
+{"step": "database_close", "span_id": "54357a7818dc", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"step": "database_close", "span_id": "54357a7818dc", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 19.197}
+{"step": "embedding_cleanup", "span_id": "cfdf8d068ea8", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"step": "embedding_cleanup", "span_id": "cfdf8d068ea8", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 0.063}
+{"step": "endpoint_close", "span_id": "08c60684a49b", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"step": "endpoint_close", "span_id": "08c60684a49b", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 0.71}

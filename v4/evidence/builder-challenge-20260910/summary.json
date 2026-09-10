@@ -1,0 +1,100 @@
+{
+  "unique_cases": 24,
+  "requests": 72,
+  "concurrency": 2,
+  "shuffle_seed": 20260910,
+  "repeats_per_sentinel": 3,
+  "boundary": "AI-authored development cases in one schema; not held-out production accuracy",
+  "versions": {
+    "v1": {
+      "outcomes": {
+        "appropriate_wait": 11,
+        "correct_retrieve": 4,
+        "missed_retrieve": 3,
+        "query_variant_review": 2,
+        "wrong_query": 4
+      },
+      "median_ms": 1053.6177707836032
+    },
+    "v2": {
+      "outcomes": {
+        "correct_retrieve": 13,
+        "unjustified_retrieve": 3,
+        "appropriate_wait": 8
+      },
+      "median_ms": 1058.8639585766941
+    }
+  },
+  "groups": {
+    "v1": {
+      "referent": {
+        "correct_retrieve": 1,
+        "wrong_query": 2,
+        "appropriate_wait": 1
+      },
+      "constraint": {
+        "correct_retrieve": 2,
+        "wrong_query": 2
+      },
+      "unsupported": {
+        "appropriate_wait": 4
+      },
+      "ambiguity": {
+        "appropriate_wait": 4
+      },
+      "data-boundary": {
+        "missed_retrieve": 2,
+        "query_variant_review": 2
+      },
+      "phase": {
+        "appropriate_wait": 2,
+        "missed_retrieve": 1,
+        "correct_retrieve": 1
+      }
+    },
+    "v2": {
+      "referent": {
+        "correct_retrieve": 3,
+        "appropriate_wait": 1
+      },
+      "constraint": {
+        "correct_retrieve": 4
+      },
+      "unsupported": {
+        "unjustified_retrieve": 2,
+        "appropriate_wait": 2
+      },
+      "ambiguity": {
+        "appropriate_wait": 4
+      },
+      "data-boundary": {
+        "correct_retrieve": 4
+      },
+      "phase": {
+        "unjustified_retrieve": 1,
+        "correct_retrieve": 2,
+        "appropriate_wait": 1
+      }
+    }
+  },
+  "sentinel_outcome_changes": [
+    {
+      "id": "drop-stock",
+      "version": "v1",
+      "outcomes": [
+        "wrong_query",
+        "correct_retrieve",
+        "correct_retrieve"
+      ]
+    },
+    {
+      "id": "history-instruction",
+      "version": "v2",
+      "outcomes": [
+        "correct_retrieve",
+        "query_variant_review",
+        "correct_retrieve"
+      ]
+    }
+  ]
+}

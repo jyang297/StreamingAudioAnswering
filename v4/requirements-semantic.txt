@@ -1,0 +1,2 @@
+# Optional local CPU semantic checker; install alongside requirements-v4.txt.
+fastembed==0.7.4

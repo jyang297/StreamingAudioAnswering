@@ -1,0 +1,167 @@
+{
+  "turns": [
+    {
+      "turn": 1,
+      "text": "Actually, what is the price of Chang?",
+      "context": [],
+      "path": "demand",
+      "evidence": [
+        {
+          "query": {
+            "name": "Chang",
+            "category_id": null,
+            "min_price": null,
+            "max_price": null,
+            "in_stock": null,
+            "discontinued": null,
+            "order": "price_asc",
+            "limit": 10
+          },
+          "rows": [
+            {
+              "product_id": 2,
+              "product_name": "Chang",
+              "category_id": 1,
+              "quantity_per_unit": "24 - 12 oz bottles",
+              "unit_price": 19.0,
+              "units_in_stock": 17,
+              "discontinued": false
+            }
+          ],
+          "error": null
+        }
+      ],
+      "phase_ms": 3033.1479581072927,
+      "answer": "In this historical sample catalog, Chang (product_id 2, category 1) has a unit price of 19.0, packaged as 24 - 12 oz bottles, with 17 units in stock and not discontinued. Note: this is sample catalog data, not a current real-world price.",
+      "rewrites": 0
+    }
+  ],
+  "trace": [
+    {
+      "event": "turn_start",
+      "turn": 1,
+      "at_ms": 7.26708397269249
+    },
+    {
+      "event": "builder_start",
+      "turn": 1,
+      "at_ms": 7.487624883651733,
+      "candidate": 1
+    },
+    {
+      "event": "builder_done",
+      "turn": 1,
+      "at_ms": 968.6549589969218,
+      "candidate": 1,
+      "action": "retrieve"
+    },
+    {
+      "event": "builder_start",
+      "turn": 1,
+      "at_ms": 2084.7161668352783,
+      "candidate": 2
+    },
+    {
+      "event": "final_received",
+      "turn": 1,
+      "at_ms": 2087.2883340343833
+    },
+    {
+      "event": "builder_done",
+      "turn": 1,
+      "at_ms": 2615.1674170978367,
+      "candidate": 2,
+      "action": "wait"
+    },
+    {
+      "event": "final_ready",
+      "turn": 1,
+      "at_ms": 5120.474041905254,
+      "path": "demand",
+      "phase_ms": 3033.1479581072927
+    },
+    {
+      "event": "answer_done",
+      "turn": 1,
+      "at_ms": 10552.94574983418,
+      "rewrites": 0
+    }
+  ],
+  "stt_streams": 1,
+  "audio_frames": 1,
+  "history": [
+    {
+      "role": "user",
+      "text": "Actually, what is the price of Chang?"
+    },
+    {
+      "role": "assistant",
+      "text": "In this historical sample catalog, Chang (product_id 2, category 1) has a unit price of 19.0, packaged as 24 - 12 oz bottles, with 17 units in stock and not discontinued. Note: this is sample catalog data, not a current real-world price."
+    }
+  ],
+  "endpoint_metrics": [
+    {
+      "role": "builder",
+      "status": "ok",
+      "total_tokens": 291,
+      "elapsed_ms": 961.1392919905484
+    },
+    {
+      "role": "builder",
+      "status": "ok",
+      "total_tokens": 335,
+      "elapsed_ms": 530.3732920438051
+    },
+    {
+      "role": "builder",
+      "status": "ok",
+      "total_tokens": 300,
+      "elapsed_ms": 714.3236668780446
+    },
+    {
+      "role": "checker",
+      "status": "ok",
+      "total_tokens": 393,
+      "elapsed_ms": 1032.93004212901
+    },
+    {
+      "role": "answer",
+      "status": "ok",
+      "total_tokens": 515,
+      "elapsed_ms": 1599.3558750487864
+    }
+  ],
+  "database_metrics": [
+    {
+      "query": {
+        "name": "Chai",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 10
+      },
+      "status": "ok",
+      "rows": 1,
+      "elapsed_ms": 17.96408323571086
+    },
+    {
+      "query": {
+        "name": "Chang",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "price_asc",
+        "limit": 10
+      },
+      "status": "ok",
+      "rows": 1,
+      "elapsed_ms": 1195.3167910687625
+    }
+  ],
+  "boundary": "Real configured text endpoint + local PostgreSQL; scripted STT, no TTS/audio latency"
+}

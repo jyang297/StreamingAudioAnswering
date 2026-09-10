@@ -1,0 +1,869 @@
+{
+  "boundary": "Hand-labeled diagnostic, not a calibrated or held-out accuracy benchmark",
+  "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "source": "qdrant/paraphrase-multilingual-MiniLM-L12-v2-onnx-Q",
+  "revision": "faf4aa4225822f3bc6376869cb1164e8e3feedd0",
+  "dimension": 384,
+  "similarity": "cosine of actual ONNX dense model outputs",
+  "representation": "query_text; structured final/candidate only; no prefix",
+  "vector_cache": "none; model load and warmup excluded from decision latency",
+  "cases": [
+    {
+      "id": "identical",
+      "candidate": {
+        "name": "Chai",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 10
+      },
+      "final": {
+        "name": "Chai",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 10
+      },
+      "expected_reuse": true,
+      "arms": {
+        "exact": {
+          "selected": 1,
+          "elapsed_ms": 0.06195809692144394,
+          "correct": true,
+          "status": "ok"
+        },
+        "llm": {
+          "selected": 1,
+          "elapsed_ms": 989.4988327287138,
+          "correct": true,
+          "status": "ok"
+        },
+        "semantic": {
+          "selected": 1,
+          "elapsed_ms": 616.9872498139739,
+          "correct": true,
+          "status": "ok"
+        }
+      },
+      "semantic_detail": {
+        "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "faf4aa4225822f3bc6376869cb1164e8e3feedd0",
+        "dimension": 384,
+        "threshold": 0.99,
+        "scores": [
+          {
+            "candidate_id": 1,
+            "cosine": 0.9999999999999998,
+            "accepted": true,
+            "completed": true
+          }
+        ],
+        "selected_candidate": 1,
+        "status": "ok",
+        "cache": "none",
+        "time_spent_ms": 616.8932081200182
+      }
+    },
+    {
+      "id": "case_insensitive",
+      "candidate": {
+        "name": "Chai",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 10
+      },
+      "final": {
+        "name": "chai",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 10
+      },
+      "expected_reuse": true,
+      "arms": {
+        "exact": {
+          "selected": null,
+          "elapsed_ms": 1.2888330966234207,
+          "correct": false,
+          "status": "ok"
+        },
+        "llm": {
+          "selected": 1,
+          "elapsed_ms": 879.3082078918815,
+          "correct": true,
+          "status": "ok"
+        },
+        "semantic": {
+          "selected": 1,
+          "elapsed_ms": 344.3782916292548,
+          "correct": true,
+          "status": "ok"
+        }
+      },
+      "semantic_detail": {
+        "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "faf4aa4225822f3bc6376869cb1164e8e3feedd0",
+        "dimension": 384,
+        "threshold": 0.99,
+        "scores": [
+          {
+            "candidate_id": 1,
+            "cosine": 0.9987790689200947,
+            "accepted": true,
+            "completed": true
+          }
+        ],
+        "selected_candidate": 1,
+        "status": "ok",
+        "cache": "none",
+        "time_spent_ms": 344.2343748174608
+      }
+    },
+    {
+      "id": "capitalized",
+      "candidate": {
+        "name": "CHANG",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 10
+      },
+      "final": {
+        "name": "Chang",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 10
+      },
+      "expected_reuse": true,
+      "arms": {
+        "exact": {
+          "selected": null,
+          "elapsed_ms": 0.1677502878010273,
+          "correct": false,
+          "status": "ok"
+        },
+        "llm": {
+          "selected": 1,
+          "elapsed_ms": 1104.2625000700355,
+          "correct": true,
+          "status": "ok"
+        },
+        "semantic": {
+          "selected": null,
+          "elapsed_ms": 222.8351659141481,
+          "correct": false,
+          "status": "ok"
+        }
+      },
+      "semantic_detail": {
+        "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "faf4aa4225822f3bc6376869cb1164e8e3feedd0",
+        "dimension": 384,
+        "threshold": 0.99,
+        "scores": [
+          {
+            "candidate_id": 1,
+            "cosine": 0.962470524747204,
+            "accepted": false,
+            "completed": true
+          }
+        ],
+        "selected_candidate": null,
+        "status": "ok",
+        "cache": "none",
+        "time_spent_ms": 222.48083259910345
+      }
+    },
+    {
+      "id": "numeric_equivalent",
+      "candidate": {
+        "name": null,
+        "category_id": null,
+        "min_price": 10,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 10
+      },
+      "final": {
+        "name": null,
+        "category_id": null,
+        "min_price": 10.0,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 10
+      },
+      "expected_reuse": true,
+      "arms": {
+        "exact": {
+          "selected": 1,
+          "elapsed_ms": 0.05654105916619301,
+          "correct": true,
+          "status": "ok"
+        },
+        "llm": {
+          "selected": 1,
+          "elapsed_ms": 1000.6566247902811,
+          "correct": true,
+          "status": "ok"
+        },
+        "semantic": {
+          "selected": null,
+          "elapsed_ms": 293.16462529823184,
+          "correct": false,
+          "status": "ok"
+        }
+      },
+      "semantic_detail": {
+        "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "faf4aa4225822f3bc6376869cb1164e8e3feedd0",
+        "dimension": 384,
+        "threshold": 0.99,
+        "scores": [
+          {
+            "candidate_id": 1,
+            "cosine": 0.9862723038863087,
+            "accepted": false,
+            "completed": true
+          }
+        ],
+        "selected_candidate": null,
+        "status": "ok",
+        "cache": "none",
+        "time_spent_ms": 290.0425000116229
+      }
+    },
+    {
+      "id": "entity",
+      "candidate": {
+        "name": "Chai",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 10
+      },
+      "final": {
+        "name": "Chang",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 10
+      },
+      "expected_reuse": false,
+      "arms": {
+        "exact": {
+          "selected": null,
+          "elapsed_ms": 0.03679189831018448,
+          "correct": true,
+          "status": "ok"
+        },
+        "llm": {
+          "selected": null,
+          "elapsed_ms": 777.3385001346469,
+          "correct": true,
+          "status": "ok"
+        },
+        "semantic": {
+          "selected": null,
+          "elapsed_ms": 100.71516688913107,
+          "correct": true,
+          "status": "ok"
+        }
+      },
+      "semantic_detail": {
+        "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "faf4aa4225822f3bc6376869cb1164e8e3feedd0",
+        "dimension": 384,
+        "threshold": 0.99,
+        "scores": [
+          {
+            "candidate_id": 1,
+            "cosine": 0.8936779772143936,
+            "accepted": false,
+            "completed": true
+          }
+        ],
+        "selected_candidate": null,
+        "status": "ok",
+        "cache": "none",
+        "time_spent_ms": 100.36783292889595
+      }
+    },
+    {
+      "id": "stock_polarity",
+      "candidate": {
+        "name": null,
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": true,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 10
+      },
+      "final": {
+        "name": null,
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": false,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 10
+      },
+      "expected_reuse": false,
+      "arms": {
+        "exact": {
+          "selected": null,
+          "elapsed_ms": 0.1004580408334732,
+          "correct": true,
+          "status": "ok"
+        },
+        "llm": {
+          "selected": null,
+          "elapsed_ms": 553.3924591727555,
+          "correct": true,
+          "status": "ok"
+        },
+        "semantic": {
+          "selected": null,
+          "elapsed_ms": 47.666041646152735,
+          "correct": true,
+          "status": "ok"
+        }
+      },
+      "semantic_detail": {
+        "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "faf4aa4225822f3bc6376869cb1164e8e3feedd0",
+        "dimension": 384,
+        "threshold": 0.99,
+        "scores": [
+          {
+            "candidate_id": 1,
+            "cosine": 0.9720576703142015,
+            "accepted": false,
+            "completed": true
+          }
+        ],
+        "selected_candidate": null,
+        "status": "ok",
+        "cache": "none",
+        "time_spent_ms": 47.64958284795284
+      }
+    },
+    {
+      "id": "discontinued_polarity",
+      "candidate": {
+        "name": null,
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": true,
+        "order": "product_id",
+        "limit": 10
+      },
+      "final": {
+        "name": null,
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": false,
+        "order": "product_id",
+        "limit": 10
+      },
+      "expected_reuse": false,
+      "arms": {
+        "exact": {
+          "selected": null,
+          "elapsed_ms": 0.02208305522799492,
+          "correct": true,
+          "status": "ok"
+        },
+        "llm": {
+          "selected": null,
+          "elapsed_ms": 1046.4464169926941,
+          "correct": true,
+          "status": "ok"
+        },
+        "semantic": {
+          "selected": null,
+          "elapsed_ms": 30.742208007723093,
+          "correct": true,
+          "status": "ok"
+        }
+      },
+      "semantic_detail": {
+        "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "faf4aa4225822f3bc6376869cb1164e8e3feedd0",
+        "dimension": 384,
+        "threshold": 0.99,
+        "scores": [
+          {
+            "candidate_id": 1,
+            "cosine": 0.984812806062307,
+            "accepted": false,
+            "completed": true
+          }
+        ],
+        "selected_candidate": null,
+        "status": "ok",
+        "cache": "none",
+        "time_spent_ms": 30.704875010997057
+      }
+    },
+    {
+      "id": "numeric_disjoint",
+      "candidate": {
+        "name": null,
+        "category_id": null,
+        "min_price": null,
+        "max_price": 10,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 10
+      },
+      "final": {
+        "name": null,
+        "category_id": null,
+        "min_price": 20,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 10
+      },
+      "expected_reuse": false,
+      "arms": {
+        "exact": {
+          "selected": null,
+          "elapsed_ms": 0.02074986696243286,
+          "correct": true,
+          "status": "ok"
+        },
+        "llm": {
+          "selected": null,
+          "elapsed_ms": 977.5625001639128,
+          "correct": true,
+          "status": "ok"
+        },
+        "semantic": {
+          "selected": null,
+          "elapsed_ms": 34.72829191014171,
+          "correct": true,
+          "status": "ok"
+        }
+      },
+      "semantic_detail": {
+        "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "faf4aa4225822f3bc6376869cb1164e8e3feedd0",
+        "dimension": 384,
+        "threshold": 0.99,
+        "scores": [
+          {
+            "candidate_id": 1,
+            "cosine": 0.9394444608821847,
+            "accepted": false,
+            "completed": true
+          }
+        ],
+        "selected_candidate": null,
+        "status": "ok",
+        "cache": "none",
+        "time_spent_ms": 34.66358268633485
+      }
+    },
+    {
+      "id": "narrow_candidate",
+      "candidate": {
+        "name": null,
+        "category_id": null,
+        "min_price": 20,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 10
+      },
+      "final": {
+        "name": null,
+        "category_id": null,
+        "min_price": 10,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 10
+      },
+      "expected_reuse": false,
+      "arms": {
+        "exact": {
+          "selected": null,
+          "elapsed_ms": 0.020500272512435913,
+          "correct": true,
+          "status": "ok"
+        },
+        "llm": {
+          "selected": null,
+          "elapsed_ms": 935.9000418335199,
+          "correct": true,
+          "status": "ok"
+        },
+        "semantic": {
+          "selected": 1,
+          "elapsed_ms": 36.64033301174641,
+          "correct": false,
+          "status": "ok"
+        }
+      },
+      "semantic_detail": {
+        "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "faf4aa4225822f3bc6376869cb1164e8e3feedd0",
+        "dimension": 384,
+        "threshold": 0.99,
+        "scores": [
+          {
+            "candidate_id": 1,
+            "cosine": 0.9930075014523781,
+            "accepted": true,
+            "completed": true
+          }
+        ],
+        "selected_candidate": 1,
+        "status": "ok",
+        "cache": "none",
+        "time_spent_ms": 36.62366699427366
+      }
+    },
+    {
+      "id": "category",
+      "candidate": {
+        "name": null,
+        "category_id": 1,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 10
+      },
+      "final": {
+        "name": null,
+        "category_id": 2,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 10
+      },
+      "expected_reuse": false,
+      "arms": {
+        "exact": {
+          "selected": null,
+          "elapsed_ms": 0.021624844521284103,
+          "correct": true,
+          "status": "ok"
+        },
+        "llm": {
+          "selected": null,
+          "elapsed_ms": 627.5060418993235,
+          "correct": true,
+          "status": "ok"
+        },
+        "semantic": {
+          "selected": 1,
+          "elapsed_ms": 32.45300007984042,
+          "correct": false,
+          "status": "ok"
+        }
+      },
+      "semantic_detail": {
+        "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "faf4aa4225822f3bc6376869cb1164e8e3feedd0",
+        "dimension": 384,
+        "threshold": 0.99,
+        "scores": [
+          {
+            "candidate_id": 1,
+            "cosine": 0.9958503750694847,
+            "accepted": true,
+            "completed": true
+          }
+        ],
+        "selected_candidate": 1,
+        "status": "ok",
+        "cache": "none",
+        "time_spent_ms": 32.43766725063324
+      }
+    },
+    {
+      "id": "sort",
+      "candidate": {
+        "name": null,
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "price_asc",
+        "limit": 5
+      },
+      "final": {
+        "name": null,
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "price_desc",
+        "limit": 5
+      },
+      "expected_reuse": false,
+      "arms": {
+        "exact": {
+          "selected": null,
+          "elapsed_ms": 0.020584091544151306,
+          "correct": true,
+          "status": "ok"
+        },
+        "llm": {
+          "selected": null,
+          "elapsed_ms": 509.338750038296,
+          "correct": true,
+          "status": "ok"
+        },
+        "semantic": {
+          "selected": null,
+          "elapsed_ms": 42.757167015224695,
+          "correct": true,
+          "status": "ok"
+        }
+      },
+      "semantic_detail": {
+        "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "faf4aa4225822f3bc6376869cb1164e8e3feedd0",
+        "dimension": 384,
+        "threshold": 0.99,
+        "scores": [
+          {
+            "candidate_id": 1,
+            "cosine": 0.9726512030019366,
+            "accepted": false,
+            "completed": true
+          }
+        ],
+        "selected_candidate": null,
+        "status": "ok",
+        "cache": "none",
+        "time_spent_ms": 42.64466604217887
+      }
+    },
+    {
+      "id": "too_few",
+      "candidate": {
+        "name": null,
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 5
+      },
+      "final": {
+        "name": null,
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 10
+      },
+      "expected_reuse": false,
+      "arms": {
+        "exact": {
+          "selected": null,
+          "elapsed_ms": 0.027375295758247375,
+          "correct": true,
+          "status": "ok"
+        },
+        "llm": {
+          "selected": null,
+          "elapsed_ms": 637.8256250172853,
+          "correct": true,
+          "status": "ok"
+        },
+        "semantic": {
+          "selected": null,
+          "elapsed_ms": 28.193000238388777,
+          "correct": true,
+          "status": "ok"
+        }
+      },
+      "semantic_detail": {
+        "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "faf4aa4225822f3bc6376869cb1164e8e3feedd0",
+        "dimension": 384,
+        "threshold": 0.99,
+        "scores": [
+          {
+            "candidate_id": 1,
+            "cosine": 0.9836493783384812,
+            "accepted": false,
+            "completed": true
+          }
+        ],
+        "selected_candidate": null,
+        "status": "ok",
+        "cache": "none",
+        "time_spent_ms": 28.177666012197733
+      }
+    }
+  ],
+  "model_load_ms": 5255.125416908413,
+  "warmup_ms": 142.94624980539083,
+  "threshold_sweep": [
+    {
+      "threshold": 0.9,
+      "false_accept": 7,
+      "false_reject": 0
+    },
+    {
+      "threshold": 0.95,
+      "false_accept": 6,
+      "false_reject": 0
+    },
+    {
+      "threshold": 0.98,
+      "false_accept": 4,
+      "false_reject": 1
+    },
+    {
+      "threshold": 0.99,
+      "false_accept": 2,
+      "false_reject": 2
+    },
+    {
+      "threshold": 0.995,
+      "false_accept": 1,
+      "false_reject": 2
+    },
+    {
+      "threshold": 0.999,
+      "false_accept": 0,
+      "false_reject": 3
+    },
+    {
+      "threshold": 0.9999,
+      "false_accept": 0,
+      "false_reject": 3
+    }
+  ],
+  "llm_metrics": [
+    {
+      "role": "checker",
+      "status": "ok",
+      "total_tokens": 446,
+      "elapsed_ms": 989.4071659073234
+    },
+    {
+      "role": "checker",
+      "status": "ok",
+      "total_tokens": 446,
+      "elapsed_ms": 879.2023337446153
+    },
+    {
+      "role": "checker",
+      "status": "ok",
+      "total_tokens": 444,
+      "elapsed_ms": 1104.1472079232335
+    },
+    {
+      "role": "checker",
+      "status": "ok",
+      "total_tokens": 447,
+      "elapsed_ms": 1000.2745408564806
+    },
+    {
+      "role": "checker",
+      "status": "ok",
+      "total_tokens": 443,
+      "elapsed_ms": 777.2487499751151
+    },
+    {
+      "role": "checker",
+      "status": "ok",
+      "total_tokens": 439,
+      "elapsed_ms": 553.369540721178
+    },
+    {
+      "role": "checker",
+      "status": "ok",
+      "total_tokens": 439,
+      "elapsed_ms": 1046.4244158938527
+    },
+    {
+      "role": "checker",
+      "status": "ok",
+      "total_tokens": 442,
+      "elapsed_ms": 977.524499874562
+    },
+    {
+      "role": "checker",
+      "status": "ok",
+      "total_tokens": 442,
+      "elapsed_ms": 935.887083876878
+    },
+    {
+      "role": "checker",
+      "status": "ok",
+      "total_tokens": 442,
+      "elapsed_ms": 627.4914578534663
+    },
+    {
+      "role": "checker",
+      "status": "ok",
+      "total_tokens": 440,
+      "elapsed_ms": 509.3191252090037
+    },
+    {
+      "role": "checker",
+      "status": "ok",
+      "total_tokens": 439,
+      "elapsed_ms": 637.8115839324892
+    }
+  ]
+}

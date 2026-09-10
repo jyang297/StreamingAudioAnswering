@@ -1,0 +1,10 @@
+{
+  "date": "2026-09-10",
+  "command": "PYTHONDONTWRITEBYTECODE=1 /private/tmp/livekit-anticipation-poc-venv/bin/python -m pytest -q -p no:cacheprovider",
+  "passed": 74,
+  "skipped": 3,
+  "seconds": 3.38,
+  "exit_code": 0,
+  "boundary": "v4 local regression; real PostgreSQL tests not enabled; no Answerer or real STT quality test",
+  "stored_prompts_match_code": true
+}

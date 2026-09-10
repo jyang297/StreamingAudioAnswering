@@ -1,0 +1,404 @@
+{
+  "turns": [
+    {
+      "turn": 1,
+      "text": "What is the price of Chai?",
+      "context": [],
+      "path": "reuse_ready",
+      "evidence": [
+        {
+          "query": {
+            "name": "Chai",
+            "category_id": null,
+            "min_price": null,
+            "max_price": null,
+            "in_stock": null,
+            "discontinued": null,
+            "order": "product_id",
+            "limit": 10
+          },
+          "rows": [
+            {
+              "product_id": 1,
+              "product_name": "Chai",
+              "category_id": 1,
+              "quantity_per_unit": "10 boxes x 20 bags",
+              "unit_price": 18.0,
+              "units_in_stock": 39,
+              "discontinued": false
+            }
+          ],
+          "error": null
+        }
+      ],
+      "phase_ms": 1280.4131251759827,
+      "answer": "In this historical sample catalog, Chai (product ID 1) has a unit price of 18.0. This is sample catalog data, not a current real-world price.",
+      "rewrites": 0
+    },
+    {
+      "turn": 2,
+      "text": "Stock?",
+      "context": [
+        {
+          "role": "user",
+          "content": "What is the price of Chai?"
+        },
+        {
+          "role": "assistant",
+          "content": "In this historical sample catalog, Chai (product ID 1) has a unit price of 18.0. This is sample catalog data, not a current real-world price."
+        }
+      ],
+      "path": "demand",
+      "evidence": [
+        {
+          "query": {
+            "name": "Chai",
+            "category_id": null,
+            "min_price": null,
+            "max_price": null,
+            "in_stock": true,
+            "discontinued": null,
+            "order": "product_id",
+            "limit": 10
+          },
+          "rows": [
+            {
+              "product_id": 1,
+              "product_name": "Chai",
+              "category_id": 1,
+              "quantity_per_unit": "10 boxes x 20 bags",
+              "unit_price": 18.0,
+              "units_in_stock": 39,
+              "discontinued": false
+            }
+          ],
+          "error": null
+        }
+      ],
+      "phase_ms": 704.1594171896577,
+      "answer": "In this historical sample catalog, Chai (product ID 1) has 39 units in stock and is not discontinued. This is sample catalog data, not current real-world inventory.",
+      "rewrites": 0
+    },
+    {
+      "turn": 3,
+      "text": "Actually, what is the price of Chang?",
+      "context": [
+        {
+          "role": "user",
+          "content": "What is the price of Chai?"
+        },
+        {
+          "role": "assistant",
+          "content": "In this historical sample catalog, Chai (product ID 1) has a unit price of 18.0. This is sample catalog data, not a current real-world price."
+        },
+        {
+          "role": "user",
+          "content": "Stock?"
+        },
+        {
+          "role": "assistant",
+          "content": "In this historical sample catalog, Chai (product ID 1) has 39 units in stock and is not discontinued. This is sample catalog data, not current real-world inventory."
+        }
+      ],
+      "path": "demand",
+      "evidence": [
+        {
+          "query": {
+            "name": "Chang",
+            "category_id": null,
+            "min_price": null,
+            "max_price": null,
+            "in_stock": null,
+            "discontinued": null,
+            "order": "product_id",
+            "limit": 10
+          },
+          "rows": [
+            {
+              "product_id": 2,
+              "product_name": "Chang",
+              "category_id": 1,
+              "quantity_per_unit": "24 - 12 oz bottles",
+              "unit_price": 19.0,
+              "units_in_stock": 17,
+              "discontinued": false
+            }
+          ],
+          "error": null
+        }
+      ],
+      "phase_ms": 761.2679577432573,
+      "answer": "In this historical sample catalog, Chang (product ID 2) has a unit price of 19.0. This is sample catalog data, not a current real-world price.",
+      "rewrites": 0
+    }
+  ],
+  "trace": [
+    {
+      "event": "turn_start",
+      "turn": 1,
+      "at_ms": 6.302957888692617
+    },
+    {
+      "event": "builder_start",
+      "turn": 1,
+      "at_ms": 6.552457809448242,
+      "candidate": 1
+    },
+    {
+      "event": "final_received",
+      "turn": 1,
+      "at_ms": 572.3193329758942
+    },
+    {
+      "event": "builder_done",
+      "turn": 1,
+      "at_ms": 725.9774166159332,
+      "candidate": 1,
+      "action": "retrieve"
+    },
+    {
+      "event": "builder_start",
+      "turn": 1,
+      "at_ms": 726.0230826213956,
+      "candidate": 2
+    },
+    {
+      "event": "candidate_accepted",
+      "turn": 1,
+      "at_ms": 1852.669082581997,
+      "candidate": 1
+    },
+    {
+      "event": "final_ready",
+      "turn": 1,
+      "at_ms": 1852.7329578064382,
+      "path": "reuse_ready",
+      "phase_ms": 1280.4131251759827
+    },
+    {
+      "event": "answer_done",
+      "turn": 1,
+      "at_ms": 2884.916333016008,
+      "rewrites": 0
+    },
+    {
+      "event": "turn_start",
+      "turn": 2,
+      "at_ms": 2891.0280829295516
+    },
+    {
+      "event": "builder_start",
+      "turn": 2,
+      "at_ms": 2891.341082751751,
+      "candidate": 1
+    },
+    {
+      "event": "final_received",
+      "turn": 2,
+      "at_ms": 2892.9479578509927
+    },
+    {
+      "event": "final_ready",
+      "turn": 2,
+      "at_ms": 3597.108082845807,
+      "path": "demand",
+      "phase_ms": 704.1594171896577
+    },
+    {
+      "event": "answer_done",
+      "turn": 2,
+      "at_ms": 4608.4846667945385,
+      "rewrites": 0
+    },
+    {
+      "event": "turn_start",
+      "turn": 3,
+      "at_ms": 4609.567541629076
+    },
+    {
+      "event": "builder_start",
+      "turn": 3,
+      "at_ms": 4609.722499735653,
+      "candidate": 1
+    },
+    {
+      "event": "final_received",
+      "turn": 3,
+      "at_ms": 5112.336082849652
+    },
+    {
+      "event": "builder_done",
+      "turn": 3,
+      "at_ms": 5640.760041773319,
+      "candidate": 1,
+      "action": "wait"
+    },
+    {
+      "event": "builder_start",
+      "turn": 3,
+      "at_ms": 5640.7856666482985,
+      "candidate": 2
+    },
+    {
+      "event": "final_ready",
+      "turn": 3,
+      "at_ms": 5873.605124652386,
+      "path": "demand",
+      "phase_ms": 761.2679577432573
+    },
+    {
+      "event": "answer_done",
+      "turn": 3,
+      "at_ms": 6726.648374926299,
+      "rewrites": 0
+    }
+  ],
+  "stt_streams": 1,
+  "audio_frames": 1,
+  "history": [
+    {
+      "role": "user",
+      "text": "What is the price of Chai?"
+    },
+    {
+      "role": "assistant",
+      "text": "In this historical sample catalog, Chai (product ID 1) has a unit price of 18.0. This is sample catalog data, not a current real-world price."
+    },
+    {
+      "role": "user",
+      "text": "Stock?"
+    },
+    {
+      "role": "assistant",
+      "text": "In this historical sample catalog, Chai (product ID 1) has 39 units in stock and is not discontinued. This is sample catalog data, not current real-world inventory."
+    },
+    {
+      "role": "user",
+      "text": "Actually, what is the price of Chang?"
+    },
+    {
+      "role": "assistant",
+      "text": "In this historical sample catalog, Chang (product ID 2) has a unit price of 19.0. This is sample catalog data, not a current real-world price."
+    }
+  ],
+  "endpoint_metrics": [
+    {
+      "role": "builder",
+      "status": "ok",
+      "total_tokens": 291,
+      "elapsed_ms": 719.3858330138028
+    },
+    {
+      "role": "builder",
+      "status": "ok",
+      "total_tokens": 291,
+      "elapsed_ms": 593.9794168807566
+    },
+    {
+      "role": "builder",
+      "status": "ok",
+      "total_tokens": 334,
+      "elapsed_ms": 999.2311666719615
+    },
+    {
+      "role": "checker",
+      "status": "ok",
+      "total_tokens": 393,
+      "elapsed_ms": 634.9716251716018
+    },
+    {
+      "role": "answer",
+      "status": "ok",
+      "total_tokens": 490,
+      "elapsed_ms": 1027.9196249321103
+    },
+    {
+      "role": "builder",
+      "status": "error",
+      "elapsed_ms": 700.7684577256441
+    },
+    {
+      "role": "builder",
+      "status": "ok",
+      "total_tokens": 359,
+      "elapsed_ms": 646.8834169209003
+    },
+    {
+      "role": "answer",
+      "status": "ok",
+      "total_tokens": 553,
+      "elapsed_ms": 1010.1096658036113
+    },
+    {
+      "role": "builder",
+      "status": "ok",
+      "total_tokens": 413,
+      "elapsed_ms": 1031.0171251185238
+    },
+    {
+      "role": "builder",
+      "status": "ok",
+      "total_tokens": 430,
+      "elapsed_ms": 694.5272502489388
+    },
+    {
+      "role": "builder",
+      "status": "error",
+      "elapsed_ms": 218.0356252938509
+    },
+    {
+      "role": "answer",
+      "status": "ok",
+      "total_tokens": 619,
+      "elapsed_ms": 851.4790004119277
+    }
+  ],
+  "database_metrics": [
+    {
+      "query": {
+        "name": "Chai",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 10
+      },
+      "status": "ok",
+      "rows": 1,
+      "elapsed_ms": 24.853707756847143
+    },
+    {
+      "query": {
+        "name": "Chai",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": true,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 10
+      },
+      "status": "ok",
+      "rows": 1,
+      "elapsed_ms": 6.134249735623598
+    },
+    {
+      "query": {
+        "name": "Chang",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 10
+      },
+      "status": "ok",
+      "rows": 1,
+      "elapsed_ms": 15.129375271499157
+    }
+  ],
+  "boundary": "Real configured text endpoint + local PostgreSQL; scripted STT, no TTS/audio latency"
+}

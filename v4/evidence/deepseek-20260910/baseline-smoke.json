@@ -1,0 +1,108 @@
+{
+  "turns": [
+    {
+      "turn": 1,
+      "text": "What is the price of Chai?",
+      "context": [],
+      "path": "demand",
+      "evidence": [
+        {
+          "query": {
+            "name": "Chai",
+            "category_id": null,
+            "min_price": null,
+            "max_price": null,
+            "in_stock": null,
+            "discontinued": null,
+            "order": "price_asc",
+            "limit": 10
+          },
+          "rows": [
+            {
+              "product_id": 1,
+              "product_name": "Chai",
+              "category_id": 1,
+              "quantity_per_unit": "10 boxes x 20 bags",
+              "unit_price": 18.0,
+              "units_in_stock": 39,
+              "discontinued": false
+            }
+          ],
+          "error": null
+        }
+      ],
+      "phase_ms": 2223.184499889612,
+      "answer": "In this historical sample catalog, Chai (product ID 1) has a unit price of 18.0. This is sample catalog data, not a current real-world price.",
+      "rewrites": 0
+    }
+  ],
+  "trace": [
+    {
+      "event": "turn_start",
+      "turn": 1,
+      "at_ms": 31.311416998505592
+    },
+    {
+      "event": "final_received",
+      "turn": 1,
+      "at_ms": 33.17329194396734
+    },
+    {
+      "event": "final_ready",
+      "turn": 1,
+      "at_ms": 2256.3734580762684,
+      "path": "demand",
+      "phase_ms": 2223.184499889612
+    },
+    {
+      "event": "answer_done",
+      "turn": 1,
+      "at_ms": 3040.4134169220924,
+      "rewrites": 0
+    }
+  ],
+  "stt_streams": 1,
+  "audio_frames": 1,
+  "history": [
+    {
+      "role": "user",
+      "text": "What is the price of Chai?"
+    },
+    {
+      "role": "assistant",
+      "text": "In this historical sample catalog, Chai (product ID 1) has a unit price of 18.0. This is sample catalog data, not a current real-world price."
+    }
+  ],
+  "endpoint_metrics": [
+    {
+      "role": "builder",
+      "status": "ok",
+      "total_tokens": 300,
+      "elapsed_ms": 1698.0343330651522
+    },
+    {
+      "role": "answer",
+      "status": "ok",
+      "total_tokens": 491,
+      "elapsed_ms": 769.6322500705719
+    }
+  ],
+  "database_metrics": [
+    {
+      "query": {
+        "name": "Chai",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "price_asc",
+        "limit": 10
+      },
+      "status": "ok",
+      "rows": 1,
+      "elapsed_ms": 518.7409576028585
+    }
+  ],
+  "boundary": "Real configured text endpoint + local PostgreSQL; scripted STT, no TTS/audio latency"
+}

@@ -1,0 +1,1110 @@
+{
+  "turns": [
+    {
+      "turn": 1,
+      "text": "I would like to know the price of Chai in this sample catalog. Please give its unit price, rather than the total value of its stock.",
+      "context": [],
+      "path": "demand",
+      "evidence": [
+        {
+          "query": {
+            "name": "Chai",
+            "category_id": null,
+            "min_price": null,
+            "max_price": null,
+            "in_stock": null,
+            "discontinued": null,
+            "order": "product_id",
+            "limit": 10
+          },
+          "rows": [
+            {
+              "product_id": 1,
+              "product_name": "Chai",
+              "category_id": 1,
+              "quantity_per_unit": "10 boxes x 20 bags",
+              "unit_price": 18.0,
+              "units_in_stock": 39,
+              "discontinued": false
+            }
+          ],
+          "error": null
+        }
+      ],
+      "phase_ms": 1261.2304165959358,
+      "answer": "In this historical sample catalog, Chai (product_id 1) has a unit price of 18.0. This is a sample catalog price, not a current real-world price.",
+      "rewrites": 0
+    },
+    {
+      "turn": 2,
+      "text": "Chang price?",
+      "context": [
+        {
+          "role": "user",
+          "content": "I would like to know the price of Chai in this sample catalog. Please give its unit price, rather than the total value of its stock."
+        },
+        {
+          "role": "assistant",
+          "content": "In this historical sample catalog, Chai (product_id 1) has a unit price of 18.0. This is a sample catalog price, not a current real-world price."
+        }
+      ],
+      "path": "demand",
+      "evidence": [
+        {
+          "query": {
+            "name": "Chang",
+            "category_id": null,
+            "min_price": null,
+            "max_price": null,
+            "in_stock": null,
+            "discontinued": null,
+            "order": "product_id",
+            "limit": 10
+          },
+          "rows": [
+            {
+              "product_id": 2,
+              "product_name": "Chang",
+              "category_id": 1,
+              "quantity_per_unit": "24 - 12 oz bottles",
+              "unit_price": 19.0,
+              "units_in_stock": 17,
+              "discontinued": false
+            }
+          ],
+          "error": null
+        }
+      ],
+      "phase_ms": 1054.5891248621047,
+      "answer": "In this historical sample catalog, Chang (product_id 2) has a unit price of 19.0. This is a sample catalog price, not a current real-world price.",
+      "rewrites": 0
+    },
+    {
+      "turn": 3,
+      "text": "Stock?",
+      "context": [
+        {
+          "role": "user",
+          "content": "I would like to know the price of Chai in this sample catalog. Please give its unit price, rather than the total value of its stock."
+        },
+        {
+          "role": "assistant",
+          "content": "In this historical sample catalog, Chai (product_id 1) has a unit price of 18.0. This is a sample catalog price, not a current real-world price."
+        },
+        {
+          "role": "user",
+          "content": "Chang price?"
+        },
+        {
+          "role": "assistant",
+          "content": "In this historical sample catalog, Chang (product_id 2) has a unit price of 19.0. This is a sample catalog price, not a current real-world price."
+        }
+      ],
+      "path": "no_query",
+      "evidence": [
+        {
+          "query": {
+            "name": "Chai",
+            "category_id": null,
+            "min_price": null,
+            "max_price": null,
+            "in_stock": null,
+            "discontinued": null,
+            "order": "product_id",
+            "limit": 10
+          },
+          "rows": [
+            {
+              "product_id": 1,
+              "product_name": "Chai",
+              "category_id": 1,
+              "quantity_per_unit": "10 boxes x 20 bags",
+              "unit_price": 18.0,
+              "units_in_stock": 39,
+              "discontinued": false
+            }
+          ],
+          "error": null
+        }
+      ],
+      "phase_ms": 1579.7277078963816,
+      "answer": "In this historical sample catalog, Chai (product_id 1) has 39 units in stock. This is a sample catalog figure, not current real-world inventory.",
+      "rewrites": 1
+    }
+  ],
+  "trace": [
+    {
+      "event": "turn_start",
+      "turn": 1,
+      "at_ms": 65.92183327302337
+    },
+    {
+      "event": "snapshot_updated",
+      "turn": 1,
+      "at_ms": 67.43595842272043,
+      "revision": 1,
+      "changed_units": 5
+    },
+    {
+      "event": "trigger_fired",
+      "turn": 1,
+      "at_ms": 67.47541623190045,
+      "policy": "hybrid",
+      "candidate": 1,
+      "revision": 1,
+      "changed_units": 5
+    },
+    {
+      "event": "builder_start",
+      "turn": 1,
+      "at_ms": 67.74166645482183,
+      "candidate": 1
+    },
+    {
+      "event": "snapshot_updated",
+      "turn": 1,
+      "at_ms": 651.9655003212392,
+      "revision": 2,
+      "changed_units": 4
+    },
+    {
+      "event": "snapshot_updated",
+      "turn": 1,
+      "at_ms": 908.2174580544233,
+      "revision": 3,
+      "changed_units": 8
+    },
+    {
+      "event": "snapshot_updated",
+      "turn": 1,
+      "at_ms": 1161.6557501256466,
+      "revision": 4,
+      "changed_units": 24
+    },
+    {
+      "event": "final_received",
+      "turn": 1,
+      "at_ms": 1172.0195412635803
+    },
+    {
+      "event": "builder_handoff_timeout",
+      "turn": 1,
+      "at_ms": 1174.9572083353996,
+      "candidate": 1
+    },
+    {
+      "event": "final_ready",
+      "turn": 1,
+      "at_ms": 2433.293375186622,
+      "path": "demand",
+      "phase_ms": 1261.2304165959358
+    },
+    {
+      "event": "answer_done",
+      "turn": 1,
+      "at_ms": 3328.6116663366556,
+      "rewrites": 0
+    },
+    {
+      "event": "turn_start",
+      "turn": 2,
+      "at_ms": 3427.509458269924
+    },
+    {
+      "event": "snapshot_updated",
+      "turn": 2,
+      "at_ms": 3434.0755832381546,
+      "revision": 1,
+      "changed_units": 3
+    },
+    {
+      "event": "trigger_fired",
+      "turn": 2,
+      "at_ms": 3441.769333090633,
+      "policy": "hybrid",
+      "candidate": 1,
+      "revision": 1,
+      "changed_units": 3
+    },
+    {
+      "event": "builder_start",
+      "turn": 2,
+      "at_ms": 3444.742791354656,
+      "candidate": 1
+    },
+    {
+      "event": "final_received",
+      "turn": 2,
+      "at_ms": 3463.5302084498107
+    },
+    {
+      "event": "builder_handoff_timeout",
+      "turn": 2,
+      "at_ms": 3518.651833292097,
+      "candidate": 1
+    },
+    {
+      "event": "final_ready",
+      "turn": 2,
+      "at_ms": 4518.133416306227,
+      "path": "demand",
+      "phase_ms": 1054.5891248621047
+    },
+    {
+      "event": "answer_done",
+      "turn": 2,
+      "at_ms": 5712.930583395064,
+      "rewrites": 0
+    },
+    {
+      "event": "turn_start",
+      "turn": 3,
+      "at_ms": 5754.056375008076
+    },
+    {
+      "event": "snapshot_updated",
+      "turn": 3,
+      "at_ms": 5759.081416297704,
+      "revision": 1,
+      "changed_units": 2
+    },
+    {
+      "event": "trigger_fired",
+      "turn": 3,
+      "at_ms": 5910.244166385382,
+      "policy": "hybrid",
+      "candidate": 1,
+      "revision": 1,
+      "changed_units": 2
+    },
+    {
+      "event": "builder_start",
+      "turn": 3,
+      "at_ms": 5911.103250458837,
+      "candidate": 1
+    },
+    {
+      "event": "final_received",
+      "turn": 3,
+      "at_ms": 6024.7960411943495
+    },
+    {
+      "event": "builder_handoff_timeout",
+      "turn": 3,
+      "at_ms": 6077.301625162363,
+      "candidate": 1
+    },
+    {
+      "event": "final_ready",
+      "turn": 3,
+      "at_ms": 7604.580208193511,
+      "path": "no_query",
+      "phase_ms": 1579.7277078963816
+    },
+    {
+      "event": "answer_rewrite",
+      "turn": 3,
+      "at_ms": 8823.91570834443,
+      "query": {
+        "name": "Chai",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 10
+      }
+    },
+    {
+      "event": "answer_done",
+      "turn": 3,
+      "at_ms": 10275.054458063096,
+      "rewrites": 1
+    }
+  ],
+  "stt_streams": 1,
+  "audio_frames": 1,
+  "history": [
+    {
+      "role": "user",
+      "text": "I would like to know the price of Chai in this sample catalog. Please give its unit price, rather than the total value of its stock."
+    },
+    {
+      "role": "assistant",
+      "text": "In this historical sample catalog, Chai (product_id 1) has a unit price of 18.0. This is a sample catalog price, not a current real-world price."
+    },
+    {
+      "role": "user",
+      "text": "Chang price?"
+    },
+    {
+      "role": "assistant",
+      "text": "In this historical sample catalog, Chang (product_id 2) has a unit price of 19.0. This is a sample catalog price, not a current real-world price."
+    },
+    {
+      "role": "user",
+      "text": "Stock?"
+    },
+    {
+      "role": "assistant",
+      "text": "In this historical sample catalog, Chai (product_id 1) has 39 units in stock. This is a sample catalog figure, not current real-world inventory."
+    }
+  ],
+  "trigger_config": {
+    "policy": "hybrid",
+    "window_ms": 150.0,
+    "change_units": 3,
+    "max_builder_calls": 6,
+    "builder_handoff_ms": 50
+  },
+  "checker_metrics": [],
+  "checker_type": "llm",
+  "step_timings": [
+    {
+      "turn": 1,
+      "stt_event": "start_of_speech",
+      "step": "stt_event_dispatch",
+      "span_id": "1a3a60dedfdc",
+      "parent_span_id": null,
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 0.526
+    },
+    {
+      "turn": 1,
+      "candidate": 1,
+      "step": "builder_queue_wait",
+      "span_id": "cc98a34fc740",
+      "parent_span_id": "486c8261f566",
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 0.035
+    },
+    {
+      "turn": 1,
+      "stt_event": "interim_transcript",
+      "step": "stt_event_dispatch",
+      "span_id": "226350650355",
+      "parent_span_id": null,
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 268.686
+    },
+    {
+      "turn": 1,
+      "stt_event": "interim_transcript",
+      "step": "stt_event_dispatch",
+      "span_id": "4efd3941f084",
+      "parent_span_id": null,
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 3.788
+    },
+    {
+      "turn": 1,
+      "stt_event": "interim_transcript",
+      "step": "stt_event_dispatch",
+      "span_id": "500d7812e36d",
+      "parent_span_id": null,
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 0.935
+    },
+    {
+      "turn": 1,
+      "step": "stt_event_dispatch",
+      "span_id": "11670c3fdd32",
+      "parent_span_id": "6946419871da",
+      "status": "ok",
+      "stt_event": "final_transcript",
+      "event": "end",
+      "time_spent_ms": 2.049
+    },
+    {
+      "turn": 1,
+      "step": "stt_event_dispatch",
+      "span_id": "bdbad051c4d4",
+      "parent_span_id": "6946419871da",
+      "status": "ok",
+      "stt_event": "end_of_speech",
+      "event": "end",
+      "time_spent_ms": 6.024
+    },
+    {
+      "turn": 1,
+      "candidate": 1,
+      "step": "llm_http",
+      "span_id": "a3f2fa41e864",
+      "parent_span_id": "d76cbeaf0c1c",
+      "status": "cancelled",
+      "role": "builder",
+      "event": "end",
+      "time_spent_ms": 1113.824
+    },
+    {
+      "turn": 1,
+      "candidate": 1,
+      "step": "partial_query_builder",
+      "span_id": "d76cbeaf0c1c",
+      "parent_span_id": "486c8261f566",
+      "status": "cancelled",
+      "event": "end",
+      "time_spent_ms": 1114.125
+    },
+    {
+      "turn": 1,
+      "candidate": 1,
+      "step": "speculative_builder_task",
+      "span_id": "486c8261f566",
+      "parent_span_id": null,
+      "status": "cancelled",
+      "event": "end",
+      "time_spent_ms": 1114.336
+    },
+    {
+      "turn": 1,
+      "step": "llm_http",
+      "span_id": "1ed7e3661499",
+      "parent_span_id": "25d521d04087",
+      "status": "ok",
+      "role": "builder",
+      "event": "end",
+      "time_spent_ms": 984.414
+    },
+    {
+      "turn": 1,
+      "step": "final_query_builder",
+      "span_id": "25d521d04087",
+      "parent_span_id": "2076b7611508",
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 1036.11
+    },
+    {
+      "turn": 1,
+      "step": "checker",
+      "span_id": "b038333e1f97",
+      "parent_span_id": "2076b7611508",
+      "status": "ok",
+      "checker_type": "LLMChecker",
+      "candidate_count": 0,
+      "selected_candidate": null,
+      "event": "end",
+      "time_spent_ms": 2.099
+    },
+    {
+      "turn": 1,
+      "step": "retrieval_queue_wait",
+      "span_id": "0423dbb2a350",
+      "parent_span_id": "944746153fff",
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 0.54
+    },
+    {
+      "turn": 1,
+      "step": "database_search",
+      "span_id": "5231e40109b3",
+      "parent_span_id": "944746153fff",
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 202.959
+    },
+    {
+      "turn": 1,
+      "step": "retrieval_task",
+      "span_id": "944746153fff",
+      "parent_span_id": "8268ee36fcd0",
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 204.178
+    },
+    {
+      "turn": 1,
+      "step": "demand_retrieval",
+      "span_id": "8268ee36fcd0",
+      "parent_span_id": "2076b7611508",
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 206.31
+    },
+    {
+      "turn": 1,
+      "step": "final_resolution",
+      "span_id": "2076b7611508",
+      "parent_span_id": null,
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 1262.582
+    },
+    {
+      "turn": 1,
+      "step": "llm_http",
+      "span_id": "35dbd871bf30",
+      "parent_span_id": "bfdd645fe851",
+      "status": "ok",
+      "attempt": 0,
+      "role": "answer",
+      "event": "end",
+      "time_spent_ms": 856.46
+    },
+    {
+      "turn": 1,
+      "step": "answer_llm",
+      "span_id": "bfdd645fe851",
+      "parent_span_id": "457074d014ac",
+      "status": "ok",
+      "attempt": 0,
+      "event": "end",
+      "time_spent_ms": 860.765
+    },
+    {
+      "turn": 1,
+      "step": "answer_total",
+      "span_id": "457074d014ac",
+      "parent_span_id": null,
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 862.165
+    },
+    {
+      "turn": 1,
+      "step": "final_to_full_answer",
+      "span_id": "6946419871da",
+      "parent_span_id": null,
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 2266.193
+    },
+    {
+      "turn": 2,
+      "stt_event": "start_of_speech",
+      "step": "stt_event_dispatch",
+      "span_id": "1657c921e55a",
+      "parent_span_id": null,
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 3.037
+    },
+    {
+      "turn": 2,
+      "candidate": 1,
+      "step": "builder_queue_wait",
+      "span_id": "03798390a590",
+      "parent_span_id": "58f8c3de61e9",
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 0.156
+    },
+    {
+      "turn": 2,
+      "step": "stt_event_dispatch",
+      "span_id": "ed1298aba0dd",
+      "parent_span_id": "5c6ac6765852",
+      "status": "ok",
+      "stt_event": "final_transcript",
+      "event": "end",
+      "time_spent_ms": 20.105
+    },
+    {
+      "turn": 2,
+      "step": "stt_event_dispatch",
+      "span_id": "b49bf031f69a",
+      "parent_span_id": "5c6ac6765852",
+      "status": "ok",
+      "stt_event": "end_of_speech",
+      "event": "end",
+      "time_spent_ms": 5.829
+    },
+    {
+      "turn": 2,
+      "step": "builder_grace_wait",
+      "span_id": "48ecdff73117",
+      "parent_span_id": "c16c2a9d2728",
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 50.863
+    },
+    {
+      "turn": 2,
+      "candidate": 1,
+      "step": "llm_http",
+      "span_id": "cd0888f6728a",
+      "parent_span_id": "4d0bc931a9eb",
+      "status": "cancelled",
+      "role": "builder",
+      "event": "end",
+      "time_spent_ms": 76.738
+    },
+    {
+      "turn": 2,
+      "candidate": 1,
+      "step": "partial_query_builder",
+      "span_id": "4d0bc931a9eb",
+      "parent_span_id": "58f8c3de61e9",
+      "status": "cancelled",
+      "event": "end",
+      "time_spent_ms": 77.001
+    },
+    {
+      "turn": 2,
+      "candidate": 1,
+      "step": "speculative_builder_task",
+      "span_id": "58f8c3de61e9",
+      "parent_span_id": null,
+      "status": "cancelled",
+      "event": "end",
+      "time_spent_ms": 78.749
+    },
+    {
+      "turn": 2,
+      "step": "llm_http",
+      "span_id": "46322af3943b",
+      "parent_span_id": "2e28178a1c6d",
+      "status": "ok",
+      "role": "builder",
+      "event": "end",
+      "time_spent_ms": 951.417
+    },
+    {
+      "turn": 2,
+      "step": "final_query_builder",
+      "span_id": "2e28178a1c6d",
+      "parent_span_id": "c16c2a9d2728",
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 957.019
+    },
+    {
+      "turn": 2,
+      "step": "checker",
+      "span_id": "15bd9cc54f47",
+      "parent_span_id": "c16c2a9d2728",
+      "status": "ok",
+      "checker_type": "LLMChecker",
+      "candidate_count": 0,
+      "selected_candidate": null,
+      "event": "end",
+      "time_spent_ms": 0.189
+    },
+    {
+      "turn": 2,
+      "step": "retrieval_queue_wait",
+      "span_id": "5fb454454b35",
+      "parent_span_id": "98afa65440f8",
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 0.124
+    },
+    {
+      "turn": 2,
+      "step": "database_search",
+      "span_id": "a5584ece8fff",
+      "parent_span_id": "98afa65440f8",
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 40.119
+    },
+    {
+      "turn": 2,
+      "step": "retrieval_task",
+      "span_id": "98afa65440f8",
+      "parent_span_id": "c4862923b67a",
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 40.614
+    },
+    {
+      "turn": 2,
+      "step": "demand_retrieval",
+      "span_id": "c4862923b67a",
+      "parent_span_id": "c16c2a9d2728",
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 40.711
+    },
+    {
+      "turn": 2,
+      "step": "final_resolution",
+      "span_id": "c16c2a9d2728",
+      "parent_span_id": null,
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 1054.929
+    },
+    {
+      "turn": 2,
+      "step": "llm_http",
+      "span_id": "8448aed1afbe",
+      "parent_span_id": "dc2b34f3cc6e",
+      "status": "ok",
+      "attempt": 0,
+      "role": "answer",
+      "event": "end",
+      "time_spent_ms": 1175.162
+    },
+    {
+      "turn": 2,
+      "step": "answer_llm",
+      "span_id": "dc2b34f3cc6e",
+      "parent_span_id": "fa1f36205b87",
+      "status": "ok",
+      "attempt": 0,
+      "event": "end",
+      "time_spent_ms": 1179.588
+    },
+    {
+      "turn": 2,
+      "step": "answer_total",
+      "span_id": "fa1f36205b87",
+      "parent_span_id": null,
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 1180.784
+    },
+    {
+      "turn": 2,
+      "step": "final_to_full_answer",
+      "span_id": "5c6ac6765852",
+      "parent_span_id": null,
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 2319.388
+    },
+    {
+      "turn": 3,
+      "stt_event": "start_of_speech",
+      "step": "stt_event_dispatch",
+      "span_id": "8668ab9d81b4",
+      "parent_span_id": null,
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 4.743
+    },
+    {
+      "turn": 3,
+      "stt_event": "interim_transcript",
+      "step": "stt_event_dispatch",
+      "span_id": "962b203340a9",
+      "parent_span_id": null,
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 1.014
+    },
+    {
+      "turn": 3,
+      "candidate": 1,
+      "step": "builder_queue_wait",
+      "span_id": "04d27719a48b",
+      "parent_span_id": "19db83e68a33",
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 0.349
+    },
+    {
+      "turn": 3,
+      "step": "stt_event_dispatch",
+      "span_id": "f63bfc97d529",
+      "parent_span_id": "083caad1e52e",
+      "status": "ok",
+      "stt_event": "final_transcript",
+      "event": "end",
+      "time_spent_ms": 2.469
+    },
+    {
+      "turn": 3,
+      "step": "stt_event_dispatch",
+      "span_id": "3dfdf04aeebc",
+      "parent_span_id": "083caad1e52e",
+      "status": "ok",
+      "stt_event": "end_of_speech",
+      "event": "end",
+      "time_spent_ms": 0.878
+    },
+    {
+      "turn": 3,
+      "step": "builder_grace_wait",
+      "span_id": "a56134c673cc",
+      "parent_span_id": "58ca2770733d",
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 52.054
+    },
+    {
+      "turn": 3,
+      "candidate": 1,
+      "step": "llm_http",
+      "span_id": "a05b5be01a54",
+      "parent_span_id": "aa56bcc8276d",
+      "status": "cancelled",
+      "role": "builder",
+      "event": "end",
+      "time_spent_ms": 223.024
+    },
+    {
+      "turn": 3,
+      "candidate": 1,
+      "step": "partial_query_builder",
+      "span_id": "aa56bcc8276d",
+      "parent_span_id": "19db83e68a33",
+      "status": "cancelled",
+      "event": "end",
+      "time_spent_ms": 223.712
+    },
+    {
+      "turn": 3,
+      "candidate": 1,
+      "step": "speculative_builder_task",
+      "span_id": "19db83e68a33",
+      "parent_span_id": null,
+      "status": "cancelled",
+      "event": "end",
+      "time_spent_ms": 224.679
+    },
+    {
+      "turn": 3,
+      "step": "llm_http",
+      "span_id": "ba3db6c90056",
+      "parent_span_id": "356e38b6bdb4",
+      "status": "ok",
+      "role": "builder",
+      "event": "end",
+      "time_spent_ms": 1521.134
+    },
+    {
+      "turn": 3,
+      "step": "final_query_builder",
+      "span_id": "356e38b6bdb4",
+      "parent_span_id": "58ca2770733d",
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 1526.421
+    },
+    {
+      "turn": 3,
+      "step": "final_resolution",
+      "span_id": "58ca2770733d",
+      "parent_span_id": null,
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 1587.912
+    },
+    {
+      "turn": 3,
+      "step": "llm_http",
+      "span_id": "143ef4ab3d13",
+      "parent_span_id": "e392df5e05fe",
+      "status": "ok",
+      "attempt": 0,
+      "role": "answer",
+      "event": "end",
+      "time_spent_ms": 1174.585
+    },
+    {
+      "turn": 3,
+      "step": "answer_llm",
+      "span_id": "e392df5e05fe",
+      "parent_span_id": "a8f49112de69",
+      "status": "ok",
+      "attempt": 0,
+      "event": "end",
+      "time_spent_ms": 1182.763
+    },
+    {
+      "turn": 3,
+      "step": "retrieval_queue_wait",
+      "span_id": "b7d1c670764f",
+      "parent_span_id": "e21493fdfe4f",
+      "status": "ok",
+      "attempt": 0,
+      "event": "end",
+      "time_spent_ms": 0.111
+    },
+    {
+      "turn": 3,
+      "step": "database_search",
+      "span_id": "a11087e2f160",
+      "parent_span_id": "e21493fdfe4f",
+      "status": "ok",
+      "attempt": 0,
+      "event": "end",
+      "time_spent_ms": 338.393
+    },
+    {
+      "turn": 3,
+      "step": "retrieval_task",
+      "span_id": "e21493fdfe4f",
+      "parent_span_id": "0f0bcec6159e",
+      "status": "ok",
+      "attempt": 0,
+      "event": "end",
+      "time_spent_ms": 338.884
+    },
+    {
+      "turn": 3,
+      "step": "rewrite_retrieval",
+      "span_id": "0f0bcec6159e",
+      "parent_span_id": "a8f49112de69",
+      "status": "ok",
+      "attempt": 0,
+      "event": "end",
+      "time_spent_ms": 339.273
+    },
+    {
+      "turn": 3,
+      "step": "llm_http",
+      "span_id": "ecd41fb71b47",
+      "parent_span_id": "3e8cad378ac1",
+      "status": "ok",
+      "attempt": 1,
+      "role": "answer",
+      "event": "end",
+      "time_spent_ms": 1096.085
+    },
+    {
+      "turn": 3,
+      "step": "answer_llm",
+      "span_id": "3e8cad378ac1",
+      "parent_span_id": "a8f49112de69",
+      "status": "ok",
+      "attempt": 1,
+      "event": "end",
+      "time_spent_ms": 1107.921
+    },
+    {
+      "turn": 3,
+      "step": "answer_total",
+      "span_id": "a8f49112de69",
+      "parent_span_id": null,
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 2637.663
+    },
+    {
+      "turn": 3,
+      "step": "final_to_full_answer",
+      "span_id": "083caad1e52e",
+      "parent_span_id": null,
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 4294.187
+    },
+    {
+      "turn": 3,
+      "step": "pipeline_cleanup",
+      "span_id": "82f295f51110",
+      "parent_span_id": null,
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 0.97
+    }
+  ],
+  "endpoint_metrics": [
+    {
+      "role": "builder",
+      "status": "cancelled",
+      "elapsed_ms": 1114.0821250155568
+    },
+    {
+      "role": "builder",
+      "status": "ok",
+      "total_tokens": 316,
+      "elapsed_ms": 1027.1172081120312
+    },
+    {
+      "role": "answer",
+      "status": "ok",
+      "total_tokens": 513,
+      "elapsed_ms": 860.5533330701292
+    },
+    {
+      "role": "builder",
+      "status": "cancelled",
+      "elapsed_ms": 76.8841658718884
+    },
+    {
+      "role": "builder",
+      "status": "ok",
+      "total_tokens": 385,
+      "elapsed_ms": 956.3676668331027
+    },
+    {
+      "role": "answer",
+      "status": "ok",
+      "total_tokens": 575,
+      "elapsed_ms": 1179.4209168292582
+    },
+    {
+      "role": "builder",
+      "status": "cancelled",
+      "elapsed_ms": 223.5191250219941
+    },
+    {
+      "role": "builder",
+      "status": "ok",
+      "total_tokens": 431,
+      "elapsed_ms": 1526.2529999017715
+    },
+    {
+      "role": "answer",
+      "status": "ok",
+      "total_tokens": 485,
+      "elapsed_ms": 1182.4052082374692
+    },
+    {
+      "role": "answer",
+      "status": "ok",
+      "total_tokens": 636,
+      "elapsed_ms": 1107.614791020751
+    }
+  ],
+  "database_metrics": [
+    {
+      "query": {
+        "name": "Chai",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 10
+      },
+      "status": "ok",
+      "rows": 1,
+      "elapsed_ms": 196.61087542772293
+    },
+    {
+      "query": {
+        "name": "Chang",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 10
+      },
+      "status": "ok",
+      "rows": 1,
+      "elapsed_ms": 39.93758372962475
+    },
+    {
+      "query": {
+        "name": "Chai",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 10
+      },
+      "status": "ok",
+      "rows": 1,
+      "elapsed_ms": 338.2174582220614
+    }
+  ],
+  "boundary": "Real configured text endpoint + local PostgreSQL; scripted STT, no TTS/audio latency"
+}

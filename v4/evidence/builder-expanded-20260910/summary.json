@@ -1,0 +1,106 @@
+{
+  "unique_cases": 100,
+  "requests": 240,
+  "concurrency": 2,
+  "shuffle_seed": 20260910,
+  "repeats_per_sentinel": 3,
+  "boundary": "AI-authored development cases in one schema; not held-out production accuracy",
+  "versions": {
+    "v1": {
+      "outcomes": {
+        "correct_retrieve": 47,
+        "appropriate_wait": 25,
+        "query_variant_review": 12,
+        "missed_retrieve": 16
+      },
+      "median_ms": 1093.444437487051
+    },
+    "v2": {
+      "outcomes": {
+        "correct_retrieve": 70,
+        "appropriate_wait": 21,
+        "query_variant_review": 4,
+        "unjustified_retrieve": 4,
+        "missed_retrieve": 1
+      },
+      "median_ms": 1109.2630417551845
+    }
+  },
+  "groups": {
+    "v1": {
+      "recent_followup": {
+        "missed_retrieve": 7,
+        "correct_retrieve": 3
+      },
+      "explicit_switch": {
+        "correct_retrieve": 5,
+        "query_variant_review": 5
+      },
+      "explicit_backreference": {
+        "correct_retrieve": 10
+      },
+      "ambiguous": {
+        "appropriate_wait": 10
+      },
+      "unsupported": {
+        "appropriate_wait": 10
+      },
+      "short_explicit": {
+        "query_variant_review": 7,
+        "correct_retrieve": 2,
+        "missed_retrieve": 1
+      },
+      "duplicate_phase": {
+        "appropriate_wait": 5,
+        "correct_retrieve": 5
+      },
+      "explicit_constraints": {
+        "correct_retrieve": 10
+      },
+      "constraint_revision": {
+        "correct_retrieve": 10
+      },
+      "long_history_focus": {
+        "missed_retrieve": 8,
+        "correct_retrieve": 2
+      }
+    },
+    "v2": {
+      "recent_followup": {
+        "correct_retrieve": 10
+      },
+      "explicit_switch": {
+        "correct_retrieve": 10
+      },
+      "explicit_backreference": {
+        "correct_retrieve": 10
+      },
+      "ambiguous": {
+        "appropriate_wait": 10
+      },
+      "unsupported": {
+        "appropriate_wait": 10
+      },
+      "short_explicit": {
+        "query_variant_review": 4,
+        "correct_retrieve": 6
+      },
+      "duplicate_phase": {
+        "unjustified_retrieve": 4,
+        "correct_retrieve": 5,
+        "appropriate_wait": 1
+      },
+      "explicit_constraints": {
+        "correct_retrieve": 10
+      },
+      "constraint_revision": {
+        "correct_retrieve": 10
+      },
+      "long_history_focus": {
+        "correct_retrieve": 9,
+        "missed_retrieve": 1
+      }
+    }
+  },
+  "sentinel_outcome_changes": []
+}

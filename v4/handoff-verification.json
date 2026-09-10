@@ -1,0 +1,23 @@
+{
+  "source_commit": "e83b511",
+  "export_scope": "requirements.txt and v4/ from tracked LiveKitAnticipationPoC subtree",
+  "test_command": "PYTHONDONTWRITEBYTECODE=1 python -m pytest -q -p no:cacheprovider",
+  "working_directory": "export/v4",
+  "passed": 74,
+  "skipped": 3,
+  "duration_seconds": 1.86,
+  "runtime": "existing local Python 3.12 environment reused",
+  "boundary": "No credentials or ignored DB source copied. DB/API/model-download/new-OS installation not tested.",
+  "tracked_config_templates": [
+    "v4/.env.example"
+  ],
+  "ui_qa": {
+    "browser": "Codex in-app",
+    "desktop": "all7 views fit1280x720",
+    "responsive": "all7 no horizontal overflow at736 and320",
+    "controls": "views, previous/next, notes, evidence, scenario selection, step/restart",
+    "browser_warnings_errors": 0,
+    "print_pdf": "not independently validated",
+    "direct_file_open": "Automated file URL navigation rejected by browser URL policy; not bypassed. Prior local HTTP UI QA completed."
+  }
+}

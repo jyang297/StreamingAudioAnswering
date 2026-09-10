@@ -1,0 +1,752 @@
+[
+  {
+    "turns": [
+      {
+        "turn": 1,
+        "text": "Chai",
+        "context": [],
+        "path": "demand",
+        "evidence": [
+          {
+            "query": {
+              "name": "Chai",
+              "category_id": null,
+              "min_price": null,
+              "max_price": null,
+              "in_stock": null,
+              "discontinued": null,
+              "order": "product_id",
+              "limit": 10
+            },
+            "rows": [
+              {
+                "product_id": 1,
+                "product_name": "Chai",
+                "category_id": 1,
+                "quantity_per_unit": "10 boxes x 20 bags",
+                "unit_price": 18.0,
+                "units_in_stock": 39,
+                "discontinued": false
+              }
+            ],
+            "error": null
+          }
+        ],
+        "phase_ms": 170.178874861449,
+        "answer": "SCRIPTED ANSWER FROM SQL: [{\"product_id\": 1, \"product_name\": \"Chai\", \"category_id\": 1, \"quantity_per_unit\": \"10 boxes x 20 bags\", \"unit_price\": 18.0, \"units_in_stock\": 39, \"discontinued\": false}]",
+        "rewrites": 0
+      },
+      {
+        "turn": 2,
+        "text": "stock?",
+        "context": [
+          {
+            "role": "user",
+            "content": "Chai"
+          },
+          {
+            "role": "assistant",
+            "content": "SCRIPTED ANSWER FROM SQL: [{\"product_id\": 1, \"product_name\": \"Chai\", \"category_id\": 1, \"quantity_per_unit\": \"10 boxes x 20 bags\", \"unit_price\": 18.0, \"units_in_stock\": 39, \"discontinued\": false}]"
+          }
+        ],
+        "path": "demand",
+        "evidence": [
+          {
+            "query": {
+              "name": "Chai",
+              "category_id": null,
+              "min_price": null,
+              "max_price": null,
+              "in_stock": null,
+              "discontinued": null,
+              "order": "product_id",
+              "limit": 10
+            },
+            "rows": [
+              {
+                "product_id": 1,
+                "product_name": "Chai",
+                "category_id": 1,
+                "quantity_per_unit": "10 boxes x 20 bags",
+                "unit_price": 18.0,
+                "units_in_stock": 39,
+                "discontinued": false
+              }
+            ],
+            "error": null
+          }
+        ],
+        "phase_ms": 13.304375112056732,
+        "answer": "SCRIPTED ANSWER FROM SQL: [{\"product_id\": 1, \"product_name\": \"Chai\", \"category_id\": 1, \"quantity_per_unit\": \"10 boxes x 20 bags\", \"unit_price\": 18.0, \"units_in_stock\": 39, \"discontinued\": false}]",
+        "rewrites": 0
+      },
+      {
+        "turn": 3,
+        "text": "Chang",
+        "context": [
+          {
+            "role": "user",
+            "content": "Chai"
+          },
+          {
+            "role": "assistant",
+            "content": "SCRIPTED ANSWER FROM SQL: [{\"product_id\": 1, \"product_name\": \"Chai\", \"category_id\": 1, \"quantity_per_unit\": \"10 boxes x 20 bags\", \"unit_price\": 18.0, \"units_in_stock\": 39, \"discontinued\": false}]"
+          },
+          {
+            "role": "user",
+            "content": "stock?"
+          },
+          {
+            "role": "assistant",
+            "content": "SCRIPTED ANSWER FROM SQL: [{\"product_id\": 1, \"product_name\": \"Chai\", \"category_id\": 1, \"quantity_per_unit\": \"10 boxes x 20 bags\", \"unit_price\": 18.0, \"units_in_stock\": 39, \"discontinued\": false}]"
+          }
+        ],
+        "path": "demand",
+        "evidence": [
+          {
+            "query": {
+              "name": "Chang",
+              "category_id": null,
+              "min_price": null,
+              "max_price": null,
+              "in_stock": null,
+              "discontinued": null,
+              "order": "product_id",
+              "limit": 10
+            },
+            "rows": [
+              {
+                "product_id": 2,
+                "product_name": "Chang",
+                "category_id": 1,
+                "quantity_per_unit": "24 - 12 oz bottles",
+                "unit_price": 19.0,
+                "units_in_stock": 17,
+                "discontinued": false
+              }
+            ],
+            "error": null
+          }
+        ],
+        "phase_ms": 18.180042039602995,
+        "answer": "SCRIPTED ANSWER FROM SQL: [{\"product_id\": 2, \"product_name\": \"Chang\", \"category_id\": 1, \"quantity_per_unit\": \"24 - 12 oz bottles\", \"unit_price\": 19.0, \"units_in_stock\": 17, \"discontinued\": false}]",
+        "rewrites": 0
+      }
+    ],
+    "trace": [
+      {
+        "event": "turn_start",
+        "turn": 1,
+        "at_ms": 31.458333134651184
+      },
+      {
+        "event": "final_received",
+        "turn": 1,
+        "at_ms": 77.36104121431708
+      },
+      {
+        "event": "final_ready",
+        "turn": 1,
+        "at_ms": 247.53945786505938,
+        "path": "demand",
+        "phase_ms": 170.178874861449
+      },
+      {
+        "event": "answer_done",
+        "turn": 1,
+        "at_ms": 252.2296248935163,
+        "rewrites": 0
+      },
+      {
+        "event": "turn_start",
+        "turn": 2,
+        "at_ms": 260.52908319979906
+      },
+      {
+        "event": "final_received",
+        "turn": 2,
+        "at_ms": 303.19100013002753
+      },
+      {
+        "event": "final_ready",
+        "turn": 2,
+        "at_ms": 316.49995781481266,
+        "path": "demand",
+        "phase_ms": 13.304375112056732
+      },
+      {
+        "event": "answer_done",
+        "turn": 2,
+        "at_ms": 318.3819158002734,
+        "rewrites": 0
+      },
+      {
+        "event": "turn_start",
+        "turn": 3,
+        "at_ms": 319.94291581213474
+      },
+      {
+        "event": "final_received",
+        "turn": 3,
+        "at_ms": 364.0461661852896
+      },
+      {
+        "event": "final_ready",
+        "turn": 3,
+        "at_ms": 382.2270408272743,
+        "path": "demand",
+        "phase_ms": 18.180042039602995
+      },
+      {
+        "event": "answer_done",
+        "turn": 3,
+        "at_ms": 384.4675412401557,
+        "rewrites": 0
+      }
+    ],
+    "stt_streams": 1,
+    "audio_frames": 1,
+    "history": [
+      {
+        "role": "user",
+        "text": "Chai"
+      },
+      {
+        "role": "assistant",
+        "text": "SCRIPTED ANSWER FROM SQL: [{\"product_id\": 1, \"product_name\": \"Chai\", \"category_id\": 1, \"quantity_per_unit\": \"10 boxes x 20 bags\", \"unit_price\": 18.0, \"units_in_stock\": 39, \"discontinued\": false}]"
+      },
+      {
+        "role": "user",
+        "text": "stock?"
+      },
+      {
+        "role": "assistant",
+        "text": "SCRIPTED ANSWER FROM SQL: [{\"product_id\": 1, \"product_name\": \"Chai\", \"category_id\": 1, \"quantity_per_unit\": \"10 boxes x 20 bags\", \"unit_price\": 18.0, \"units_in_stock\": 39, \"discontinued\": false}]"
+      },
+      {
+        "role": "user",
+        "text": "Chang"
+      },
+      {
+        "role": "assistant",
+        "text": "SCRIPTED ANSWER FROM SQL: [{\"product_id\": 2, \"product_name\": \"Chang\", \"category_id\": 1, \"quantity_per_unit\": \"24 - 12 oz bottles\", \"unit_price\": 19.0, \"units_in_stock\": 17, \"discontinued\": false}]"
+      }
+    ],
+    "speculate": false,
+    "database_metrics": [
+      {
+        "query": {
+          "name": "Chai",
+          "category_id": null,
+          "min_price": null,
+          "max_price": null,
+          "in_stock": null,
+          "discontinued": null,
+          "order": "product_id",
+          "limit": 10
+        },
+        "status": "ok",
+        "rows": 1,
+        "elapsed_ms": 163.14558312296867
+      },
+      {
+        "query": {
+          "name": "Chai",
+          "category_id": null,
+          "min_price": null,
+          "max_price": null,
+          "in_stock": null,
+          "discontinued": null,
+          "order": "product_id",
+          "limit": 10
+        },
+        "status": "ok",
+        "rows": 1,
+        "elapsed_ms": 12.547084130346775
+      },
+      {
+        "query": {
+          "name": "Chang",
+          "category_id": null,
+          "min_price": null,
+          "max_price": null,
+          "in_stock": null,
+          "discontinued": null,
+          "order": "product_id",
+          "limit": 10
+        },
+        "status": "ok",
+        "rows": 1,
+        "elapsed_ms": 16.967666801065207
+      }
+    ],
+    "endpoint_contract_metrics": [
+      {
+        "role": "builder",
+        "status": "ok",
+        "total_tokens": 0,
+        "elapsed_ms": 6.451667286455631
+      },
+      {
+        "role": "answer",
+        "status": "ok",
+        "total_tokens": 0,
+        "elapsed_ms": 0.3364169970154762
+      },
+      {
+        "role": "builder",
+        "status": "ok",
+        "total_tokens": 0,
+        "elapsed_ms": 0.44404203072190285
+      },
+      {
+        "role": "answer",
+        "status": "ok",
+        "total_tokens": 0,
+        "elapsed_ms": 0.3225416876375675
+      },
+      {
+        "role": "builder",
+        "status": "ok",
+        "total_tokens": 0,
+        "elapsed_ms": 0.6488342769443989
+      },
+      {
+        "role": "answer",
+        "status": "ok",
+        "total_tokens": 0,
+        "elapsed_ms": 0.388583168387413
+      }
+    ],
+    "boundary": "REAL PostgreSQL and LiveKit; SCRIPTED HTTP responses and STT; no model or audio latency"
+  },
+  {
+    "turns": [
+      {
+        "turn": 1,
+        "text": "Chai",
+        "context": [],
+        "path": "reuse_wait",
+        "evidence": [
+          {
+            "query": {
+              "name": "Chai",
+              "category_id": null,
+              "min_price": null,
+              "max_price": null,
+              "in_stock": null,
+              "discontinued": null,
+              "order": "product_id",
+              "limit": 10
+            },
+            "rows": [
+              {
+                "product_id": 1,
+                "product_name": "Chai",
+                "category_id": 1,
+                "quantity_per_unit": "10 boxes x 20 bags",
+                "unit_price": 18.0,
+                "units_in_stock": 39,
+                "discontinued": false
+              }
+            ],
+            "error": null
+          }
+        ],
+        "phase_ms": 116.94583296775818,
+        "answer": "SCRIPTED ANSWER FROM SQL: [{\"product_id\": 1, \"product_name\": \"Chai\", \"category_id\": 1, \"quantity_per_unit\": \"10 boxes x 20 bags\", \"unit_price\": 18.0, \"units_in_stock\": 39, \"discontinued\": false}]",
+        "rewrites": 0
+      },
+      {
+        "turn": 2,
+        "text": "stock?",
+        "context": [
+          {
+            "role": "user",
+            "content": "Chai"
+          },
+          {
+            "role": "assistant",
+            "content": "SCRIPTED ANSWER FROM SQL: [{\"product_id\": 1, \"product_name\": \"Chai\", \"category_id\": 1, \"quantity_per_unit\": \"10 boxes x 20 bags\", \"unit_price\": 18.0, \"units_in_stock\": 39, \"discontinued\": false}]"
+          }
+        ],
+        "path": "reuse_wait",
+        "evidence": [
+          {
+            "query": {
+              "name": "Chai",
+              "category_id": null,
+              "min_price": null,
+              "max_price": null,
+              "in_stock": null,
+              "discontinued": null,
+              "order": "product_id",
+              "limit": 10
+            },
+            "rows": [
+              {
+                "product_id": 1,
+                "product_name": "Chai",
+                "category_id": 1,
+                "quantity_per_unit": "10 boxes x 20 bags",
+                "unit_price": 18.0,
+                "units_in_stock": 39,
+                "discontinued": false
+              }
+            ],
+            "error": null
+          }
+        ],
+        "phase_ms": 81.37558307498693,
+        "answer": "SCRIPTED ANSWER FROM SQL: [{\"product_id\": 1, \"product_name\": \"Chai\", \"category_id\": 1, \"quantity_per_unit\": \"10 boxes x 20 bags\", \"unit_price\": 18.0, \"units_in_stock\": 39, \"discontinued\": false}]",
+        "rewrites": 0
+      },
+      {
+        "turn": 3,
+        "text": "Chang",
+        "context": [
+          {
+            "role": "user",
+            "content": "Chai"
+          },
+          {
+            "role": "assistant",
+            "content": "SCRIPTED ANSWER FROM SQL: [{\"product_id\": 1, \"product_name\": \"Chai\", \"category_id\": 1, \"quantity_per_unit\": \"10 boxes x 20 bags\", \"unit_price\": 18.0, \"units_in_stock\": 39, \"discontinued\": false}]"
+          },
+          {
+            "role": "user",
+            "content": "stock?"
+          },
+          {
+            "role": "assistant",
+            "content": "SCRIPTED ANSWER FROM SQL: [{\"product_id\": 1, \"product_name\": \"Chai\", \"category_id\": 1, \"quantity_per_unit\": \"10 boxes x 20 bags\", \"unit_price\": 18.0, \"units_in_stock\": 39, \"discontinued\": false}]"
+          }
+        ],
+        "path": "reuse_wait",
+        "evidence": [
+          {
+            "query": {
+              "name": "Chang",
+              "category_id": null,
+              "min_price": null,
+              "max_price": null,
+              "in_stock": null,
+              "discontinued": null,
+              "order": "product_id",
+              "limit": 10
+            },
+            "rows": [
+              {
+                "product_id": 2,
+                "product_name": "Chang",
+                "category_id": 1,
+                "quantity_per_unit": "24 - 12 oz bottles",
+                "unit_price": 19.0,
+                "units_in_stock": 17,
+                "discontinued": false
+              }
+            ],
+            "error": null
+          }
+        ],
+        "phase_ms": 448.7192500382662,
+        "answer": "SCRIPTED ANSWER FROM SQL: [{\"product_id\": 2, \"product_name\": \"Chang\", \"category_id\": 1, \"quantity_per_unit\": \"24 - 12 oz bottles\", \"unit_price\": 19.0, \"units_in_stock\": 17, \"discontinued\": false}]",
+        "rewrites": 0
+      }
+    ],
+    "trace": [
+      {
+        "event": "turn_start",
+        "turn": 1,
+        "at_ms": 31.973334029316902
+      },
+      {
+        "event": "builder_start",
+        "turn": 1,
+        "at_ms": 32.81058417633176,
+        "candidate": 1
+      },
+      {
+        "event": "builder_done",
+        "turn": 1,
+        "at_ms": 35.51754215732217,
+        "candidate": 1,
+        "action": "retrieve"
+      },
+      {
+        "event": "final_received",
+        "turn": 1,
+        "at_ms": 79.61475010961294
+      },
+      {
+        "event": "candidate_accepted",
+        "turn": 1,
+        "at_ms": 196.3438750244677,
+        "candidate": 1
+      },
+      {
+        "event": "final_ready",
+        "turn": 1,
+        "at_ms": 196.56183384358883,
+        "path": "reuse_wait",
+        "phase_ms": 116.94583296775818
+      },
+      {
+        "event": "answer_done",
+        "turn": 1,
+        "at_ms": 207.8288341872394,
+        "rewrites": 0
+      },
+      {
+        "event": "turn_start",
+        "turn": 2,
+        "at_ms": 216.75370912998915
+      },
+      {
+        "event": "builder_start",
+        "turn": 2,
+        "at_ms": 217.76479203253984,
+        "candidate": 1
+      },
+      {
+        "event": "builder_done",
+        "turn": 2,
+        "at_ms": 218.3981668204069,
+        "candidate": 1,
+        "action": "retrieve"
+      },
+      {
+        "event": "final_received",
+        "turn": 2,
+        "at_ms": 264.6754588931799
+      },
+      {
+        "event": "candidate_accepted",
+        "turn": 2,
+        "at_ms": 345.8705418743193,
+        "candidate": 1
+      },
+      {
+        "event": "final_ready",
+        "turn": 2,
+        "at_ms": 346.0524589754641,
+        "path": "reuse_wait",
+        "phase_ms": 81.37558307498693
+      },
+      {
+        "event": "answer_done",
+        "turn": 2,
+        "at_ms": 350.1565419137478,
+        "rewrites": 0
+      },
+      {
+        "event": "turn_start",
+        "turn": 3,
+        "at_ms": 353.963834233582
+      },
+      {
+        "event": "builder_start",
+        "turn": 3,
+        "at_ms": 354.6464592218399,
+        "candidate": 1
+      },
+      {
+        "event": "builder_done",
+        "turn": 3,
+        "at_ms": 355.6995000690222,
+        "candidate": 1,
+        "action": "retrieve"
+      },
+      {
+        "event": "builder_start",
+        "turn": 3,
+        "at_ms": 396.6208752244711,
+        "candidate": 2
+      },
+      {
+        "event": "builder_done",
+        "turn": 3,
+        "at_ms": 397.0903749577701,
+        "candidate": 2,
+        "action": "retrieve"
+      },
+      {
+        "event": "final_received",
+        "turn": 3,
+        "at_ms": 401.14637510851026
+      },
+      {
+        "event": "candidate_accepted",
+        "turn": 3,
+        "at_ms": 849.4853340089321,
+        "candidate": 2
+      },
+      {
+        "event": "final_ready",
+        "turn": 3,
+        "at_ms": 849.9188339337707,
+        "path": "reuse_wait",
+        "phase_ms": 448.7192500382662
+      },
+      {
+        "event": "answer_done",
+        "turn": 3,
+        "at_ms": 891.0929998382926,
+        "rewrites": 0
+      }
+    ],
+    "stt_streams": 1,
+    "audio_frames": 1,
+    "history": [
+      {
+        "role": "user",
+        "text": "Chai"
+      },
+      {
+        "role": "assistant",
+        "text": "SCRIPTED ANSWER FROM SQL: [{\"product_id\": 1, \"product_name\": \"Chai\", \"category_id\": 1, \"quantity_per_unit\": \"10 boxes x 20 bags\", \"unit_price\": 18.0, \"units_in_stock\": 39, \"discontinued\": false}]"
+      },
+      {
+        "role": "user",
+        "text": "stock?"
+      },
+      {
+        "role": "assistant",
+        "text": "SCRIPTED ANSWER FROM SQL: [{\"product_id\": 1, \"product_name\": \"Chai\", \"category_id\": 1, \"quantity_per_unit\": \"10 boxes x 20 bags\", \"unit_price\": 18.0, \"units_in_stock\": 39, \"discontinued\": false}]"
+      },
+      {
+        "role": "user",
+        "text": "Chang"
+      },
+      {
+        "role": "assistant",
+        "text": "SCRIPTED ANSWER FROM SQL: [{\"product_id\": 2, \"product_name\": \"Chang\", \"category_id\": 1, \"quantity_per_unit\": \"24 - 12 oz bottles\", \"unit_price\": 19.0, \"units_in_stock\": 17, \"discontinued\": false}]"
+      }
+    ],
+    "speculate": true,
+    "database_metrics": [
+      {
+        "query": {
+          "name": "Chai",
+          "category_id": null,
+          "min_price": null,
+          "max_price": null,
+          "in_stock": null,
+          "discontinued": null,
+          "order": "product_id",
+          "limit": 10
+        },
+        "status": "ok",
+        "rows": 1,
+        "elapsed_ms": 159.67083303257823
+      },
+      {
+        "query": {
+          "name": "Chai",
+          "category_id": null,
+          "min_price": null,
+          "max_price": null,
+          "in_stock": null,
+          "discontinued": null,
+          "order": "product_id",
+          "limit": 10
+        },
+        "status": "ok",
+        "rows": 1,
+        "elapsed_ms": 125.67845918238163
+      },
+      {
+        "query": {
+          "name": "Chai",
+          "category_id": null,
+          "min_price": null,
+          "max_price": null,
+          "in_stock": null,
+          "discontinued": null,
+          "order": "product_id",
+          "limit": 10
+        },
+        "status": "error",
+        "elapsed_ms": 400.4044160246849
+      },
+      {
+        "query": {
+          "name": "Chang",
+          "category_id": null,
+          "min_price": null,
+          "max_price": null,
+          "in_stock": null,
+          "discontinued": null,
+          "order": "product_id",
+          "limit": 10
+        },
+        "status": "ok",
+        "rows": 1,
+        "elapsed_ms": 451.2234157882631
+      }
+    ],
+    "endpoint_contract_metrics": [
+      {
+        "role": "builder",
+        "status": "ok",
+        "total_tokens": 0,
+        "elapsed_ms": 2.6575420051813126
+      },
+      {
+        "role": "checker",
+        "status": "ok",
+        "total_tokens": 0,
+        "elapsed_ms": 0.42108306661248207
+      },
+      {
+        "role": "answer",
+        "status": "ok",
+        "total_tokens": 0,
+        "elapsed_ms": 1.1879578232765198
+      },
+      {
+        "role": "builder",
+        "status": "ok",
+        "total_tokens": 0,
+        "elapsed_ms": 0.5725412629544735
+      },
+      {
+        "role": "checker",
+        "status": "ok",
+        "total_tokens": 0,
+        "elapsed_ms": 2.232540864497423
+      },
+      {
+        "role": "answer",
+        "status": "ok",
+        "total_tokens": 0,
+        "elapsed_ms": 0.37079164758324623
+      },
+      {
+        "role": "builder",
+        "status": "ok",
+        "total_tokens": 0,
+        "elapsed_ms": 1.02199986577034
+      },
+      {
+        "role": "builder",
+        "status": "ok",
+        "total_tokens": 0,
+        "elapsed_ms": 0.4225838929414749
+      },
+      {
+        "role": "checker",
+        "status": "ok",
+        "total_tokens": 0,
+        "elapsed_ms": 0.6927922368049622
+      },
+      {
+        "role": "answer",
+        "status": "ok",
+        "total_tokens": 0,
+        "elapsed_ms": 4.792375024408102
+      }
+    ],
+    "boundary": "REAL PostgreSQL and LiveKit; SCRIPTED HTTP responses and STT; no model or audio latency"
+  }
+]

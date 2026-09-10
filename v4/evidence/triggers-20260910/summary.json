@@ -1,0 +1,194 @@
+{
+  "time": {
+    "config": {
+      "policy": "time",
+      "window_ms": 150.0,
+      "change_units": 3,
+      "max_builder_calls": 6,
+      "builder_handoff_ms": 50
+    },
+    "paths": [
+      "demand",
+      "demand",
+      "no_query"
+    ],
+    "answers": [
+      "In this historical sample catalog, Chai (product ID 1) has a unit price of 18.0. This is a sample catalog price, not a current real-world price.",
+      "In this historical sample catalog, Chang (product ID 2) has a unit price of 19.0. This is a sample catalog price, not a current real-world price.",
+      "In this historical sample catalog, Chai (product ID 1) has 39 units in stock. This is sample catalog data, not current real-world inventory."
+    ],
+    "builder_calls": 5,
+    "llm_calls": 9,
+    "database_errors": 0,
+    "trigger_events": [
+      {
+        "event": "trigger_fired",
+        "turn": 1,
+        "at_ms": 293.54658303782344,
+        "policy": "time",
+        "candidate": 1,
+        "revision": 1,
+        "changed_units": 5
+      },
+      {
+        "event": "builder_handoff_timeout",
+        "turn": 1,
+        "at_ms": 1405.0093330442905,
+        "candidate": 1
+      },
+      {
+        "event": "trigger_fired",
+        "turn": 3,
+        "at_ms": 8991.32483266294,
+        "policy": "time",
+        "candidate": 1,
+        "revision": 1,
+        "changed_units": 2
+      },
+      {
+        "event": "builder_handoff_timeout",
+        "turn": 3,
+        "at_ms": 9986.300374846905,
+        "candidate": 1
+      }
+    ],
+    "final_resolution_ms": [
+      3638.7,
+      1075.1,
+      3280.8
+    ]
+  },
+  "text": {
+    "config": {
+      "policy": "text",
+      "window_ms": 150.0,
+      "change_units": 3,
+      "max_builder_calls": 6,
+      "builder_handoff_ms": 50
+    },
+    "paths": [
+      "retrieval_error",
+      "retrieval_error",
+      "no_query"
+    ],
+    "answers": [
+      "\u73b0\u6709\u8d44\u6599\u4e0d\u8db3\u4ee5\u56de\u7b54\uff1b\u91cd\u590d\u76f8\u540c\u67e5\u8be2\u4e0d\u4f1a\u8865\u5145\u4fe1\u606f\u3002",
+      "\u73b0\u6709\u8d44\u6599\u4e0d\u8db3\u4ee5\u56de\u7b54\uff1b\u91cd\u590d\u76f8\u540c\u67e5\u8be2\u4e0d\u4f1a\u8865\u5145\u4fe1\u606f\u3002",
+      "I can\u2019t confirm stock information from the available evidence. The prior lookup for \u201cChai\u201d returned an error (TimeoutError) and no rows, so there is no reliable catalog data to report. Also, the current request \u201cStock?\u201d does not specify a product name, and no new query can be made because can_rewrite is false. Please specify the exact product name if you want stock details."
+    ],
+    "builder_calls": 5,
+    "llm_calls": 9,
+    "database_errors": 3,
+    "trigger_events": [
+      {
+        "event": "trigger_fired",
+        "turn": 1,
+        "at_ms": 733.7208329699934,
+        "policy": "text",
+        "candidate": 1,
+        "revision": 1,
+        "changed_units": 5
+      },
+      {
+        "event": "builder_handoff_timeout",
+        "turn": 1,
+        "at_ms": 5694.511041045189,
+        "candidate": 1
+      },
+      {
+        "event": "trigger_fired",
+        "turn": 2,
+        "at_ms": 18551.4120827429,
+        "policy": "text",
+        "candidate": 1,
+        "revision": 1,
+        "changed_units": 3
+      },
+      {
+        "event": "builder_handoff_timeout",
+        "turn": 2,
+        "at_ms": 18625.74420776218,
+        "candidate": 1
+      }
+    ],
+    "final_resolution_ms": [
+      9843.8,
+      13027.8,
+      1191.7
+    ]
+  },
+  "hybrid": {
+    "config": {
+      "policy": "hybrid",
+      "window_ms": 150.0,
+      "change_units": 3,
+      "max_builder_calls": 6,
+      "builder_handoff_ms": 50
+    },
+    "paths": [
+      "demand",
+      "demand",
+      "no_query"
+    ],
+    "answers": [
+      "In this historical sample catalog, Chai (product_id 1) has a unit price of 18.0. This is a sample catalog price, not a current real-world price.",
+      "In this historical sample catalog, Chang (product_id 2) has a unit price of 19.0. This is a sample catalog price, not a current real-world price.",
+      "In this historical sample catalog, Chai (product_id 1) has 39 units in stock. This is a sample catalog figure, not current real-world inventory."
+    ],
+    "builder_calls": 6,
+    "llm_calls": 10,
+    "database_errors": 0,
+    "trigger_events": [
+      {
+        "event": "trigger_fired",
+        "turn": 1,
+        "at_ms": 67.47541623190045,
+        "policy": "hybrid",
+        "candidate": 1,
+        "revision": 1,
+        "changed_units": 5
+      },
+      {
+        "event": "builder_handoff_timeout",
+        "turn": 1,
+        "at_ms": 1174.9572083353996,
+        "candidate": 1
+      },
+      {
+        "event": "trigger_fired",
+        "turn": 2,
+        "at_ms": 3441.769333090633,
+        "policy": "hybrid",
+        "candidate": 1,
+        "revision": 1,
+        "changed_units": 3
+      },
+      {
+        "event": "builder_handoff_timeout",
+        "turn": 2,
+        "at_ms": 3518.651833292097,
+        "candidate": 1
+      },
+      {
+        "event": "trigger_fired",
+        "turn": 3,
+        "at_ms": 5910.244166385382,
+        "policy": "hybrid",
+        "candidate": 1,
+        "revision": 1,
+        "changed_units": 2
+      },
+      {
+        "event": "builder_handoff_timeout",
+        "turn": 3,
+        "at_ms": 6077.301625162363,
+        "candidate": 1
+      }
+    ],
+    "final_resolution_ms": [
+      1261.2,
+      1054.6,
+      1579.7
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+[{"partials": ["What is the price of Chai"], "final": "What is the price of Chai?", "gap_ms": 500}, {"partials": [], "final": "Stock?", "gap_ms": 0}, {"partials": ["What is the price of Chai"], "final": "Actually, what is the price of Chang?", "gap_ms": 500}]

@@ -1,0 +1,210 @@
+{
+  "baseline": {
+    "turns": [
+      {
+        "turn": 1,
+        "text": "What is the price of Chai?",
+        "path": "demand",
+        "retrieval_phase_ms": 1200.5,
+        "final_to_full_answer_ms": 1955.5,
+        "answer": "In this historical sample catalog, Chai (product ID 1) has a unit price of 18.0. This is sample catalog data, not a current real-world price.",
+        "product_ids": [
+          1
+        ],
+        "rewrites": 0
+      },
+      {
+        "turn": 2,
+        "text": "Stock?",
+        "path": "demand",
+        "retrieval_phase_ms": 628.7,
+        "final_to_full_answer_ms": 1354.9,
+        "answer": "In this historical sample catalog, Chai (product ID 1) has 39 units in stock and is not discontinued. This is sample catalog data, not current real-world inventory.",
+        "product_ids": [
+          1
+        ],
+        "rewrites": 0
+      },
+      {
+        "turn": 3,
+        "text": "Actually, what is the price of Chang?",
+        "path": "demand",
+        "retrieval_phase_ms": 833.7,
+        "final_to_full_answer_ms": 1785.1,
+        "answer": "In this historical sample catalog, Chang (product ID 2) has a unit price of 19.0. This is sample catalog data, not a current real-world price.",
+        "product_ids": [
+          2
+        ],
+        "rewrites": 0
+      }
+    ],
+    "endpoint_calls": 6,
+    "endpoint_errors": 0,
+    "reported_total_tokens": 2734,
+    "database_calls": 3,
+    "database_elapsed_ms": [
+      22.2,
+      9.2,
+      4.8
+    ],
+    "endpoint_metrics": [
+      {
+        "role": "builder",
+        "status": "ok",
+        "total_tokens": 291,
+        "elapsed_ms": 1177.7806668542325
+      },
+      {
+        "role": "answer",
+        "status": "ok",
+        "total_tokens": 490,
+        "elapsed_ms": 746.1532079614699
+      },
+      {
+        "role": "builder",
+        "status": "ok",
+        "total_tokens": 359,
+        "elapsed_ms": 619.2419999279082
+      },
+      {
+        "role": "answer",
+        "status": "ok",
+        "total_tokens": 553,
+        "elapsed_ms": 722.0980417914689
+      },
+      {
+        "role": "builder",
+        "status": "ok",
+        "total_tokens": 422,
+        "elapsed_ms": 828.7251251749694
+      },
+      {
+        "role": "answer",
+        "status": "ok",
+        "total_tokens": 619,
+        "elapsed_ms": 948.8081657327712
+      }
+    ]
+  },
+  "speculative": {
+    "turns": [
+      {
+        "turn": 1,
+        "text": "What is the price of Chai?",
+        "path": "reuse_ready",
+        "retrieval_phase_ms": 1280.4,
+        "final_to_full_answer_ms": 2312.6,
+        "answer": "In this historical sample catalog, Chai (product ID 1) has a unit price of 18.0. This is sample catalog data, not a current real-world price.",
+        "product_ids": [
+          1
+        ],
+        "rewrites": 0
+      },
+      {
+        "turn": 2,
+        "text": "Stock?",
+        "path": "demand",
+        "retrieval_phase_ms": 704.2,
+        "final_to_full_answer_ms": 1715.5,
+        "answer": "In this historical sample catalog, Chai (product ID 1) has 39 units in stock and is not discontinued. This is sample catalog data, not current real-world inventory.",
+        "product_ids": [
+          1
+        ],
+        "rewrites": 0
+      },
+      {
+        "turn": 3,
+        "text": "Actually, what is the price of Chang?",
+        "path": "demand",
+        "retrieval_phase_ms": 761.3,
+        "final_to_full_answer_ms": 1614.3,
+        "answer": "In this historical sample catalog, Chang (product ID 2) has a unit price of 19.0. This is sample catalog data, not a current real-world price.",
+        "product_ids": [
+          2
+        ],
+        "rewrites": 0
+      }
+    ],
+    "endpoint_calls": 12,
+    "endpoint_errors": 2,
+    "reported_total_tokens": 4173,
+    "database_calls": 3,
+    "database_elapsed_ms": [
+      24.9,
+      6.1,
+      15.1
+    ],
+    "endpoint_metrics": [
+      {
+        "role": "builder",
+        "status": "ok",
+        "total_tokens": 291,
+        "elapsed_ms": 719.3858330138028
+      },
+      {
+        "role": "builder",
+        "status": "ok",
+        "total_tokens": 291,
+        "elapsed_ms": 593.9794168807566
+      },
+      {
+        "role": "builder",
+        "status": "ok",
+        "total_tokens": 334,
+        "elapsed_ms": 999.2311666719615
+      },
+      {
+        "role": "checker",
+        "status": "ok",
+        "total_tokens": 393,
+        "elapsed_ms": 634.9716251716018
+      },
+      {
+        "role": "answer",
+        "status": "ok",
+        "total_tokens": 490,
+        "elapsed_ms": 1027.9196249321103
+      },
+      {
+        "role": "builder",
+        "status": "error",
+        "elapsed_ms": 700.7684577256441
+      },
+      {
+        "role": "builder",
+        "status": "ok",
+        "total_tokens": 359,
+        "elapsed_ms": 646.8834169209003
+      },
+      {
+        "role": "answer",
+        "status": "ok",
+        "total_tokens": 553,
+        "elapsed_ms": 1010.1096658036113
+      },
+      {
+        "role": "builder",
+        "status": "ok",
+        "total_tokens": 413,
+        "elapsed_ms": 1031.0171251185238
+      },
+      {
+        "role": "builder",
+        "status": "ok",
+        "total_tokens": 430,
+        "elapsed_ms": 694.5272502489388
+      },
+      {
+        "role": "builder",
+        "status": "error",
+        "elapsed_ms": 218.0356252938509
+      },
+      {
+        "role": "answer",
+        "status": "ok",
+        "total_tokens": 619,
+        "elapsed_ms": 851.4790004119277
+      }
+    ]
+  }
+}

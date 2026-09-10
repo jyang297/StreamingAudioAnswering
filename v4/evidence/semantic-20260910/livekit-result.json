@@ -1,0 +1,384 @@
+{
+  "turns": [
+    {
+      "turn": 1,
+      "text": "What is the price of Chai?",
+      "context": [],
+      "path": "reuse_ready",
+      "evidence": [
+        {
+          "query": {
+            "name": "Chai",
+            "category_id": null,
+            "min_price": null,
+            "max_price": null,
+            "in_stock": null,
+            "discontinued": null,
+            "order": "product_id",
+            "limit": 10
+          },
+          "rows": [
+            {
+              "product_id": 1,
+              "product_name": "Chai",
+              "category_id": 1,
+              "quantity_per_unit": "10 boxes x 20 bags",
+              "unit_price": 18.0,
+              "units_in_stock": 39,
+              "discontinued": false
+            }
+          ],
+          "error": null
+        }
+      ],
+      "phase_ms": 131.93204207345843,
+      "answer": "In this historical sample catalog, Chai (product ID 1) has a unit price of 18.0. This is sample catalog data, not a current real-world price.",
+      "rewrites": 0
+    }
+  ],
+  "trace": [
+    {
+      "event": "turn_start",
+      "turn": 1,
+      "at_ms": 54.96324971318245
+    },
+    {
+      "event": "builder_start",
+      "turn": 1,
+      "at_ms": 55.96033297479153,
+      "candidate": 1
+    },
+    {
+      "event": "builder_done",
+      "turn": 1,
+      "at_ms": 797.8157908655703,
+      "candidate": 1,
+      "action": "retrieve"
+    },
+    {
+      "event": "final_received",
+      "turn": 1,
+      "at_ms": 2134.961957577616
+    },
+    {
+      "event": "candidate_accepted",
+      "turn": 1,
+      "at_ms": 2266.6897499002516,
+      "candidate": 1
+    },
+    {
+      "event": "final_ready",
+      "turn": 1,
+      "at_ms": 2266.813207883388,
+      "path": "reuse_ready",
+      "phase_ms": 131.93204207345843
+    },
+    {
+      "event": "answer_done",
+      "turn": 1,
+      "at_ms": 3222.015874926001,
+      "rewrites": 0
+    }
+  ],
+  "stt_streams": 1,
+  "audio_frames": 1,
+  "history": [
+    {
+      "role": "user",
+      "text": "What is the price of Chai?"
+    },
+    {
+      "role": "assistant",
+      "text": "In this historical sample catalog, Chai (product ID 1) has a unit price of 18.0. This is sample catalog data, not a current real-world price."
+    }
+  ],
+  "checker_metrics": [
+    {
+      "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "faf4aa4225822f3bc6376869cb1164e8e3feedd0",
+      "dimension": 384,
+      "threshold": 0.99,
+      "scores": [
+        {
+          "candidate_id": 1,
+          "cosine": 0.9999999999999998,
+          "accepted": true,
+          "completed": true
+        }
+      ],
+      "selected_candidate": 1,
+      "status": "ok",
+      "cache": "none",
+      "time_spent_ms": 130.15633402392268
+    }
+  ],
+  "checker_type": "semantic",
+  "step_timings": [
+    {
+      "turn": 1,
+      "stt_event": "start_of_speech",
+      "step": "stt_event_dispatch",
+      "span_id": "7ca373239ac1",
+      "parent_span_id": null,
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 0.515
+    },
+    {
+      "turn": 1,
+      "candidate": 1,
+      "step": "builder_queue_wait",
+      "span_id": "21c9f809f1cf",
+      "parent_span_id": "515f23a77ba0",
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 0.059
+    },
+    {
+      "turn": 1,
+      "stt_event": "interim_transcript",
+      "step": "stt_event_dispatch",
+      "span_id": "cb856d37d293",
+      "parent_span_id": null,
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 56.427
+    },
+    {
+      "turn": 1,
+      "candidate": 1,
+      "step": "llm_http",
+      "span_id": "9adeba116b10",
+      "parent_span_id": "3fedca839615",
+      "status": "ok",
+      "role": "builder",
+      "event": "end",
+      "time_spent_ms": 741.096
+    },
+    {
+      "turn": 1,
+      "candidate": 1,
+      "step": "partial_query_builder",
+      "span_id": "3fedca839615",
+      "parent_span_id": "515f23a77ba0",
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 741.759
+    },
+    {
+      "turn": 1,
+      "candidate": 1,
+      "step": "speculative_builder_task",
+      "span_id": "515f23a77ba0",
+      "parent_span_id": null,
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 742.075
+    },
+    {
+      "turn": 1,
+      "candidate": 1,
+      "step": "retrieval_queue_wait",
+      "span_id": "0e8e1a924684",
+      "parent_span_id": "0479d0afcd56",
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 0.031
+    },
+    {
+      "turn": 1,
+      "candidate": 1,
+      "step": "database_search",
+      "span_id": "a0ffcb47e7dd",
+      "parent_span_id": "0479d0afcd56",
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 773.117
+    },
+    {
+      "turn": 1,
+      "candidate": 1,
+      "step": "retrieval_task",
+      "span_id": "0479d0afcd56",
+      "parent_span_id": "515f23a77ba0",
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 773.69
+    },
+    {
+      "turn": 1,
+      "step": "stt_event_dispatch",
+      "span_id": "46419a2b0b72",
+      "parent_span_id": "3fca253fcc48",
+      "status": "ok",
+      "stt_event": "final_transcript",
+      "event": "end",
+      "time_spent_ms": 13.63
+    },
+    {
+      "turn": 1,
+      "step": "stt_event_dispatch",
+      "span_id": "4092773952fb",
+      "parent_span_id": "3fca253fcc48",
+      "status": "ok",
+      "stt_event": "end_of_speech",
+      "event": "end",
+      "time_spent_ms": 2.691
+    },
+    {
+      "turn": 1,
+      "step": "final_query_reuse",
+      "span_id": "4e683cdf7c1d",
+      "parent_span_id": "34b6ff5fecb5",
+      "status": "ok",
+      "candidate": 1,
+      "event": "end",
+      "time_spent_ms": 0.182
+    },
+    {
+      "turn": 1,
+      "step": "embedding_inference",
+      "span_id": "97fe6fd98178",
+      "parent_span_id": "550b0259bf9d",
+      "status": "ok",
+      "checker_type": "SemanticChecker",
+      "candidate_count": 1,
+      "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "texts": 2,
+      "event": "end",
+      "time_spent_ms": 129.032
+    },
+    {
+      "turn": 1,
+      "step": "cosine_comparison",
+      "span_id": "92b82364bce4",
+      "parent_span_id": "550b0259bf9d",
+      "status": "ok",
+      "checker_type": "SemanticChecker",
+      "candidate_count": 1,
+      "threshold": 0.99,
+      "scores": [
+        {
+          "candidate_id": 1,
+          "cosine": 0.9999999999999998,
+          "accepted": true,
+          "completed": true
+        }
+      ],
+      "selected_candidate": 1,
+      "event": "end",
+      "time_spent_ms": 0.183
+    },
+    {
+      "turn": 1,
+      "step": "checker",
+      "span_id": "550b0259bf9d",
+      "parent_span_id": "34b6ff5fecb5",
+      "status": "ok",
+      "checker_type": "SemanticChecker",
+      "candidate_count": 1,
+      "selected_candidate": 1,
+      "event": "end",
+      "time_spent_ms": 130.237
+    },
+    {
+      "turn": 1,
+      "step": "selected_retrieval_wait",
+      "span_id": "45277e7333f1",
+      "parent_span_id": "34b6ff5fecb5",
+      "status": "ok",
+      "candidate": 1,
+      "event": "end",
+      "time_spent_ms": 0.17
+    },
+    {
+      "turn": 1,
+      "step": "final_resolution",
+      "span_id": "34b6ff5fecb5",
+      "parent_span_id": null,
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 132.049
+    },
+    {
+      "turn": 1,
+      "step": "llm_http",
+      "span_id": "93697b6fac12",
+      "parent_span_id": "c13ecc033be8",
+      "status": "ok",
+      "attempt": 0,
+      "role": "answer",
+      "event": "end",
+      "time_spent_ms": 929.556
+    },
+    {
+      "turn": 1,
+      "step": "answer_llm",
+      "span_id": "c13ecc033be8",
+      "parent_span_id": "90aad87cbf34",
+      "status": "ok",
+      "attempt": 0,
+      "event": "end",
+      "time_spent_ms": 937.382
+    },
+    {
+      "turn": 1,
+      "step": "answer_total",
+      "span_id": "90aad87cbf34",
+      "parent_span_id": null,
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 941.701
+    },
+    {
+      "turn": 1,
+      "step": "final_to_full_answer",
+      "span_id": "3fca253fcc48",
+      "parent_span_id": null,
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 1210.25
+    },
+    {
+      "turn": 1,
+      "step": "pipeline_cleanup",
+      "span_id": "20846716957b",
+      "parent_span_id": null,
+      "status": "ok",
+      "event": "end",
+      "time_spent_ms": 0.648
+    }
+  ],
+  "endpoint_metrics": [
+    {
+      "role": "builder",
+      "status": "ok",
+      "total_tokens": 291,
+      "elapsed_ms": 741.6110830381513
+    },
+    {
+      "role": "answer",
+      "status": "ok",
+      "total_tokens": 490,
+      "elapsed_ms": 936.4688331261277
+    }
+  ],
+  "database_metrics": [
+    {
+      "query": {
+        "name": "Chai",
+        "category_id": null,
+        "min_price": null,
+        "max_price": null,
+        "in_stock": null,
+        "discontinued": null,
+        "order": "product_id",
+        "limit": 10
+      },
+      "status": "ok",
+      "rows": 1,
+      "elapsed_ms": 772.9991250671446
+    }
+  ],
+  "boundary": "Real configured text endpoint + local PostgreSQL; scripted STT, no TTS/audio latency"
+}

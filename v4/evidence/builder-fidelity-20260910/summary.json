@@ -1,0 +1,107 @@
+{
+  "unique_cases": 36,
+  "requests": 108,
+  "selected_versions": [
+    "v2",
+    "v3"
+  ],
+  "concurrency": 2,
+  "shuffle_seed": 20260910,
+  "repeats_per_sentinel": 3,
+  "boundary": "AI-authored development cases in one schema; not held-out production accuracy",
+  "versions": {
+    "v2": {
+      "outcomes": {
+        "correct_retrieve": 19,
+        "unjustified_retrieve": 6,
+        "appropriate_wait": 8,
+        "api_or_contract_error": 2,
+        "query_variant_review": 1
+      },
+      "median_ms": 1137.8839167300612
+    },
+    "v3": {
+      "outcomes": {
+        "appropriate_wait": 13,
+        "unjustified_retrieve": 3,
+        "correct_retrieve": 19,
+        "missed_retrieve": 1
+      },
+      "median_ms": 1218.3598328847438
+    }
+  },
+  "groups": {
+    "v2": {
+      "known-referent": {
+        "correct_retrieve": 3,
+        "appropriate_wait": 1
+      },
+      "known-constraint": {
+        "correct_retrieve": 4
+      },
+      "known-unsupported": {
+        "api_or_contract_error": 1,
+        "unjustified_retrieve": 1,
+        "appropriate_wait": 2
+      },
+      "known-ambiguity": {
+        "appropriate_wait": 4
+      },
+      "known-data-boundary": {
+        "correct_retrieve": 3,
+        "query_variant_review": 1
+      },
+      "known-phase": {
+        "unjustified_retrieve": 1,
+        "appropriate_wait": 1,
+        "correct_retrieve": 2
+      },
+      "probe-bounded-positive": {
+        "correct_retrieve": 4
+      },
+      "probe-coverage-negative": {
+        "unjustified_retrieve": 4
+      },
+      "probe-context-revision": {
+        "correct_retrieve": 3,
+        "api_or_contract_error": 1
+      }
+    },
+    "v3": {
+      "known-referent": {
+        "correct_retrieve": 3,
+        "appropriate_wait": 1
+      },
+      "known-constraint": {
+        "correct_retrieve": 4
+      },
+      "known-unsupported": {
+        "appropriate_wait": 4
+      },
+      "known-ambiguity": {
+        "appropriate_wait": 4
+      },
+      "known-data-boundary": {
+        "correct_retrieve": 3,
+        "missed_retrieve": 1
+      },
+      "known-phase": {
+        "appropriate_wait": 1,
+        "correct_retrieve": 2,
+        "unjustified_retrieve": 1
+      },
+      "probe-bounded-positive": {
+        "correct_retrieve": 4
+      },
+      "probe-coverage-negative": {
+        "appropriate_wait": 3,
+        "unjustified_retrieve": 1
+      },
+      "probe-context-revision": {
+        "unjustified_retrieve": 1,
+        "correct_retrieve": 3
+      }
+    }
+  },
+  "sentinel_outcome_changes": []
+}

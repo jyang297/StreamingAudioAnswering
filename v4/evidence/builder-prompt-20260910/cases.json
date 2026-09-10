@@ -1,0 +1,251 @@
+[
+  {
+    "id": "original_failure",
+    "input": {
+      "text": "Stock?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "I would like to know the price of Chai in this sample catalog. Please give its unit price, rather than the total value of its stock."
+        },
+        {
+          "role": "assistant",
+          "content": "In this historical sample catalog, Chai (product ID 1) has a unit price of 18.0. This is a sample catalog price, not a current real-world price."
+        },
+        {
+          "role": "user",
+          "content": "Chang price?"
+        },
+        {
+          "role": "assistant",
+          "content": "In this historical sample catalog, Chang (product ID 2) has a unit price of 19.0. This is a sample catalog price, not a current real-world price."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Chang",
+        "in_stock": null,
+        "discontinued": null,
+        "category_id": null,
+        "min_price": null,
+        "max_price": null
+      }
+    }
+  },
+  {
+    "id": "different_entities",
+    "input": {
+      "text": "Stock?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Ikura?"
+        },
+        {
+          "role": "assistant",
+          "content": "The sample catalog contains Ikura."
+        },
+        {
+          "role": "user",
+          "content": "What about Tofu?"
+        },
+        {
+          "role": "assistant",
+          "content": "The sample catalog contains Tofu."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Tofu",
+        "in_stock": null,
+        "discontinued": null,
+        "category_id": null,
+        "min_price": null,
+        "max_price": null
+      }
+    }
+  },
+  {
+    "id": "chinese_followup",
+    "input": {
+      "text": "库存呢？",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "What is the price of Geitost?"
+        },
+        {
+          "role": "assistant",
+          "content": "The sample catalog contains Geitost."
+        },
+        {
+          "role": "user",
+          "content": "What about Queso Cabrales?"
+        },
+        {
+          "role": "assistant",
+          "content": "The sample catalog contains Queso Cabrales."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Queso Cabrales",
+        "in_stock": null,
+        "discontinued": null,
+        "category_id": null,
+        "min_price": null,
+        "max_price": null
+      }
+    }
+  },
+  {
+    "id": "explicit_return",
+    "input": {
+      "text": "What is the stock of Chai?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "I would like to know the price of Chai in this sample catalog. Please give its unit price, rather than the total value of its stock."
+        },
+        {
+          "role": "assistant",
+          "content": "In this historical sample catalog, Chai (product ID 1) has a unit price of 18.0. This is a sample catalog price, not a current real-world price."
+        },
+        {
+          "role": "user",
+          "content": "Chang price?"
+        },
+        {
+          "role": "assistant",
+          "content": "In this historical sample catalog, Chang (product ID 2) has a unit price of 19.0. This is a sample catalog price, not a current real-world price."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Chai",
+        "in_stock": null,
+        "discontinued": null,
+        "category_id": null,
+        "min_price": null,
+        "max_price": null
+      }
+    }
+  },
+  {
+    "id": "ambiguous_two_entities",
+    "input": {
+      "text": "What is its stock?",
+      "confirmed_context": [
+        {
+          "role": "user",
+          "content": "Compare Chai and Chang."
+        },
+        {
+          "role": "assistant",
+          "content": "Both products are in the sample catalog."
+        }
+      ],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "no_referent",
+    "input": {
+      "text": "Stock?",
+      "confirmed_context": [],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "final_short_explicit",
+    "input": {
+      "text": "Tofu",
+      "confirmed_context": [],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Tofu",
+        "in_stock": null,
+        "discontinued": null,
+        "category_id": null,
+        "min_price": null,
+        "max_price": null
+      }
+    }
+  },
+  {
+    "id": "partial_incomplete",
+    "input": {
+      "text": "What is the price of",
+      "confirmed_context": [],
+      "previous_queries": [],
+      "final": false
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "unsupported_domain",
+    "input": {
+      "text": "How can I reset my bank password?",
+      "confirmed_context": [],
+      "previous_queries": [],
+      "final": true
+    },
+    "expected": {
+      "action": "wait"
+    }
+  },
+  {
+    "id": "final_repeat_query",
+    "input": {
+      "text": "What is the price of Chai?",
+      "confirmed_context": [],
+      "previous_queries": [
+        {
+          "name": "Chai"
+        }
+      ],
+      "final": true
+    },
+    "expected": {
+      "action": "retrieve",
+      "query_fields": {
+        "name": "Chai",
+        "in_stock": null,
+        "discontinued": null,
+        "category_id": null,
+        "min_price": null,
+        "max_price": null
+      }
+    }
+  }
+]

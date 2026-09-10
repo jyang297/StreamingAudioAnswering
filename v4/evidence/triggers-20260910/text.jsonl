@@ -1,0 +1,126 @@
+{"step": "database_connect", "span_id": "49b19a174414", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"step": "database_connect", "span_id": "49b19a174414", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 3153.094}
+{"turn": 1, "stt_event": "start_of_speech", "step": "stt_event_dispatch", "span_id": "5f68f22188db", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "stt_event": "start_of_speech", "step": "stt_event_dispatch", "span_id": "5f68f22188db", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 2.479}
+{"turn": 1, "stt_event": "interim_transcript", "step": "stt_event_dispatch", "span_id": "6ca115230094", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "candidate": 1, "step": "speculative_builder_task", "span_id": "40ab5d135ebd", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "candidate": 1, "step": "builder_queue_wait", "span_id": "43c2e711419f", "parent_span_id": "40ab5d135ebd", "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "candidate": 1, "step": "builder_queue_wait", "span_id": "43c2e711419f", "parent_span_id": "40ab5d135ebd", "status": "ok", "event": "end", "time_spent_ms": 2.563}
+{"turn": 1, "candidate": 1, "step": "partial_query_builder", "span_id": "fce64bd869d7", "parent_span_id": "40ab5d135ebd", "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "candidate": 1, "step": "llm_http", "span_id": "85ffc00a281e", "parent_span_id": "fce64bd869d7", "status": "ok", "role": "builder", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "stt_event": "interim_transcript", "step": "stt_event_dispatch", "span_id": "6ca115230094", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 4236.231}
+{"turn": 1, "stt_event": "interim_transcript", "step": "stt_event_dispatch", "span_id": "50686c745715", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "stt_event": "interim_transcript", "step": "stt_event_dispatch", "span_id": "50686c745715", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 5.315}
+{"turn": 1, "stt_event": "interim_transcript", "step": "stt_event_dispatch", "span_id": "52e4650049f2", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "stt_event": "interim_transcript", "step": "stt_event_dispatch", "span_id": "52e4650049f2", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 1.824}
+{"turn": 1, "step": "final_to_full_answer", "span_id": "ef9767949c99", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "step": "stt_event_dispatch", "span_id": "834b6c017f9a", "parent_span_id": "ef9767949c99", "status": "ok", "stt_event": "final_transcript", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "step": "stt_event_dispatch", "span_id": "834b6c017f9a", "parent_span_id": "ef9767949c99", "status": "ok", "stt_event": "final_transcript", "event": "end", "time_spent_ms": 3.382}
+{"turn": 1, "step": "stt_event_dispatch", "span_id": "76368a9970a0", "parent_span_id": "ef9767949c99", "status": "ok", "stt_event": "end_of_speech", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "step": "stt_event_dispatch", "span_id": "76368a9970a0", "parent_span_id": "ef9767949c99", "status": "ok", "stt_event": "end_of_speech", "event": "end", "time_spent_ms": 4.848}
+{"turn": 1, "step": "final_resolution", "span_id": "9261a2cc027b", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "step": "final_query_builder", "span_id": "64585962e37c", "parent_span_id": "9261a2cc027b", "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "step": "llm_http", "span_id": "9a7e1a7a5c2c", "parent_span_id": "64585962e37c", "status": "ok", "role": "builder", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "candidate": 1, "step": "llm_http", "span_id": "85ffc00a281e", "parent_span_id": "fce64bd869d7", "status": "cancelled", "role": "builder", "event": "end", "time_spent_ms": 4918.432}
+{"turn": 1, "candidate": 1, "step": "partial_query_builder", "span_id": "fce64bd869d7", "parent_span_id": "40ab5d135ebd", "status": "cancelled", "event": "end", "time_spent_ms": 4919.043}
+{"turn": 1, "candidate": 1, "step": "speculative_builder_task", "span_id": "40ab5d135ebd", "parent_span_id": null, "status": "cancelled", "event": "end", "time_spent_ms": 4964.44}
+{"turn": 1, "step": "llm_http", "span_id": "9a7e1a7a5c2c", "parent_span_id": "64585962e37c", "status": "ok", "role": "builder", "event": "end", "time_spent_ms": 1951.348}
+{"turn": 1, "step": "final_query_builder", "span_id": "64585962e37c", "parent_span_id": "9261a2cc027b", "status": "ok", "event": "end", "time_spent_ms": 1957.293}
+{"turn": 1, "step": "checker", "span_id": "4673a2367a84", "parent_span_id": "9261a2cc027b", "status": "ok", "checker_type": "LLMChecker", "candidate_count": 0, "event": "start", "time_spent_ms": 0}
+{"turn": 1, "step": "checker", "span_id": "4673a2367a84", "parent_span_id": "9261a2cc027b", "status": "ok", "checker_type": "LLMChecker", "candidate_count": 0, "selected_candidate": null, "event": "end", "time_spent_ms": 0.048}
+{"turn": 1, "step": "demand_retrieval", "span_id": "d7a728b273bf", "parent_span_id": "9261a2cc027b", "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "step": "retrieval_task", "span_id": "8e9eff910080", "parent_span_id": "d7a728b273bf", "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "step": "retrieval_queue_wait", "span_id": "fbd969664681", "parent_span_id": "8e9eff910080", "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "step": "retrieval_queue_wait", "span_id": "fbd969664681", "parent_span_id": "8e9eff910080", "status": "ok", "event": "end", "time_spent_ms": 0.071}
+{"turn": 1, "step": "database_search", "span_id": "67c23cc34667", "parent_span_id": "8e9eff910080", "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "step": "database_search", "span_id": "67c23cc34667", "parent_span_id": "8e9eff910080", "status": "error", "error_type": "TimeoutError", "event": "end", "time_spent_ms": 7805.001}
+{"turn": 1, "step": "retrieval_task", "span_id": "8e9eff910080", "parent_span_id": "d7a728b273bf", "status": "error", "error_type": "TimeoutError", "event": "end", "time_spent_ms": 7850.204}
+{"turn": 1, "step": "demand_retrieval", "span_id": "d7a728b273bf", "parent_span_id": "9261a2cc027b", "status": "error", "error_type": "TimeoutError", "event": "end", "time_spent_ms": 7853.773}
+{"turn": 1, "step": "final_resolution", "span_id": "9261a2cc027b", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 9843.947}
+{"turn": 1, "step": "answer_total", "span_id": "a22c84ed547e", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "step": "answer_llm", "span_id": "406cc24d2857", "parent_span_id": "a22c84ed547e", "status": "ok", "attempt": 0, "event": "start", "time_spent_ms": 0}
+{"turn": 1, "step": "llm_http", "span_id": "07f579622902", "parent_span_id": "406cc24d2857", "status": "ok", "attempt": 0, "role": "answer", "event": "start", "time_spent_ms": 0}
+{"turn": 1, "step": "llm_http", "span_id": "07f579622902", "parent_span_id": "406cc24d2857", "status": "ok", "attempt": 0, "role": "answer", "event": "end", "time_spent_ms": 2205.697}
+{"turn": 1, "step": "answer_llm", "span_id": "406cc24d2857", "parent_span_id": "a22c84ed547e", "status": "ok", "attempt": 0, "event": "end", "time_spent_ms": 2238.003}
+{"turn": 1, "step": "answer_total", "span_id": "a22c84ed547e", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 2273.544}
+{"turn": 1, "step": "final_to_full_answer", "span_id": "ef9767949c99", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 12854.411}
+{"turn": 2, "stt_event": "start_of_speech", "step": "stt_event_dispatch", "span_id": "76b43a9df0cf", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 2, "stt_event": "start_of_speech", "step": "stt_event_dispatch", "span_id": "76b43a9df0cf", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 9.288}
+{"turn": 2, "step": "final_to_full_answer", "span_id": "888a982e0cc3", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 2, "step": "stt_event_dispatch", "span_id": "311e8adc622a", "parent_span_id": "888a982e0cc3", "status": "ok", "stt_event": "final_transcript", "event": "start", "time_spent_ms": 0}
+{"turn": 2, "candidate": 1, "step": "speculative_builder_task", "span_id": "400ee80f80db", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 2, "candidate": 1, "step": "builder_queue_wait", "span_id": "786023012cc1", "parent_span_id": "400ee80f80db", "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 2, "candidate": 1, "step": "builder_queue_wait", "span_id": "786023012cc1", "parent_span_id": "400ee80f80db", "status": "ok", "event": "end", "time_spent_ms": 0.089}
+{"turn": 2, "candidate": 1, "step": "partial_query_builder", "span_id": "c7e36d238775", "parent_span_id": "400ee80f80db", "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 2, "candidate": 1, "step": "llm_http", "span_id": "63e0a884f384", "parent_span_id": "c7e36d238775", "status": "ok", "role": "builder", "event": "start", "time_spent_ms": 0}
+{"turn": 2, "step": "stt_event_dispatch", "span_id": "311e8adc622a", "parent_span_id": "888a982e0cc3", "status": "ok", "stt_event": "final_transcript", "event": "end", "time_spent_ms": 11.236}
+{"turn": 2, "step": "stt_event_dispatch", "span_id": "087c6b0fcc72", "parent_span_id": "888a982e0cc3", "status": "ok", "stt_event": "end_of_speech", "event": "start", "time_spent_ms": 0}
+{"turn": 2, "step": "stt_event_dispatch", "span_id": "087c6b0fcc72", "parent_span_id": "888a982e0cc3", "status": "ok", "stt_event": "end_of_speech", "event": "end", "time_spent_ms": 8.936}
+{"turn": 2, "step": "final_resolution", "span_id": "4aae964c7120", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 2, "step": "builder_grace_wait", "span_id": "66f94870b425", "parent_span_id": "4aae964c7120", "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 2, "step": "builder_grace_wait", "span_id": "66f94870b425", "parent_span_id": "4aae964c7120", "status": "ok", "event": "end", "time_spent_ms": 50.579}
+{"turn": 2, "step": "final_query_builder", "span_id": "ae321cb7f01f", "parent_span_id": "4aae964c7120", "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 2, "step": "llm_http", "span_id": "7b6269fdc19c", "parent_span_id": "ae321cb7f01f", "status": "ok", "role": "builder", "event": "start", "time_spent_ms": 0}
+{"turn": 2, "candidate": 1, "step": "llm_http", "span_id": "63e0a884f384", "parent_span_id": "c7e36d238775", "status": "cancelled", "role": "builder", "event": "end", "time_spent_ms": 73.496}
+{"turn": 2, "candidate": 1, "step": "partial_query_builder", "span_id": "c7e36d238775", "parent_span_id": "400ee80f80db", "status": "cancelled", "event": "end", "time_spent_ms": 80.177}
+{"turn": 2, "candidate": 1, "step": "speculative_builder_task", "span_id": "400ee80f80db", "parent_span_id": null, "status": "cancelled", "event": "end", "time_spent_ms": 80.649}
+{"turn": 2, "step": "llm_http", "span_id": "7b6269fdc19c", "parent_span_id": "ae321cb7f01f", "status": "ok", "role": "builder", "event": "end", "time_spent_ms": 2262.893}
+{"turn": 2, "step": "final_query_builder", "span_id": "ae321cb7f01f", "parent_span_id": "4aae964c7120", "status": "ok", "event": "end", "time_spent_ms": 2331.878}
+{"turn": 2, "step": "checker", "span_id": "25bdfb1d412d", "parent_span_id": "4aae964c7120", "status": "ok", "checker_type": "LLMChecker", "candidate_count": 0, "event": "start", "time_spent_ms": 0}
+{"turn": 2, "step": "checker", "span_id": "25bdfb1d412d", "parent_span_id": "4aae964c7120", "status": "ok", "checker_type": "LLMChecker", "candidate_count": 0, "selected_candidate": null, "event": "end", "time_spent_ms": 13.987}
+{"turn": 2, "step": "demand_retrieval", "span_id": "bf17e13a229d", "parent_span_id": "4aae964c7120", "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 2, "step": "retrieval_task", "span_id": "6e30b2420502", "parent_span_id": "bf17e13a229d", "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 2, "step": "retrieval_queue_wait", "span_id": "48a8e01dc8d5", "parent_span_id": "6e30b2420502", "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 2, "step": "retrieval_queue_wait", "span_id": "48a8e01dc8d5", "parent_span_id": "6e30b2420502", "status": "ok", "event": "end", "time_spent_ms": 6.741}
+{"turn": 2, "step": "database_search", "span_id": "bdf7da61cd66", "parent_span_id": "6e30b2420502", "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 2, "step": "database_search", "span_id": "bdf7da61cd66", "parent_span_id": "6e30b2420502", "status": "error", "error_type": "TimeoutError", "event": "end", "time_spent_ms": 10576.022}
+{"turn": 2, "step": "retrieval_task", "span_id": "6e30b2420502", "parent_span_id": "bf17e13a229d", "status": "error", "error_type": "TimeoutError", "event": "end", "time_spent_ms": 10600.417}
+{"turn": 2, "step": "demand_retrieval", "span_id": "bf17e13a229d", "parent_span_id": "4aae964c7120", "status": "error", "error_type": "TimeoutError", "event": "end", "time_spent_ms": 10604.32}
+{"turn": 2, "step": "final_resolution", "span_id": "4aae964c7120", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 13027.983}
+{"turn": 2, "step": "answer_total", "span_id": "515c8841a6d9", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 2, "step": "answer_llm", "span_id": "67ea3aa85719", "parent_span_id": "515c8841a6d9", "status": "ok", "attempt": 0, "event": "start", "time_spent_ms": 0}
+{"turn": 2, "step": "llm_http", "span_id": "bdc620fa7010", "parent_span_id": "67ea3aa85719", "status": "ok", "attempt": 0, "role": "answer", "event": "start", "time_spent_ms": 0}
+{"turn": 2, "step": "llm_http", "span_id": "bdc620fa7010", "parent_span_id": "67ea3aa85719", "status": "ok", "attempt": 0, "role": "answer", "event": "end", "time_spent_ms": 1251.192}
+{"turn": 2, "step": "answer_llm", "span_id": "67ea3aa85719", "parent_span_id": "515c8841a6d9", "status": "ok", "attempt": 0, "event": "end", "time_spent_ms": 1384.035}
+{"turn": 2, "step": "answer_total", "span_id": "515c8841a6d9", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 1397.218}
+{"turn": 2, "step": "final_to_full_answer", "span_id": "888a982e0cc3", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 14890.596}
+{"turn": 3, "stt_event": "start_of_speech", "step": "stt_event_dispatch", "span_id": "d72b3158409a", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 3, "stt_event": "start_of_speech", "step": "stt_event_dispatch", "span_id": "d72b3158409a", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 75.437}
+{"turn": 3, "stt_event": "interim_transcript", "step": "stt_event_dispatch", "span_id": "6d3a17a15c6e", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 3, "stt_event": "interim_transcript", "step": "stt_event_dispatch", "span_id": "6d3a17a15c6e", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 4.956}
+{"turn": 3, "step": "final_to_full_answer", "span_id": "1a5107f6c249", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 3, "step": "stt_event_dispatch", "span_id": "45e6f0b08858", "parent_span_id": "1a5107f6c249", "status": "ok", "stt_event": "final_transcript", "event": "start", "time_spent_ms": 0}
+{"turn": 3, "step": "stt_event_dispatch", "span_id": "45e6f0b08858", "parent_span_id": "1a5107f6c249", "status": "ok", "stt_event": "final_transcript", "event": "end", "time_spent_ms": 14.251}
+{"turn": 3, "step": "stt_event_dispatch", "span_id": "8fe2d7d7969d", "parent_span_id": "1a5107f6c249", "status": "ok", "stt_event": "end_of_speech", "event": "start", "time_spent_ms": 0}
+{"turn": 3, "step": "stt_event_dispatch", "span_id": "8fe2d7d7969d", "parent_span_id": "1a5107f6c249", "status": "ok", "stt_event": "end_of_speech", "event": "end", "time_spent_ms": 39.894}
+{"turn": 3, "step": "final_resolution", "span_id": "dd5f3086e0fe", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 3, "step": "final_query_builder", "span_id": "b188d4aac0bd", "parent_span_id": "dd5f3086e0fe", "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 3, "step": "llm_http", "span_id": "3be3d1847629", "parent_span_id": "b188d4aac0bd", "status": "ok", "role": "builder", "event": "start", "time_spent_ms": 0}
+{"turn": 3, "step": "llm_http", "span_id": "3be3d1847629", "parent_span_id": "b188d4aac0bd", "status": "ok", "role": "builder", "event": "end", "time_spent_ms": 1145.352}
+{"turn": 3, "step": "final_query_builder", "span_id": "b188d4aac0bd", "parent_span_id": "dd5f3086e0fe", "status": "ok", "event": "end", "time_spent_ms": 1182.56}
+{"turn": 3, "step": "final_resolution", "span_id": "dd5f3086e0fe", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 1192.532}
+{"turn": 3, "step": "answer_total", "span_id": "7bf8f2f35331", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 3, "step": "answer_llm", "span_id": "96ea730b6af9", "parent_span_id": "7bf8f2f35331", "status": "ok", "attempt": 0, "event": "start", "time_spent_ms": 0}
+{"turn": 3, "step": "llm_http", "span_id": "29c5b1624019", "parent_span_id": "96ea730b6af9", "status": "ok", "attempt": 0, "role": "answer", "event": "start", "time_spent_ms": 0}
+{"turn": 3, "step": "llm_http", "span_id": "29c5b1624019", "parent_span_id": "96ea730b6af9", "status": "ok", "attempt": 0, "role": "answer", "event": "end", "time_spent_ms": 1212.946}
+{"turn": 3, "step": "answer_llm", "span_id": "96ea730b6af9", "parent_span_id": "7bf8f2f35331", "status": "ok", "attempt": 0, "event": "end", "time_spent_ms": 1232.982}
+{"turn": 3, "step": "rewrite_retrieval", "span_id": "4e9378fbea05", "parent_span_id": "7bf8f2f35331", "status": "ok", "attempt": 0, "event": "start", "time_spent_ms": 0}
+{"turn": 3, "step": "retrieval_task", "span_id": "a211cb92c0f3", "parent_span_id": "4e9378fbea05", "status": "ok", "attempt": 0, "event": "start", "time_spent_ms": 0}
+{"turn": 3, "step": "retrieval_queue_wait", "span_id": "1b9fbbedf399", "parent_span_id": "a211cb92c0f3", "status": "ok", "attempt": 0, "event": "start", "time_spent_ms": 0}
+{"turn": 3, "step": "retrieval_queue_wait", "span_id": "1b9fbbedf399", "parent_span_id": "a211cb92c0f3", "status": "ok", "attempt": 0, "event": "end", "time_spent_ms": 0.428}
+{"turn": 3, "step": "database_search", "span_id": "6ac6992a4941", "parent_span_id": "a211cb92c0f3", "status": "ok", "attempt": 0, "event": "start", "time_spent_ms": 0}
+{"turn": 3, "step": "database_search", "span_id": "6ac6992a4941", "parent_span_id": "a211cb92c0f3", "status": "error", "attempt": 0, "error_type": "TimeoutError", "event": "end", "time_spent_ms": 5297.202}
+{"turn": 3, "step": "retrieval_task", "span_id": "a211cb92c0f3", "parent_span_id": "4e9378fbea05", "status": "error", "attempt": 0, "error_type": "TimeoutError", "event": "end", "time_spent_ms": 5304.436}
+{"turn": 3, "step": "rewrite_retrieval", "span_id": "4e9378fbea05", "parent_span_id": "7bf8f2f35331", "status": "error", "attempt": 0, "error_type": "TimeoutError", "event": "end", "time_spent_ms": 5304.992}
+{"turn": 3, "step": "answer_llm", "span_id": "9c437a8027bb", "parent_span_id": "7bf8f2f35331", "status": "ok", "attempt": 1, "event": "start", "time_spent_ms": 0}
+{"turn": 3, "step": "llm_http", "span_id": "fc88670d3a3a", "parent_span_id": "9c437a8027bb", "status": "ok", "attempt": 1, "role": "answer", "event": "start", "time_spent_ms": 0}
+{"turn": 3, "step": "llm_http", "span_id": "fc88670d3a3a", "parent_span_id": "9c437a8027bb", "status": "ok", "attempt": 1, "role": "answer", "event": "end", "time_spent_ms": 1579.854}
+{"turn": 3, "step": "answer_llm", "span_id": "9c437a8027bb", "parent_span_id": "7bf8f2f35331", "status": "ok", "attempt": 1, "event": "end", "time_spent_ms": 1622.64}
+{"turn": 3, "step": "answer_total", "span_id": "7bf8f2f35331", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 8177.809}
+{"turn": 3, "step": "final_to_full_answer", "span_id": "1a5107f6c249", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 9940.748}
+{"turn": 3, "step": "pipeline_cleanup", "span_id": "b5ae518671e7", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"turn": 3, "step": "pipeline_cleanup", "span_id": "b5ae518671e7", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 0.772}
+{"step": "database_close", "span_id": "daaf36e2fe12", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"step": "database_close", "span_id": "daaf36e2fe12", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 571.245}
+{"step": "endpoint_close", "span_id": "38c675a66d92", "parent_span_id": null, "status": "ok", "event": "start", "time_spent_ms": 0}
+{"step": "endpoint_close", "span_id": "38c675a66d92", "parent_span_id": null, "status": "ok", "event": "end", "time_spent_ms": 5.052}
