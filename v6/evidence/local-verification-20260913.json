@@ -1,0 +1,34 @@
+{
+  "captured_at_utc": "2026-09-13T21:04:57.915808+00:00",
+  "command": [
+    "/private/tmp/livekit-sql-poc-v6-venv/bin/python",
+    "vibe-discipline/tools/vibe_guard.py",
+    "validate",
+    "--root",
+    ".",
+    "--phase",
+    "full",
+    "--run-commands"
+  ],
+  "working_directory": "/Users/codingleo/Documents/LearningVault/40-Exercises/Sandbox/LiveKitAnticipationPoC/v6",
+  "exit_code": 0,
+  "elapsed_ms": 5752.373,
+  "stdout": "integration passed\nLOCAL VERIFIED\n",
+  "stderr": "",
+  "scope": "canonical local conformance and pytest; not CI or model evaluation",
+  "source_sha256": {
+    "multitable_poc/__init__.py": "6002ca9022a5637564d04219eea951ac835807c6728c7f3a17e0884722f5a9b0",
+    "multitable_poc/compat.py": "17ab051824054d7c4cd84775c1c97ccf56c3f4b28d1317e954ab3103600d5836",
+    "multitable_poc/database.py": "017005b67cbf7eb434d269b2bbdd1f9c1c2c7cd2cb469ce62d9c69dcd5680e9e",
+    "multitable_poc/endpoints.py": "683b1095893cb26ff5c809e139b8b24fd47f9d01f602ab89732396a65560e02f",
+    "multitable_poc/evaluation.py": "101c4c677ad2b21de92bf7aa1b11d0652a12eaab506004642ef6198ccd63c403",
+    "multitable_poc/models.py": "1054505ad3855988a1818af2a78cc717dc9113fe72a040e0dd3c2055b5135374",
+    "multitable_poc/pipeline.py": "2580179e88f15bbd9d1d4a2c5eda419b5d3164f5f31e02f33abb9aa15895fd3c",
+    "multitable_poc/run.py": "5d0f00ab3e9f570e1874650738abd11a94f1b6f5af202f1101009c68f6f7e619",
+    "tests/test_database.py": "6ffecd960c9935bac3608ba256ea983be45175b8b69dc38a5586b9e6db19a8ef",
+    "tests/test_endpoints.py": "754f1bb917ef6a9cfe8a1dc89e905767189f9036d210a8c6592e0c3ac77ec01a",
+    "tests/test_evaluation.py": "c05a5927659c93a3edbd850494e988d6eeb563143b2a35dd88fcb610389a558a",
+    "tests/test_pipeline.py": "094291675337c4b821a5febb99ffb780e63493606dcf3ad9b7d7608fcd106994",
+    "tests/test_run.py": "e3c935497d5158253467b8a3538d28ed7b630ff2c14b9865d428c076f407df7d"
+  }
+}

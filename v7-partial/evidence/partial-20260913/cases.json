@@ -1,0 +1,330 @@
+[
+  {
+    "id": "california_schools:82",
+    "db_id": "california_schools",
+    "kind": "exact-cache-replay",
+    "target_id": "82",
+    "context": [],
+    "snapshots": [
+      "What",
+      "What is the grade span offered",
+      "What is the grade span offered in the school with the highest longitude?"
+    ]
+  },
+  {
+    "id": "california_schools:46",
+    "db_id": "california_schools",
+    "kind": "unlabeled-held-out",
+    "target_id": null,
+    "context": [],
+    "snapshots": [
+      "Which",
+      "Which state special schools have the",
+      "Which state special schools have the highest number of enrollees from K-12?"
+    ]
+  },
+  {
+    "id": "debit_card_specializing:1472",
+    "db_id": "debit_card_specializing",
+    "kind": "exact-cache-replay",
+    "target_id": "1472",
+    "context": [],
+    "snapshots": [
+      "In",
+      "In 2012, who had",
+      "In 2012, who had the least consumption in LAM?"
+    ]
+  },
+  {
+    "id": "debit_card_specializing:1515",
+    "db_id": "debit_card_specializing",
+    "kind": "unlabeled-held-out",
+    "target_id": null,
+    "context": [],
+    "snapshots": [
+      "What",
+      "What segment did the",
+      "What segment did the customer have at 2012/8/23 21:20:00?"
+    ]
+  },
+  {
+    "id": "financial:186",
+    "db_id": "financial",
+    "kind": "exact-cache-replay",
+    "target_id": "186",
+    "context": [],
+    "snapshots": [
+      "What",
+      "What percentage of clients who request",
+      "What percentage of clients who request weekly statements to be issued are male?"
+    ]
+  },
+  {
+    "id": "financial:137",
+    "db_id": "financial",
+    "kind": "unlabeled-held-out",
+    "target_id": null,
+    "context": [],
+    "snapshots": [
+      "How",
+      "How many accounts have running",
+      "How many accounts have running contracts in Branch location 1?"
+    ]
+  },
+  {
+    "id": "formula_1:910",
+    "db_id": "formula_1",
+    "kind": "exact-cache-replay",
+    "target_id": "910",
+    "context": [],
+    "snapshots": [
+      "What's",
+      "What's the location",
+      "What's the location coordinates of Silverstone Circuit?"
+    ]
+  },
+  {
+    "id": "formula_1:915",
+    "db_id": "formula_1",
+    "kind": "unlabeled-held-out",
+    "target_id": null,
+    "context": [],
+    "snapshots": [
+      "Which",
+      "Which country is",
+      "Which country is the oldest driver from?"
+    ]
+  },
+  {
+    "id": "student_club:1312",
+    "db_id": "student_club",
+    "kind": "exact-cache-replay",
+    "target_id": "1312",
+    "context": [],
+    "snapshots": [
+      "What's",
+      "What's Angela",
+      "What's Angela Sanders's major?"
+    ]
+  },
+  {
+    "id": "student_club:1346",
+    "db_id": "student_club",
+    "kind": "unlabeled-held-out",
+    "target_id": null,
+    "context": [],
+    "snapshots": [
+      "Tell",
+      "Tell the phone",
+      "Tell the phone number of \"Carlo Jacobs\"."
+    ]
+  },
+  {
+    "id": "superhero:737",
+    "db_id": "superhero",
+    "kind": "exact-cache-replay",
+    "target_id": "737",
+    "context": [],
+    "snapshots": [
+      "What",
+      "What is",
+      "What is Copycat's race?"
+    ]
+  },
+  {
+    "id": "superhero:794",
+    "db_id": "superhero",
+    "kind": "unlabeled-held-out",
+    "target_id": null,
+    "context": [],
+    "snapshots": [
+      "Which",
+      "Which hero",
+      "Which hero was the fastest?"
+    ]
+  },
+  {
+    "id": "thrombosis_prediction:1251",
+    "db_id": "thrombosis_prediction",
+    "kind": "exact-cache-replay",
+    "target_id": "1251",
+    "context": [],
+    "snapshots": [
+      "How",
+      "How many patients with an",
+      "How many patients with an Ig G higher than normal?"
+    ]
+  },
+  {
+    "id": "thrombosis_prediction:1198",
+    "db_id": "thrombosis_prediction",
+    "kind": "unlabeled-held-out",
+    "target_id": null,
+    "context": [],
+    "snapshots": [
+      "How",
+      "How many female patients",
+      "How many female patients were given an APS diagnosis?"
+    ]
+  },
+  {
+    "id": "toxicology:195",
+    "db_id": "toxicology",
+    "kind": "exact-cache-replay",
+    "target_id": "195",
+    "context": [],
+    "snapshots": [
+      "What",
+      "What is the",
+      "What is the most common bond type?"
+    ]
+  },
+  {
+    "id": "toxicology:206",
+    "db_id": "toxicology",
+    "kind": "unlabeled-held-out",
+    "target_id": null,
+    "context": [],
+    "snapshots": [
+      "What",
+      "What elements are in",
+      "What elements are in the TR004_8_9 bond atoms?"
+    ]
+  },
+  {
+    "id": "synthetic:0",
+    "db_id": "superhero",
+    "kind": "synthetic-context",
+    "target_id": null,
+    "context": [
+      {
+        "role": "user",
+        "content": "What is Abomination's superpower?"
+      }
+    ],
+    "snapshots": [
+      "And",
+      "And Batman",
+      "And Batman?"
+    ]
+  },
+  {
+    "id": "synthetic:1",
+    "db_id": "debit_card_specializing",
+    "kind": "synthetic-context",
+    "target_id": null,
+    "context": [
+      {
+        "role": "user",
+        "content": "What was the average monthly consumption of customers in SME for the year 2013?"
+      }
+    ],
+    "snapshots": [
+      "And",
+      "And 2012",
+      "And 2012?"
+    ]
+  },
+  {
+    "id": "synthetic:2",
+    "db_id": "financial",
+    "kind": "synthetic-context",
+    "target_id": null,
+    "context": [
+      {
+        "role": "user",
+        "content": "How many accounts opened in 1995?"
+      }
+    ],
+    "snapshots": [
+      "What",
+      "What about 1996",
+      "What about 1996?"
+    ]
+  },
+  {
+    "id": "synthetic:3",
+    "db_id": "formula_1",
+    "kind": "synthetic-context",
+    "target_id": null,
+    "context": [
+      {
+        "role": "user",
+        "content": "Who won the race in 2012?"
+      }
+    ],
+    "snapshots": [
+      "Who",
+      "Who won in 2013",
+      "Who won in 2013, in Monaco?"
+    ]
+  },
+  {
+    "id": "synthetic:4",
+    "db_id": "student_club",
+    "kind": "synthetic-context",
+    "target_id": null,
+    "context": [
+      {
+        "role": "user",
+        "content": "List the events held in 2020."
+      }
+    ],
+    "snapshots": [
+      "List",
+      "List the events in 2021",
+      "List the events in 2021, excluding fundraisers."
+    ]
+  },
+  {
+    "id": "synthetic:5",
+    "db_id": "california_schools",
+    "kind": "synthetic-context",
+    "target_id": null,
+    "context": [
+      {
+        "role": "user",
+        "content": "How many schools are in Alameda?"
+      }
+    ],
+    "snapshots": [
+      "And",
+      "And Los Angeles",
+      "And Los Angeles, only public schools?"
+    ]
+  },
+  {
+    "id": "synthetic:6",
+    "db_id": "toxicology",
+    "kind": "synthetic-context",
+    "target_id": null,
+    "context": [
+      {
+        "role": "user",
+        "content": "Which molecules are carcinogenic?"
+      }
+    ],
+    "snapshots": [
+      "Which",
+      "Which molecules are carcinogenic",
+      "Which molecules are not carcinogenic?"
+    ]
+  },
+  {
+    "id": "synthetic:7",
+    "db_id": "thrombosis_prediction",
+    "kind": "synthetic-context",
+    "target_id": null,
+    "context": [
+      {
+        "role": "user",
+        "content": "How many patients are older than 60?"
+      }
+    ],
+    "snapshots": [
+      "How",
+      "How many patients are older than 60",
+      "How many patients are older than 60? Sorry, younger than 60."
+    ]
+  }
+]

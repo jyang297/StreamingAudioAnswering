@@ -1,0 +1,10 @@
+{
+  "snapshots": 128,
+  "errors": 0,
+  "gated": 36,
+  "llm_calls": 92,
+  "waits": 36,
+  "searches": 56,
+  "total_tokens": 22068,
+  "boundary": "retrieval diagnostics only; no answer acceptance or voice latency claim"
+}

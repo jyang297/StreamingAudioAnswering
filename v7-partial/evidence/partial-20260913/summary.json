@@ -1,0 +1,8 @@
+{
+  "snapshots": 72,
+  "errors": 0,
+  "waits": 44,
+  "searches": 28,
+  "total_tokens": 15976,
+  "boundary": "retrieval diagnostics only; no answer acceptance or voice latency claim"
+}

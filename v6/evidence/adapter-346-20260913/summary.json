@@ -1,0 +1,169 @@
+{
+  "scope": "offline_adapter_contract_check",
+  "model_accuracy": "not_measured",
+  "semantic_correctness": "not_assessed",
+  "endpoints_called": 0,
+  "reference_sql_in_endpoint_payloads": false,
+  "started_at_utc": "2026-09-13T20:52:54.750070+00:00",
+  "versions": {
+    "python": "3.12.14",
+    "sqlite": "3.53.1",
+    "sqlglot": "27.29.0"
+  },
+  "source_hashes": {
+    ".data/arcwise-plat.json": "baefe2ca4fbab86c000df72aad9eaa563f7d422e425af2cbff071f656ea4eea8",
+    "selected-cases.json": "13c8c919eb21d2a0542a7ba8c3e113b7e0cb675332a8da93446e5eadf2839bcc",
+    "download-manifest.json": "8ae29e32587e25dfbdced5175a128d6fa97a9bbd271919eaeccf3d5fc6a2905e",
+    "corrected-descriptions-manifest.json": "906a448afb6a2821d2e8d34120f46ef56718d945b4711c860ec56f3d954cc5e5"
+  },
+  "database_hashes": {
+    "california_schools": "c0903eec662e63068fd1d14403d3d6c1d473287fc10c4356333ea58f878db983",
+    "debit_card_specializing": "b3d149ad05746dbbe5116e229e17e18f09c39db43cf117d9ef3441753608b691",
+    "financial": "d15d89cdb068a202b6f2b99342af44dffc1d52545b39ceaf62efdc0ba570101e",
+    "formula_1": "79770caf966707e35516fa566e24b40ae515c74ec1ec4631235245645b87b24d",
+    "student_club": "eb89bcfe97eefa386a27904ec5aa15159811a7eac894ec659a36e48fa9f76b77",
+    "superhero": "75e94a2c3236ee3bb2c01fb97a1c4b4c1c269bcefd4eab1d04be323d2d0825b1",
+    "thrombosis_prediction": "87583183c3dc472fba04de702965560a9d7c0a548836613f242317e0eeb83f00",
+    "toxicology": "35ef27ae6bdfda530e125ed369666ac0abb8bc8c0bcc0ad09407f547ecb61a93"
+  },
+  "code_hashes": {
+    "evaluation.py": "101c4c677ad2b21de92bf7aa1b11d0652a12eaab506004642ef6198ccd63c403",
+    "database.py": "6e48c1b8e527364c432c527a2098cf820f9050f37e3689528eca605ffdff1829",
+    "models.py": "dfc780d4f6f7ece12a6d09da5de71c13701dfb9d8ff96453ec8bf3321b2a58a0"
+  },
+  "limits": {
+    "each_query_timeout_s": 3,
+    "max_rows": 10000,
+    "max_result_bytes": 8000000
+  },
+  "limitations": [
+    "Agreement with source SQL on this snapshot is not generated-SQL accuracy or semantic correctness.",
+    "Empty results contain no column metadata: shape is unassessed even when both are empty.",
+    "Floating-point values use exact numeric equality without tolerance.",
+    "No-ORDER-BY queries compare multisets; ordered queries compare row sequences.",
+    "Tied ORDER BY values and LIMIT without deterministic tie-breaking can vary across plans.",
+    "Clock-dependent cases are flagged; runs at different times may produce different results.",
+    "The SQLite progress deadline is cooperative, not an operating-system hard kill."
+  ],
+  "cases": 346,
+  "statuses": {
+    "nonempty_result_agreement": 345,
+    "execution_or_validation_error": 1
+  },
+  "validation_ok": 345,
+  "adapter_execution_ok": 345,
+  "reference_execution_ok": 346,
+  "join_cases": 284,
+  "short_question_cases_at_most_10_words": 65,
+  "short_question_join_cases": 47,
+  "clock_dependent_cases": 11,
+  "per_database": {
+    "california_schools": {
+      "cases": 30,
+      "statuses": {
+        "nonempty_result_agreement": 30
+      },
+      "validation_ok": 30,
+      "adapter_execution_ok": 30,
+      "reference_execution_ok": 30,
+      "join_cases": 26,
+      "short_question_cases_at_most_10_words": 0,
+      "short_question_join_cases": 0,
+      "clock_dependent_cases": 0
+    },
+    "debit_card_specializing": {
+      "cases": 30,
+      "statuses": {
+        "nonempty_result_agreement": 30
+      },
+      "validation_ok": 30,
+      "adapter_execution_ok": 30,
+      "reference_execution_ok": 30,
+      "join_cases": 22,
+      "short_question_cases_at_most_10_words": 2,
+      "short_question_join_cases": 1,
+      "clock_dependent_cases": 0
+    },
+    "financial": {
+      "cases": 30,
+      "statuses": {
+        "nonempty_result_agreement": 30
+      },
+      "validation_ok": 30,
+      "adapter_execution_ok": 30,
+      "reference_execution_ok": 30,
+      "join_cases": 27,
+      "short_question_cases_at_most_10_words": 1,
+      "short_question_join_cases": 1,
+      "clock_dependent_cases": 1
+    },
+    "formula_1": {
+      "cases": 66,
+      "statuses": {
+        "nonempty_result_agreement": 66
+      },
+      "validation_ok": 66,
+      "adapter_execution_ok": 66,
+      "reference_execution_ok": 66,
+      "join_cases": 55,
+      "short_question_cases_at_most_10_words": 12,
+      "short_question_join_cases": 6,
+      "clock_dependent_cases": 1
+    },
+    "student_club": {
+      "cases": 48,
+      "statuses": {
+        "nonempty_result_agreement": 48
+      },
+      "validation_ok": 48,
+      "adapter_execution_ok": 48,
+      "reference_execution_ok": 48,
+      "join_cases": 38,
+      "short_question_cases_at_most_10_words": 13,
+      "short_question_join_cases": 8,
+      "clock_dependent_cases": 0
+    },
+    "superhero": {
+      "cases": 52,
+      "statuses": {
+        "nonempty_result_agreement": 52
+      },
+      "validation_ok": 52,
+      "adapter_execution_ok": 52,
+      "reference_execution_ok": 52,
+      "join_cases": 48,
+      "short_question_cases_at_most_10_words": 24,
+      "short_question_join_cases": 21,
+      "clock_dependent_cases": 0
+    },
+    "thrombosis_prediction": {
+      "cases": 50,
+      "statuses": {
+        "nonempty_result_agreement": 49,
+        "execution_or_validation_error": 1
+      },
+      "validation_ok": 49,
+      "adapter_execution_ok": 49,
+      "reference_execution_ok": 50,
+      "join_cases": 40,
+      "short_question_cases_at_most_10_words": 2,
+      "short_question_join_cases": 1,
+      "clock_dependent_cases": 9
+    },
+    "toxicology": {
+      "cases": 40,
+      "statuses": {
+        "nonempty_result_agreement": 40
+      },
+      "validation_ok": 40,
+      "adapter_execution_ok": 40,
+      "reference_execution_ok": 40,
+      "join_cases": 28,
+      "short_question_cases_at_most_10_words": 11,
+      "short_question_join_cases": 9,
+      "clock_dependent_cases": 0
+    }
+  },
+  "elapsed_ms": 9065.645,
+  "finished_at_utc": "2026-09-13T20:53:03.815632+00:00"
+}

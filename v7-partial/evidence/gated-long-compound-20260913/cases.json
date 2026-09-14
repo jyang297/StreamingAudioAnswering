@@ -1,0 +1,490 @@
+[
+  {
+    "id": "long:california_schools:87",
+    "db_id": "california_schools",
+    "kind": "long-public-question",
+    "target_id": null,
+    "context": [],
+    "snapshots": [
+      "What",
+      "What are the valid e-mail addresses of the administrator of the school located in",
+      "What are the valid e-mail addresses of the administrator of the school located in the San Bernardino county, San Bernardino city that opened between 1/1/2009 to 12/31/2010 which is",
+      "What are the valid e-mail addresses of the administrator of the school located in the San Bernardino county, San Bernardino city that opened between 1/1/2009 to 12/31/2010 which is also both an Intermediate/Middle School and Unified School? List the valid emails in two columns."
+    ]
+  },
+  {
+    "id": "long:california_schools:32",
+    "db_id": "california_schools",
+    "kind": "long-public-question",
+    "target_id": null,
+    "context": [],
+    "snapshots": [
+      "What",
+      "What is the eligible free or reduced price meal rate for",
+      "What is the eligible free or reduced price meal rate for the top 5 schools in K-12 with the highest free or",
+      "What is the eligible free or reduced price meal rate for the top 5 schools in K-12 with the highest free or reduced price meal count of the schools with the ownership code 66?"
+    ]
+  },
+  {
+    "id": "compound:california_schools",
+    "db_id": "california_schools",
+    "kind": "synthetic-two-questions",
+    "target_id": null,
+    "context": [],
+    "expected_questions": [
+      "Which state special schools have the highest number of enrollees from K-12?",
+      "What is the grade span offered in the school with the highest longitude?"
+    ],
+    "snapshots": [
+      "Which",
+      "Which state special schools have the highest number of enrollees from K-12?",
+      "Which state special schools have the highest number of enrollees from K-12? Also, What is the grade span offered",
+      "Which state special schools have the highest number of enrollees from K-12? Also, What is the grade span offered in the school with the highest longitude?"
+    ]
+  },
+  {
+    "id": "long:debit_card_specializing:1481",
+    "db_id": "debit_card_specializing",
+    "kind": "long-public-question",
+    "target_id": null,
+    "context": [],
+    "snapshots": [
+      "What",
+      "What is the difference in the annual average consumption of the",
+      "What is the difference in the annual average consumption of the customers with the least amount of consumption paid in CZK for",
+      "What is the difference in the annual average consumption of the customers with the least amount of consumption paid in CZK for 2013 between SME and LAM, LAM and KAM, and KAM and SME?"
+    ]
+  },
+  {
+    "id": "long:debit_card_specializing:1531",
+    "db_id": "debit_card_specializing",
+    "kind": "long-public-question",
+    "target_id": null,
+    "context": [],
+    "snapshots": [
+      "Who",
+      "Who is the top spending customer and how",
+      "Who is the top spending customer and how much is the average price per single item",
+      "Who is the top spending customer and how much is the average price per single item purchased by this customer? What currency was being used?"
+    ]
+  },
+  {
+    "id": "compound:debit_card_specializing",
+    "db_id": "debit_card_specializing",
+    "kind": "synthetic-two-questions",
+    "target_id": null,
+    "context": [],
+    "expected_questions": [
+      "In 2012, who had the least consumption in LAM?",
+      "What segment did the customer have at 2012/8/23 21:20:00?"
+    ],
+    "snapshots": [
+      "In",
+      "In 2012, who had the least consumption in LAM?",
+      "In 2012, who had the least consumption in LAM? Also, What segment did the",
+      "In 2012, who had the least consumption in LAM? Also, What segment did the customer have at 2012/8/23 21:20:00?"
+    ]
+  },
+  {
+    "id": "long:financial:149",
+    "db_id": "financial",
+    "kind": "long-public-question",
+    "target_id": null,
+    "context": [],
+    "snapshots": [
+      "Please",
+      "Please list the account types that are not eligible for loans,",
+      "Please list the account types that are not eligible for loans, and the average income of residents in the district where the",
+      "Please list the account types that are not eligible for loans, and the average income of residents in the district where the account is located exceeds $8000 but is no more than $9000."
+    ]
+  },
+  {
+    "id": "long:financial:152",
+    "db_id": "financial",
+    "kind": "long-public-question",
+    "target_id": null,
+    "context": [],
+    "snapshots": [
+      "What",
+      "What is the average number of crimes committed in 1995",
+      "What is the average number of crimes committed in 1995 in districts where the number exceeds 4000 and the district",
+      "What is the average number of crimes committed in 1995 in districts where the number exceeds 4000 and the district has accounts that are opened starting from the year 1997?"
+    ]
+  },
+  {
+    "id": "compound:financial",
+    "db_id": "financial",
+    "kind": "synthetic-two-questions",
+    "target_id": null,
+    "context": [],
+    "expected_questions": [
+      "How many accounts have running contracts in Branch location 1?",
+      "What percentage of clients who request weekly statements to be issued are male?"
+    ],
+    "snapshots": [
+      "How",
+      "How many accounts have running contracts in Branch location 1?",
+      "How many accounts have running contracts in Branch location 1? Also, What percentage of clients who request",
+      "How many accounts have running contracts in Branch location 1? Also, What percentage of clients who request weekly statements to be issued are male?"
+    ]
+  },
+  {
+    "id": "long:formula_1:880",
+    "db_id": "formula_1",
+    "kind": "long-public-question",
+    "target_id": null,
+    "context": [],
+    "snapshots": [
+      "Paul",
+      "Paul di Resta was in the No. 853 race,",
+      "Paul di Resta was in the No. 853 race, what percent faster did he finish in the 853rd",
+      "Paul di Resta was in the No. 853 race, what percent faster did he finish in the 853rd race than the next race for the fastest lap speed?"
+    ]
+  },
+  {
+    "id": "long:formula_1:1002",
+    "db_id": "formula_1",
+    "kind": "long-public-question",
+    "target_id": null,
+    "context": [],
+    "snapshots": [
+      "As",
+      "As of the present, what is the full name",
+      "As of the present, what is the full name of the youngest racer? Indicate her nationality and the",
+      "As of the present, what is the full name of the youngest racer? Indicate her nationality and the name of the race to which he/she first joined."
+    ]
+  },
+  {
+    "id": "compound:formula_1",
+    "db_id": "formula_1",
+    "kind": "synthetic-two-questions",
+    "target_id": null,
+    "context": [],
+    "expected_questions": [
+      "What's the location coordinates of Silverstone Circuit?",
+      "Which country is the oldest driver from?"
+    ],
+    "snapshots": [
+      "What's",
+      "What's the location coordinates of Silverstone Circuit?",
+      "What's the location coordinates of Silverstone Circuit? Also, Which country is",
+      "What's the location coordinates of Silverstone Circuit? Also, Which country is the oldest driver from?"
+    ]
+  },
+  {
+    "id": "long:student_club:1405",
+    "db_id": "student_club",
+    "kind": "long-public-question",
+    "target_id": null,
+    "context": [],
+    "snapshots": [
+      "List",
+      "List all the budgeted categories for the 'April",
+      "List all the budgeted categories for the 'April Speaker' event, along with their amount budgeted. Return the",
+      "List all the budgeted categories for the 'April Speaker' event, along with their amount budgeted. Return the results in an ascending order of their amount budgeted."
+    ]
+  },
+  {
+    "id": "long:student_club:1317",
+    "db_id": "student_club",
+    "kind": "long-public-question",
+    "target_id": null,
+    "context": [],
+    "snapshots": [
+      "Among",
+      "Among the students from the Student_Club who",
+      "Among the students from the Student_Club who attended the event \"Women's Soccer\", how many of",
+      "Among the students from the Student_Club who attended the event \"Women's Soccer\", how many of them want a T-shirt that's in medium size?"
+    ]
+  },
+  {
+    "id": "compound:student_club",
+    "db_id": "student_club",
+    "kind": "synthetic-two-questions",
+    "target_id": null,
+    "context": [],
+    "expected_questions": [
+      "What's Angela Sanders's major?",
+      "What was Brent Thomason's major?"
+    ],
+    "snapshots": [
+      "What's",
+      "What's Angela Sanders's major?",
+      "What's Angela Sanders's major? Also, What was",
+      "What's Angela Sanders's major? Also, What was Brent Thomason's major?"
+    ]
+  },
+  {
+    "id": "long:superhero:743",
+    "db_id": "superhero",
+    "kind": "long-public-question",
+    "target_id": null,
+    "context": [],
+    "snapshots": [
+      "What",
+      "What is the percentage of superheroes who act in their own",
+      "What is the percentage of superheroes who act in their own self-interest or make decisions based on their own moral code? Indicate",
+      "What is the percentage of superheroes who act in their own self-interest or make decisions based on their own moral code? Indicate how many of the said superheroes were published by Marvel Comics."
+    ]
+  },
+  {
+    "id": "long:superhero:744",
+    "db_id": "superhero",
+    "kind": "long-public-question",
+    "target_id": null,
+    "context": [],
+    "snapshots": [
+      "Between",
+      "Between DC and Marvel Comics, which publisher",
+      "Between DC and Marvel Comics, which publisher has published more superheroes? Find the difference",
+      "Between DC and Marvel Comics, which publisher has published more superheroes? Find the difference in the number of superheroes they have published."
+    ]
+  },
+  {
+    "id": "compound:superhero",
+    "db_id": "superhero",
+    "kind": "synthetic-two-questions",
+    "target_id": null,
+    "context": [],
+    "expected_questions": [
+      "What is Copycat's race?",
+      "What is Abomination's superpower?"
+    ],
+    "snapshots": [
+      "What",
+      "What is Copycat's race?",
+      "What is Copycat's race? Also, What is",
+      "What is Copycat's race? Also, What is Abomination's superpower?"
+    ]
+  },
+  {
+    "id": "long:thrombosis_prediction:1189",
+    "db_id": "thrombosis_prediction",
+    "kind": "long-public-question",
+    "target_id": null,
+    "context": [],
+    "snapshots": [
+      "What",
+      "What number of patients with a degree of thrombosis level 2",
+      "What number of patients with a degree of thrombosis level 2 and ANA pattern of only S, have a level of anti-Cardiolip",
+      "What number of patients with a degree of thrombosis level 2 and ANA pattern of only S, have a level of anti-Cardiolip in antibody (IgM) 20% higher than average value of that same subgroup?"
+    ]
+  },
+  {
+    "id": "long:thrombosis_prediction:1192",
+    "db_id": "thrombosis_prediction",
+    "kind": "long-public-question",
+    "target_id": null,
+    "context": [],
+    "snapshots": [
+      "List",
+      "List all patients who were followed up at the outpatient",
+      "List all patients who were followed up at the outpatient clinic who underwent a laboratory test in October 1991 and",
+      "List all patients who were followed up at the outpatient clinic who underwent a laboratory test in October 1991 and had a total blood bilirubin level within the normal range."
+    ]
+  },
+  {
+    "id": "compound:thrombosis_prediction",
+    "db_id": "thrombosis_prediction",
+    "kind": "synthetic-two-questions",
+    "target_id": null,
+    "context": [],
+    "expected_questions": [
+      "How many female patients were given an APS diagnosis?",
+      "How many patients with an Ig G higher than normal?"
+    ],
+    "snapshots": [
+      "How",
+      "How many female patients were given an APS diagnosis?",
+      "How many female patients were given an APS diagnosis? Also, How many patients with an",
+      "How many female patients were given an APS diagnosis? Also, How many patients with an Ig G higher than normal?"
+    ]
+  },
+  {
+    "id": "long:toxicology:215",
+    "db_id": "toxicology",
+    "kind": "long-public-question",
+    "target_id": null,
+    "context": [],
+    "snapshots": [
+      "How",
+      "How many atoms with iodine and with",
+      "How many atoms with iodine and with sulfur type elements, respectively, are there in",
+      "How many atoms with iodine and with sulfur type elements, respectively, are there in molecules that contain at least one single bond?"
+    ]
+  },
+  {
+    "id": "long:toxicology:226",
+    "db_id": "toxicology",
+    "kind": "long-public-question",
+    "target_id": null,
+    "context": [],
+    "snapshots": [
+      "What",
+      "What is the percentage of double bonds",
+      "What is the percentage of double bonds in the molecule TR008? Please provide your",
+      "What is the percentage of double bonds in the molecule TR008? Please provide your answer as a percentage with five decimal places."
+    ]
+  },
+  {
+    "id": "compound:toxicology",
+    "db_id": "toxicology",
+    "kind": "synthetic-two-questions",
+    "target_id": null,
+    "context": [],
+    "expected_questions": [
+      "What is the most common bond type?",
+      "What elements are in the TR004_8_9 bond atoms?"
+    ],
+    "snapshots": [
+      "What",
+      "What is the most common bond type?",
+      "What is the most common bond type? Also, What elements are in",
+      "What is the most common bond type? Also, What elements are in the TR004_8_9 bond atoms?"
+    ]
+  },
+  {
+    "id": "synthetic:0",
+    "db_id": "superhero",
+    "kind": "synthetic-context",
+    "target_id": null,
+    "context": [
+      {
+        "role": "user",
+        "content": "What is Abomination's superpower?"
+      }
+    ],
+    "snapshots": [
+      "And",
+      "And Batman",
+      "And Batman?",
+      "And Batman?"
+    ]
+  },
+  {
+    "id": "synthetic:1",
+    "db_id": "debit_card_specializing",
+    "kind": "synthetic-context",
+    "target_id": null,
+    "context": [
+      {
+        "role": "user",
+        "content": "What was the average monthly consumption of customers in SME for the year 2013?"
+      }
+    ],
+    "snapshots": [
+      "And",
+      "And 2012",
+      "And 2012?",
+      "And 2012?"
+    ]
+  },
+  {
+    "id": "synthetic:2",
+    "db_id": "financial",
+    "kind": "synthetic-context",
+    "target_id": null,
+    "context": [
+      {
+        "role": "user",
+        "content": "How many accounts opened in 1995?"
+      }
+    ],
+    "snapshots": [
+      "What",
+      "What about 1996",
+      "What about 1996?",
+      "What about 1996?"
+    ]
+  },
+  {
+    "id": "synthetic:3",
+    "db_id": "formula_1",
+    "kind": "synthetic-context",
+    "target_id": null,
+    "context": [
+      {
+        "role": "user",
+        "content": "Who won the race in 2012?"
+      }
+    ],
+    "snapshots": [
+      "Who",
+      "Who won in 2013",
+      "Who won in 2013, in Monaco?",
+      "Who won in 2013, in Monaco?"
+    ]
+  },
+  {
+    "id": "synthetic:4",
+    "db_id": "student_club",
+    "kind": "synthetic-context",
+    "target_id": null,
+    "context": [
+      {
+        "role": "user",
+        "content": "List the events held in 2020."
+      }
+    ],
+    "snapshots": [
+      "List",
+      "List the events in 2021",
+      "List the events in 2021, excluding fundraisers.",
+      "List the events in 2021, excluding fundraisers."
+    ]
+  },
+  {
+    "id": "synthetic:5",
+    "db_id": "california_schools",
+    "kind": "synthetic-context",
+    "target_id": null,
+    "context": [
+      {
+        "role": "user",
+        "content": "How many schools are in Alameda?"
+      }
+    ],
+    "snapshots": [
+      "And",
+      "And Los Angeles",
+      "And Los Angeles, only public schools?",
+      "And Los Angeles, only public schools?"
+    ]
+  },
+  {
+    "id": "synthetic:6",
+    "db_id": "toxicology",
+    "kind": "synthetic-context",
+    "target_id": null,
+    "context": [
+      {
+        "role": "user",
+        "content": "Which molecules are carcinogenic?"
+      }
+    ],
+    "snapshots": [
+      "Which",
+      "Which molecules are carcinogenic",
+      "Which molecules are not carcinogenic?",
+      "Which molecules are not carcinogenic?"
+    ]
+  },
+  {
+    "id": "synthetic:7",
+    "db_id": "thrombosis_prediction",
+    "kind": "synthetic-context",
+    "target_id": null,
+    "context": [
+      {
+        "role": "user",
+        "content": "How many patients are older than 60?"
+      }
+    ],
+    "snapshots": [
+      "How",
+      "How many patients are older than 60",
+      "How many patients are older than 60? Sorry, younger than 60.",
+      "How many patients are older than 60? Sorry, younger than 60."
+    ]
+  }
+]

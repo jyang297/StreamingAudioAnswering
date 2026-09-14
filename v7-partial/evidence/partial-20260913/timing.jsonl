@@ -1,0 +1,346 @@
+{"step": "model_load", "elapsed_ms": 896.95, "status": "ok"}
+{"step": "index_embedding", "elapsed_ms": 5142.159, "status": "ok"}
+{"step": "query_embedding", "elapsed_ms": 32.682, "status": "ok", "arm": "raw", "case": "california_schools:82", "snapshot": 0}
+{"step": "cosine_search", "elapsed_ms": 0.483, "status": "ok", "arm": "raw", "case": "california_schools:82", "snapshot": 0}
+{"step": "builder_llm", "elapsed_ms": 1139.895, "status": "ok", "case": "california_schools:82", "snapshot": 0}
+{"step": "snapshot_total", "case": "california_schools:82", "snapshot": 0, "elapsed_ms": 1175.903}
+{"step": "query_embedding", "elapsed_ms": 7.68, "status": "ok", "arm": "raw", "case": "california_schools:82", "snapshot": 1}
+{"step": "cosine_search", "elapsed_ms": 0.066, "status": "ok", "arm": "raw", "case": "california_schools:82", "snapshot": 1}
+{"step": "builder_llm", "elapsed_ms": 855.798, "status": "ok", "case": "california_schools:82", "snapshot": 1}
+{"step": "query_embedding", "elapsed_ms": 8.172, "status": "ok", "arm": "normalized", "case": "california_schools:82", "snapshot": 1}
+{"step": "cosine_search", "elapsed_ms": 0.046, "status": "ok", "arm": "normalized", "case": "california_schools:82", "snapshot": 1}
+{"step": "snapshot_total", "case": "california_schools:82", "snapshot": 1, "elapsed_ms": 873.193}
+{"step": "query_embedding", "elapsed_ms": 8.779, "status": "ok", "arm": "raw", "case": "california_schools:82", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.056, "status": "ok", "arm": "raw", "case": "california_schools:82", "snapshot": 2}
+{"step": "builder_llm", "elapsed_ms": 897.293, "status": "ok", "case": "california_schools:82", "snapshot": 2}
+{"step": "query_embedding", "elapsed_ms": 8.919, "status": "ok", "arm": "normalized", "case": "california_schools:82", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.05, "status": "ok", "arm": "normalized", "case": "california_schools:82", "snapshot": 2}
+{"step": "snapshot_total", "case": "california_schools:82", "snapshot": 2, "elapsed_ms": 916.591}
+{"step": "query_embedding", "elapsed_ms": 3.924, "status": "ok", "arm": "raw", "case": "california_schools:46", "snapshot": 0}
+{"step": "cosine_search", "elapsed_ms": 0.046, "status": "ok", "arm": "raw", "case": "california_schools:46", "snapshot": 0}
+{"step": "builder_llm", "elapsed_ms": 934.176, "status": "ok", "case": "california_schools:46", "snapshot": 0}
+{"step": "snapshot_total", "case": "california_schools:46", "snapshot": 0, "elapsed_ms": 939.161}
+{"step": "query_embedding", "elapsed_ms": 6.051, "status": "ok", "arm": "raw", "case": "california_schools:46", "snapshot": 1}
+{"step": "cosine_search", "elapsed_ms": 0.068, "status": "ok", "arm": "raw", "case": "california_schools:46", "snapshot": 1}
+{"step": "builder_llm", "elapsed_ms": 986.143, "status": "ok", "case": "california_schools:46", "snapshot": 1}
+{"step": "snapshot_total", "case": "california_schools:46", "snapshot": 1, "elapsed_ms": 993.17}
+{"step": "query_embedding", "elapsed_ms": 15.985, "status": "ok", "arm": "raw", "case": "california_schools:46", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.074, "status": "ok", "arm": "raw", "case": "california_schools:46", "snapshot": 2}
+{"step": "builder_llm", "elapsed_ms": 972.429, "status": "ok", "case": "california_schools:46", "snapshot": 2}
+{"step": "query_embedding", "elapsed_ms": 12.624, "status": "ok", "arm": "normalized", "case": "california_schools:46", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.068, "status": "ok", "arm": "normalized", "case": "california_schools:46", "snapshot": 2}
+{"step": "snapshot_total", "case": "california_schools:46", "snapshot": 2, "elapsed_ms": 1003.048}
+{"step": "query_embedding", "elapsed_ms": 4.474, "status": "ok", "arm": "raw", "case": "debit_card_specializing:1472", "snapshot": 0}
+{"step": "cosine_search", "elapsed_ms": 0.082, "status": "ok", "arm": "raw", "case": "debit_card_specializing:1472", "snapshot": 0}
+{"step": "builder_llm", "elapsed_ms": 1110.92, "status": "ok", "case": "debit_card_specializing:1472", "snapshot": 0}
+{"step": "snapshot_total", "case": "debit_card_specializing:1472", "snapshot": 0, "elapsed_ms": 1116.864}
+{"step": "query_embedding", "elapsed_ms": 5.604, "status": "ok", "arm": "raw", "case": "debit_card_specializing:1472", "snapshot": 1}
+{"step": "cosine_search", "elapsed_ms": 0.048, "status": "ok", "arm": "raw", "case": "debit_card_specializing:1472", "snapshot": 1}
+{"step": "builder_llm", "elapsed_ms": 998.727, "status": "ok", "case": "debit_card_specializing:1472", "snapshot": 1}
+{"step": "snapshot_total", "case": "debit_card_specializing:1472", "snapshot": 1, "elapsed_ms": 1008.315}
+{"step": "query_embedding", "elapsed_ms": 10.079, "status": "ok", "arm": "raw", "case": "debit_card_specializing:1472", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.054, "status": "ok", "arm": "raw", "case": "debit_card_specializing:1472", "snapshot": 2}
+{"step": "builder_llm", "elapsed_ms": 939.438, "status": "ok", "case": "debit_card_specializing:1472", "snapshot": 2}
+{"step": "query_embedding", "elapsed_ms": 12.6, "status": "ok", "arm": "normalized", "case": "debit_card_specializing:1472", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.046, "status": "ok", "arm": "normalized", "case": "debit_card_specializing:1472", "snapshot": 2}
+{"step": "snapshot_total", "case": "debit_card_specializing:1472", "snapshot": 2, "elapsed_ms": 965.082}
+{"step": "query_embedding", "elapsed_ms": 4.269, "status": "ok", "arm": "raw", "case": "debit_card_specializing:1515", "snapshot": 0}
+{"step": "cosine_search", "elapsed_ms": 0.046, "status": "ok", "arm": "raw", "case": "debit_card_specializing:1515", "snapshot": 0}
+{"step": "builder_llm", "elapsed_ms": 956.486, "status": "ok", "case": "debit_card_specializing:1515", "snapshot": 0}
+{"step": "snapshot_total", "case": "debit_card_specializing:1515", "snapshot": 0, "elapsed_ms": 961.736}
+{"step": "query_embedding", "elapsed_ms": 4.569, "status": "ok", "arm": "raw", "case": "debit_card_specializing:1515", "snapshot": 1}
+{"step": "cosine_search", "elapsed_ms": 0.057, "status": "ok", "arm": "raw", "case": "debit_card_specializing:1515", "snapshot": 1}
+{"step": "builder_llm", "elapsed_ms": 990.217, "status": "ok", "case": "debit_card_specializing:1515", "snapshot": 1}
+{"step": "snapshot_total", "case": "debit_card_specializing:1515", "snapshot": 1, "elapsed_ms": 996.585}
+{"step": "query_embedding", "elapsed_ms": 11.697, "status": "ok", "arm": "raw", "case": "debit_card_specializing:1515", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.053, "status": "ok", "arm": "raw", "case": "debit_card_specializing:1515", "snapshot": 2}
+{"step": "builder_llm", "elapsed_ms": 1095.382, "status": "ok", "case": "debit_card_specializing:1515", "snapshot": 2}
+{"step": "query_embedding", "elapsed_ms": 9.033, "status": "ok", "arm": "normalized", "case": "debit_card_specializing:1515", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.051, "status": "ok", "arm": "normalized", "case": "debit_card_specializing:1515", "snapshot": 2}
+{"step": "snapshot_total", "case": "debit_card_specializing:1515", "snapshot": 2, "elapsed_ms": 1117.527}
+{"step": "query_embedding", "elapsed_ms": 3.8, "status": "ok", "arm": "raw", "case": "financial:186", "snapshot": 0}
+{"step": "cosine_search", "elapsed_ms": 0.067, "status": "ok", "arm": "raw", "case": "financial:186", "snapshot": 0}
+{"step": "builder_llm", "elapsed_ms": 1779.564, "status": "ok", "case": "financial:186", "snapshot": 0}
+{"step": "snapshot_total", "case": "financial:186", "snapshot": 0, "elapsed_ms": 1784.541}
+{"step": "query_embedding", "elapsed_ms": 9.404, "status": "ok", "arm": "raw", "case": "financial:186", "snapshot": 1}
+{"step": "cosine_search", "elapsed_ms": 0.06, "status": "ok", "arm": "raw", "case": "financial:186", "snapshot": 1}
+{"step": "builder_llm", "elapsed_ms": 949.573, "status": "ok", "case": "financial:186", "snapshot": 1}
+{"step": "snapshot_total", "case": "financial:186", "snapshot": 1, "elapsed_ms": 960.003}
+{"step": "query_embedding", "elapsed_ms": 10.626, "status": "ok", "arm": "raw", "case": "financial:186", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.065, "status": "ok", "arm": "raw", "case": "financial:186", "snapshot": 2}
+{"step": "builder_llm", "elapsed_ms": 1005.189, "status": "ok", "case": "financial:186", "snapshot": 2}
+{"step": "query_embedding", "elapsed_ms": 12.919, "status": "ok", "arm": "normalized", "case": "financial:186", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.048, "status": "ok", "arm": "normalized", "case": "financial:186", "snapshot": 2}
+{"step": "snapshot_total", "case": "financial:186", "snapshot": 2, "elapsed_ms": 1031.184}
+{"step": "query_embedding", "elapsed_ms": 4.199, "status": "ok", "arm": "raw", "case": "financial:137", "snapshot": 0}
+{"step": "cosine_search", "elapsed_ms": 0.051, "status": "ok", "arm": "raw", "case": "financial:137", "snapshot": 0}
+{"step": "builder_llm", "elapsed_ms": 1005.87, "status": "ok", "case": "financial:137", "snapshot": 0}
+{"step": "snapshot_total", "case": "financial:137", "snapshot": 0, "elapsed_ms": 1011.388}
+{"step": "query_embedding", "elapsed_ms": 5.683, "status": "ok", "arm": "raw", "case": "financial:137", "snapshot": 1}
+{"step": "cosine_search", "elapsed_ms": 0.047, "status": "ok", "arm": "raw", "case": "financial:137", "snapshot": 1}
+{"step": "builder_llm", "elapsed_ms": 957.028, "status": "ok", "case": "financial:137", "snapshot": 1}
+{"step": "snapshot_total", "case": "financial:137", "snapshot": 1, "elapsed_ms": 964.789}
+{"step": "query_embedding", "elapsed_ms": 10.19, "status": "ok", "arm": "raw", "case": "financial:137", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.056, "status": "ok", "arm": "raw", "case": "financial:137", "snapshot": 2}
+{"step": "builder_llm", "elapsed_ms": 606.758, "status": "ok", "case": "financial:137", "snapshot": 2}
+{"step": "query_embedding", "elapsed_ms": 8.653, "status": "ok", "arm": "normalized", "case": "financial:137", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.053, "status": "ok", "arm": "normalized", "case": "financial:137", "snapshot": 2}
+{"step": "snapshot_total", "case": "financial:137", "snapshot": 2, "elapsed_ms": 627.362}
+{"step": "query_embedding", "elapsed_ms": 4.891, "status": "ok", "arm": "raw", "case": "formula_1:910", "snapshot": 0}
+{"step": "cosine_search", "elapsed_ms": 0.148, "status": "ok", "arm": "raw", "case": "formula_1:910", "snapshot": 0}
+{"step": "builder_llm", "elapsed_ms": 793.571, "status": "ok", "case": "formula_1:910", "snapshot": 0}
+{"step": "snapshot_total", "case": "formula_1:910", "snapshot": 0, "elapsed_ms": 799.458}
+{"step": "query_embedding", "elapsed_ms": 6.252, "status": "ok", "arm": "raw", "case": "formula_1:910", "snapshot": 1}
+{"step": "cosine_search", "elapsed_ms": 0.087, "status": "ok", "arm": "raw", "case": "formula_1:910", "snapshot": 1}
+{"step": "builder_llm", "elapsed_ms": 710.777, "status": "ok", "case": "formula_1:910", "snapshot": 1}
+{"step": "snapshot_total", "case": "formula_1:910", "snapshot": 1, "elapsed_ms": 718.604}
+{"step": "query_embedding", "elapsed_ms": 9.958, "status": "ok", "arm": "raw", "case": "formula_1:910", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.081, "status": "ok", "arm": "raw", "case": "formula_1:910", "snapshot": 2}
+{"step": "builder_llm", "elapsed_ms": 992.182, "status": "ok", "case": "formula_1:910", "snapshot": 2}
+{"step": "query_embedding", "elapsed_ms": 8.774, "status": "ok", "arm": "normalized", "case": "formula_1:910", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.064, "status": "ok", "arm": "normalized", "case": "formula_1:910", "snapshot": 2}
+{"step": "snapshot_total", "case": "formula_1:910", "snapshot": 2, "elapsed_ms": 1013.14}
+{"step": "query_embedding", "elapsed_ms": 3.775, "status": "ok", "arm": "raw", "case": "formula_1:915", "snapshot": 0}
+{"step": "cosine_search", "elapsed_ms": 0.069, "status": "ok", "arm": "raw", "case": "formula_1:915", "snapshot": 0}
+{"step": "builder_llm", "elapsed_ms": 1137.225, "status": "ok", "case": "formula_1:915", "snapshot": 0}
+{"step": "snapshot_total", "case": "formula_1:915", "snapshot": 0, "elapsed_ms": 1142.237}
+{"step": "query_embedding", "elapsed_ms": 5.609, "status": "ok", "arm": "raw", "case": "formula_1:915", "snapshot": 1}
+{"step": "cosine_search", "elapsed_ms": 0.068, "status": "ok", "arm": "raw", "case": "formula_1:915", "snapshot": 1}
+{"step": "builder_llm", "elapsed_ms": 952.814, "status": "ok", "case": "formula_1:915", "snapshot": 1}
+{"step": "snapshot_total", "case": "formula_1:915", "snapshot": 1, "elapsed_ms": 959.99}
+{"step": "query_embedding", "elapsed_ms": 14.118, "status": "ok", "arm": "raw", "case": "formula_1:915", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.068, "status": "ok", "arm": "raw", "case": "formula_1:915", "snapshot": 2}
+{"step": "builder_llm", "elapsed_ms": 1050.676, "status": "ok", "case": "formula_1:915", "snapshot": 2}
+{"step": "query_embedding", "elapsed_ms": 36.98, "status": "ok", "arm": "normalized", "case": "formula_1:915", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.263, "status": "ok", "arm": "normalized", "case": "formula_1:915", "snapshot": 2}
+{"step": "snapshot_total", "case": "formula_1:915", "snapshot": 2, "elapsed_ms": 1106.07}
+{"step": "query_embedding", "elapsed_ms": 4.099, "status": "ok", "arm": "raw", "case": "student_club:1312", "snapshot": 0}
+{"step": "cosine_search", "elapsed_ms": 0.439, "status": "ok", "arm": "raw", "case": "student_club:1312", "snapshot": 0}
+{"step": "builder_llm", "elapsed_ms": 1463.685, "status": "ok", "case": "student_club:1312", "snapshot": 0}
+{"step": "snapshot_total", "case": "student_club:1312", "snapshot": 0, "elapsed_ms": 1469.476}
+{"step": "query_embedding", "elapsed_ms": 5.709, "status": "ok", "arm": "raw", "case": "student_club:1312", "snapshot": 1}
+{"step": "cosine_search", "elapsed_ms": 0.087, "status": "ok", "arm": "raw", "case": "student_club:1312", "snapshot": 1}
+{"step": "builder_llm", "elapsed_ms": 1100.077, "status": "ok", "case": "student_club:1312", "snapshot": 1}
+{"step": "snapshot_total", "case": "student_club:1312", "snapshot": 1, "elapsed_ms": 1107.114}
+{"step": "query_embedding", "elapsed_ms": 7.178, "status": "ok", "arm": "raw", "case": "student_club:1312", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.061, "status": "ok", "arm": "raw", "case": "student_club:1312", "snapshot": 2}
+{"step": "builder_llm", "elapsed_ms": 667.261, "status": "ok", "case": "student_club:1312", "snapshot": 2}
+{"step": "query_embedding", "elapsed_ms": 10.164, "status": "ok", "arm": "normalized", "case": "student_club:1312", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.066, "status": "ok", "arm": "normalized", "case": "student_club:1312", "snapshot": 2}
+{"step": "snapshot_total", "case": "student_club:1312", "snapshot": 2, "elapsed_ms": 687.757}
+{"step": "query_embedding", "elapsed_ms": 6.001, "status": "ok", "arm": "raw", "case": "student_club:1346", "snapshot": 0}
+{"step": "cosine_search", "elapsed_ms": 0.061, "status": "ok", "arm": "raw", "case": "student_club:1346", "snapshot": 0}
+{"step": "builder_llm", "elapsed_ms": 1067.591, "status": "ok", "case": "student_club:1346", "snapshot": 0}
+{"step": "snapshot_total", "case": "student_club:1346", "snapshot": 0, "elapsed_ms": 1074.96}
+{"step": "query_embedding", "elapsed_ms": 3.911, "status": "ok", "arm": "raw", "case": "student_club:1346", "snapshot": 1}
+{"step": "cosine_search", "elapsed_ms": 0.063, "status": "ok", "arm": "raw", "case": "student_club:1346", "snapshot": 1}
+{"step": "builder_llm", "elapsed_ms": 588.995, "status": "ok", "case": "student_club:1346", "snapshot": 1}
+{"step": "snapshot_total", "case": "student_club:1346", "snapshot": 1, "elapsed_ms": 593.833}
+{"step": "query_embedding", "elapsed_ms": 10.625, "status": "ok", "arm": "raw", "case": "student_club:1346", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.071, "status": "ok", "arm": "raw", "case": "student_club:1346", "snapshot": 2}
+{"step": "builder_llm", "elapsed_ms": 1047.11, "status": "ok", "case": "student_club:1346", "snapshot": 2}
+{"step": "query_embedding", "elapsed_ms": 9.571, "status": "ok", "arm": "normalized", "case": "student_club:1346", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.064, "status": "ok", "arm": "normalized", "case": "student_club:1346", "snapshot": 2}
+{"step": "snapshot_total", "case": "student_club:1346", "snapshot": 2, "elapsed_ms": 1069.092}
+{"step": "query_embedding", "elapsed_ms": 4.315, "status": "ok", "arm": "raw", "case": "superhero:737", "snapshot": 0}
+{"step": "cosine_search", "elapsed_ms": 0.107, "status": "ok", "arm": "raw", "case": "superhero:737", "snapshot": 0}
+{"step": "builder_llm", "elapsed_ms": 608.863, "status": "ok", "case": "superhero:737", "snapshot": 0}
+{"step": "snapshot_total", "case": "superhero:737", "snapshot": 0, "elapsed_ms": 614.542}
+{"step": "query_embedding", "elapsed_ms": 3.824, "status": "ok", "arm": "raw", "case": "superhero:737", "snapshot": 1}
+{"step": "cosine_search", "elapsed_ms": 0.054, "status": "ok", "arm": "raw", "case": "superhero:737", "snapshot": 1}
+{"step": "builder_llm", "elapsed_ms": 1043.454, "status": "ok", "case": "superhero:737", "snapshot": 1}
+{"step": "snapshot_total", "case": "superhero:737", "snapshot": 1, "elapsed_ms": 1048.404}
+{"step": "query_embedding", "elapsed_ms": 6.713, "status": "ok", "arm": "raw", "case": "superhero:737", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.063, "status": "ok", "arm": "raw", "case": "superhero:737", "snapshot": 2}
+{"step": "builder_llm", "elapsed_ms": 654.985, "status": "ok", "case": "superhero:737", "snapshot": 2}
+{"step": "query_embedding", "elapsed_ms": 7.088, "status": "ok", "arm": "normalized", "case": "superhero:737", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.073, "status": "ok", "arm": "normalized", "case": "superhero:737", "snapshot": 2}
+{"step": "snapshot_total", "case": "superhero:737", "snapshot": 2, "elapsed_ms": 671.027}
+{"step": "query_embedding", "elapsed_ms": 6.286, "status": "ok", "arm": "raw", "case": "superhero:794", "snapshot": 0}
+{"step": "cosine_search", "elapsed_ms": 0.06, "status": "ok", "arm": "raw", "case": "superhero:794", "snapshot": 0}
+{"step": "builder_llm", "elapsed_ms": 900.026, "status": "ok", "case": "superhero:794", "snapshot": 0}
+{"step": "snapshot_total", "case": "superhero:794", "snapshot": 0, "elapsed_ms": 907.426}
+{"step": "query_embedding", "elapsed_ms": 6.224, "status": "ok", "arm": "raw", "case": "superhero:794", "snapshot": 1}
+{"step": "cosine_search", "elapsed_ms": 0.08, "status": "ok", "arm": "raw", "case": "superhero:794", "snapshot": 1}
+{"step": "builder_llm", "elapsed_ms": 921.196, "status": "ok", "case": "superhero:794", "snapshot": 1}
+{"step": "snapshot_total", "case": "superhero:794", "snapshot": 1, "elapsed_ms": 928.445}
+{"step": "query_embedding", "elapsed_ms": 8.025, "status": "ok", "arm": "raw", "case": "superhero:794", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.07, "status": "ok", "arm": "raw", "case": "superhero:794", "snapshot": 2}
+{"step": "builder_llm", "elapsed_ms": 684.943, "status": "ok", "case": "superhero:794", "snapshot": 2}
+{"step": "query_embedding", "elapsed_ms": 7.411, "status": "ok", "arm": "normalized", "case": "superhero:794", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.056, "status": "ok", "arm": "normalized", "case": "superhero:794", "snapshot": 2}
+{"step": "snapshot_total", "case": "superhero:794", "snapshot": 2, "elapsed_ms": 702.414}
+{"step": "query_embedding", "elapsed_ms": 3.874, "status": "ok", "arm": "raw", "case": "thrombosis_prediction:1251", "snapshot": 0}
+{"step": "cosine_search", "elapsed_ms": 0.077, "status": "ok", "arm": "raw", "case": "thrombosis_prediction:1251", "snapshot": 0}
+{"step": "builder_llm", "elapsed_ms": 756.142, "status": "ok", "case": "thrombosis_prediction:1251", "snapshot": 0}
+{"step": "snapshot_total", "case": "thrombosis_prediction:1251", "snapshot": 0, "elapsed_ms": 762.672}
+{"step": "query_embedding", "elapsed_ms": 7.479, "status": "ok", "arm": "raw", "case": "thrombosis_prediction:1251", "snapshot": 1}
+{"step": "cosine_search", "elapsed_ms": 0.075, "status": "ok", "arm": "raw", "case": "thrombosis_prediction:1251", "snapshot": 1}
+{"step": "builder_llm", "elapsed_ms": 928.601, "status": "ok", "case": "thrombosis_prediction:1251", "snapshot": 1}
+{"step": "snapshot_total", "case": "thrombosis_prediction:1251", "snapshot": 1, "elapsed_ms": 938.1}
+{"step": "query_embedding", "elapsed_ms": 9.841, "status": "ok", "arm": "raw", "case": "thrombosis_prediction:1251", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.061, "status": "ok", "arm": "raw", "case": "thrombosis_prediction:1251", "snapshot": 2}
+{"step": "builder_llm", "elapsed_ms": 1068.326, "status": "ok", "case": "thrombosis_prediction:1251", "snapshot": 2}
+{"step": "query_embedding", "elapsed_ms": 12.287, "status": "ok", "arm": "normalized", "case": "thrombosis_prediction:1251", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.059, "status": "ok", "arm": "normalized", "case": "thrombosis_prediction:1251", "snapshot": 2}
+{"step": "snapshot_total", "case": "thrombosis_prediction:1251", "snapshot": 2, "elapsed_ms": 1092.787}
+{"step": "query_embedding", "elapsed_ms": 4.744, "status": "ok", "arm": "raw", "case": "thrombosis_prediction:1198", "snapshot": 0}
+{"step": "cosine_search", "elapsed_ms": 0.101, "status": "ok", "arm": "raw", "case": "thrombosis_prediction:1198", "snapshot": 0}
+{"step": "builder_llm", "elapsed_ms": 917.846, "status": "ok", "case": "thrombosis_prediction:1198", "snapshot": 0}
+{"step": "snapshot_total", "case": "thrombosis_prediction:1198", "snapshot": 0, "elapsed_ms": 924.96}
+{"step": "query_embedding", "elapsed_ms": 4.544, "status": "ok", "arm": "raw", "case": "thrombosis_prediction:1198", "snapshot": 1}
+{"step": "cosine_search", "elapsed_ms": 0.061, "status": "ok", "arm": "raw", "case": "thrombosis_prediction:1198", "snapshot": 1}
+{"step": "builder_llm", "elapsed_ms": 985.581, "status": "ok", "case": "thrombosis_prediction:1198", "snapshot": 1}
+{"step": "snapshot_total", "case": "thrombosis_prediction:1198", "snapshot": 1, "elapsed_ms": 991.738}
+{"step": "query_embedding", "elapsed_ms": 10.097, "status": "ok", "arm": "raw", "case": "thrombosis_prediction:1198", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.051, "status": "ok", "arm": "raw", "case": "thrombosis_prediction:1198", "snapshot": 2}
+{"step": "builder_llm", "elapsed_ms": 963.094, "status": "ok", "case": "thrombosis_prediction:1198", "snapshot": 2}
+{"step": "query_embedding", "elapsed_ms": 8.639, "status": "ok", "arm": "normalized", "case": "thrombosis_prediction:1198", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.057, "status": "ok", "arm": "normalized", "case": "thrombosis_prediction:1198", "snapshot": 2}
+{"step": "snapshot_total", "case": "thrombosis_prediction:1198", "snapshot": 2, "elapsed_ms": 983.405}
+{"step": "query_embedding", "elapsed_ms": 3.404, "status": "ok", "arm": "raw", "case": "toxicology:195", "snapshot": 0}
+{"step": "cosine_search", "elapsed_ms": 0.085, "status": "ok", "arm": "raw", "case": "toxicology:195", "snapshot": 0}
+{"step": "builder_llm", "elapsed_ms": 899.638, "status": "ok", "case": "toxicology:195", "snapshot": 0}
+{"step": "snapshot_total", "case": "toxicology:195", "snapshot": 0, "elapsed_ms": 904.493}
+{"step": "query_embedding", "elapsed_ms": 4.332, "status": "ok", "arm": "raw", "case": "toxicology:195", "snapshot": 1}
+{"step": "cosine_search", "elapsed_ms": 0.065, "status": "ok", "arm": "raw", "case": "toxicology:195", "snapshot": 1}
+{"step": "builder_llm", "elapsed_ms": 1467.515, "status": "ok", "case": "toxicology:195", "snapshot": 1}
+{"step": "snapshot_total", "case": "toxicology:195", "snapshot": 1, "elapsed_ms": 1473.545}
+{"step": "query_embedding", "elapsed_ms": 9.691, "status": "ok", "arm": "raw", "case": "toxicology:195", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.08, "status": "ok", "arm": "raw", "case": "toxicology:195", "snapshot": 2}
+{"step": "builder_llm", "elapsed_ms": 795.933, "status": "ok", "case": "toxicology:195", "snapshot": 2}
+{"step": "query_embedding", "elapsed_ms": 5.962, "status": "ok", "arm": "normalized", "case": "toxicology:195", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.059, "status": "ok", "arm": "normalized", "case": "toxicology:195", "snapshot": 2}
+{"step": "snapshot_total", "case": "toxicology:195", "snapshot": 2, "elapsed_ms": 813.276}
+{"step": "query_embedding", "elapsed_ms": 3.889, "status": "ok", "arm": "raw", "case": "toxicology:206", "snapshot": 0}
+{"step": "cosine_search", "elapsed_ms": 0.055, "status": "ok", "arm": "raw", "case": "toxicology:206", "snapshot": 0}
+{"step": "builder_llm", "elapsed_ms": 981.66, "status": "ok", "case": "toxicology:206", "snapshot": 0}
+{"step": "snapshot_total", "case": "toxicology:206", "snapshot": 0, "elapsed_ms": 986.727}
+{"step": "query_embedding", "elapsed_ms": 5.658, "status": "ok", "arm": "raw", "case": "toxicology:206", "snapshot": 1}
+{"step": "cosine_search", "elapsed_ms": 0.055, "status": "ok", "arm": "raw", "case": "toxicology:206", "snapshot": 1}
+{"step": "builder_llm", "elapsed_ms": 992.691, "status": "ok", "case": "toxicology:206", "snapshot": 1}
+{"step": "snapshot_total", "case": "toxicology:206", "snapshot": 1, "elapsed_ms": 1000.079}
+{"step": "query_embedding", "elapsed_ms": 13.82, "status": "ok", "arm": "raw", "case": "toxicology:206", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.058, "status": "ok", "arm": "raw", "case": "toxicology:206", "snapshot": 2}
+{"step": "builder_llm", "elapsed_ms": 1399.662, "status": "ok", "case": "toxicology:206", "snapshot": 2}
+{"step": "query_embedding", "elapsed_ms": 9.813, "status": "ok", "arm": "normalized", "case": "toxicology:206", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.057, "status": "ok", "arm": "normalized", "case": "toxicology:206", "snapshot": 2}
+{"step": "snapshot_total", "case": "toxicology:206", "snapshot": 2, "elapsed_ms": 1425.971}
+{"step": "query_embedding", "elapsed_ms": 3.95, "status": "ok", "arm": "raw", "case": "synthetic:0", "snapshot": 0}
+{"step": "cosine_search", "elapsed_ms": 0.132, "status": "ok", "arm": "raw", "case": "synthetic:0", "snapshot": 0}
+{"step": "builder_llm", "elapsed_ms": 1132.384, "status": "ok", "case": "synthetic:0", "snapshot": 0}
+{"step": "snapshot_total", "case": "synthetic:0", "snapshot": 0, "elapsed_ms": 1138.29}
+{"step": "query_embedding", "elapsed_ms": 4.497, "status": "ok", "arm": "raw", "case": "synthetic:0", "snapshot": 1}
+{"step": "cosine_search", "elapsed_ms": 0.062, "status": "ok", "arm": "raw", "case": "synthetic:0", "snapshot": 1}
+{"step": "builder_llm", "elapsed_ms": 797.376, "status": "ok", "case": "synthetic:0", "snapshot": 1}
+{"step": "snapshot_total", "case": "synthetic:0", "snapshot": 1, "elapsed_ms": 803.384}
+{"step": "query_embedding", "elapsed_ms": 5.004, "status": "ok", "arm": "raw", "case": "synthetic:0", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.08, "status": "ok", "arm": "raw", "case": "synthetic:0", "snapshot": 2}
+{"step": "builder_llm", "elapsed_ms": 966.901, "status": "ok", "case": "synthetic:0", "snapshot": 2}
+{"step": "query_embedding", "elapsed_ms": 9.826, "status": "ok", "arm": "normalized", "case": "synthetic:0", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.068, "status": "ok", "arm": "normalized", "case": "synthetic:0", "snapshot": 2}
+{"step": "snapshot_total", "case": "synthetic:0", "snapshot": 2, "elapsed_ms": 983.733}
+{"step": "query_embedding", "elapsed_ms": 4.236, "status": "ok", "arm": "raw", "case": "synthetic:1", "snapshot": 0}
+{"step": "cosine_search", "elapsed_ms": 0.099, "status": "ok", "arm": "raw", "case": "synthetic:1", "snapshot": 0}
+{"step": "builder_llm", "elapsed_ms": 1362.942, "status": "ok", "case": "synthetic:1", "snapshot": 0}
+{"step": "snapshot_total", "case": "synthetic:1", "snapshot": 0, "elapsed_ms": 1368.371}
+{"step": "query_embedding", "elapsed_ms": 5.462, "status": "ok", "arm": "raw", "case": "synthetic:1", "snapshot": 1}
+{"step": "cosine_search", "elapsed_ms": 0.047, "status": "ok", "arm": "raw", "case": "synthetic:1", "snapshot": 1}
+{"step": "builder_llm", "elapsed_ms": 530.518, "status": "ok", "case": "synthetic:1", "snapshot": 1}
+{"step": "snapshot_total", "case": "synthetic:1", "snapshot": 1, "elapsed_ms": 537.017}
+{"step": "query_embedding", "elapsed_ms": 4.516, "status": "ok", "arm": "raw", "case": "synthetic:1", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.086, "status": "ok", "arm": "raw", "case": "synthetic:1", "snapshot": 2}
+{"step": "builder_llm", "elapsed_ms": 661.208, "status": "ok", "case": "synthetic:1", "snapshot": 2}
+{"step": "query_embedding", "elapsed_ms": 11.919, "status": "ok", "arm": "normalized", "case": "synthetic:1", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.056, "status": "ok", "arm": "normalized", "case": "synthetic:1", "snapshot": 2}
+{"step": "snapshot_total", "case": "synthetic:1", "snapshot": 2, "elapsed_ms": 681.039}
+{"step": "query_embedding", "elapsed_ms": 4.23, "status": "ok", "arm": "raw", "case": "synthetic:2", "snapshot": 0}
+{"step": "cosine_search", "elapsed_ms": 0.115, "status": "ok", "arm": "raw", "case": "synthetic:2", "snapshot": 0}
+{"step": "builder_llm", "elapsed_ms": 1316.598, "status": "ok", "case": "synthetic:2", "snapshot": 0}
+{"step": "snapshot_total", "case": "synthetic:2", "snapshot": 0, "elapsed_ms": 1321.986}
+{"step": "query_embedding", "elapsed_ms": 5.29, "status": "ok", "arm": "raw", "case": "synthetic:2", "snapshot": 1}
+{"step": "cosine_search", "elapsed_ms": 0.048, "status": "ok", "arm": "raw", "case": "synthetic:2", "snapshot": 1}
+{"step": "builder_llm", "elapsed_ms": 968.073, "status": "ok", "case": "synthetic:2", "snapshot": 1}
+{"step": "snapshot_total", "case": "synthetic:2", "snapshot": 1, "elapsed_ms": 974.646}
+{"step": "query_embedding", "elapsed_ms": 5.209, "status": "ok", "arm": "raw", "case": "synthetic:2", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.051, "status": "ok", "arm": "raw", "case": "synthetic:2", "snapshot": 2}
+{"step": "builder_llm", "elapsed_ms": 1134.94, "status": "ok", "case": "synthetic:2", "snapshot": 2}
+{"step": "query_embedding", "elapsed_ms": 7.196, "status": "ok", "arm": "normalized", "case": "synthetic:2", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.041, "status": "ok", "arm": "normalized", "case": "synthetic:2", "snapshot": 2}
+{"step": "snapshot_total", "case": "synthetic:2", "snapshot": 2, "elapsed_ms": 1149.723}
+{"step": "query_embedding", "elapsed_ms": 3.945, "status": "ok", "arm": "raw", "case": "synthetic:3", "snapshot": 0}
+{"step": "cosine_search", "elapsed_ms": 0.158, "status": "ok", "arm": "raw", "case": "synthetic:3", "snapshot": 0}
+{"step": "builder_llm", "elapsed_ms": 1064.875, "status": "ok", "case": "synthetic:3", "snapshot": 0}
+{"step": "snapshot_total", "case": "synthetic:3", "snapshot": 0, "elapsed_ms": 1070.534}
+{"step": "query_embedding", "elapsed_ms": 5.478, "status": "ok", "arm": "raw", "case": "synthetic:3", "snapshot": 1}
+{"step": "cosine_search", "elapsed_ms": 0.071, "status": "ok", "arm": "raw", "case": "synthetic:3", "snapshot": 1}
+{"step": "builder_llm", "elapsed_ms": 1142.192, "status": "ok", "case": "synthetic:3", "snapshot": 1}
+{"step": "snapshot_total", "case": "synthetic:3", "snapshot": 1, "elapsed_ms": 1150.325}
+{"step": "query_embedding", "elapsed_ms": 10.052, "status": "ok", "arm": "raw", "case": "synthetic:3", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.198, "status": "ok", "arm": "raw", "case": "synthetic:3", "snapshot": 2}
+{"step": "builder_llm", "elapsed_ms": 1034.878, "status": "ok", "case": "synthetic:3", "snapshot": 2}
+{"step": "query_embedding", "elapsed_ms": 10.022, "status": "ok", "arm": "normalized", "case": "synthetic:3", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.076, "status": "ok", "arm": "normalized", "case": "synthetic:3", "snapshot": 2}
+{"step": "snapshot_total", "case": "synthetic:3", "snapshot": 2, "elapsed_ms": 1056.969}
+{"step": "query_embedding", "elapsed_ms": 4.357, "status": "ok", "arm": "raw", "case": "synthetic:4", "snapshot": 0}
+{"step": "cosine_search", "elapsed_ms": 0.126, "status": "ok", "arm": "raw", "case": "synthetic:4", "snapshot": 0}
+{"step": "builder_llm", "elapsed_ms": 1100.268, "status": "ok", "case": "synthetic:4", "snapshot": 0}
+{"step": "snapshot_total", "case": "synthetic:4", "snapshot": 0, "elapsed_ms": 1106.664}
+{"step": "query_embedding", "elapsed_ms": 6.896, "status": "ok", "arm": "raw", "case": "synthetic:4", "snapshot": 1}
+{"step": "cosine_search", "elapsed_ms": 0.059, "status": "ok", "arm": "raw", "case": "synthetic:4", "snapshot": 1}
+{"step": "builder_llm", "elapsed_ms": 1108.352, "status": "ok", "case": "synthetic:4", "snapshot": 1}
+{"step": "query_embedding", "elapsed_ms": 7.583, "status": "ok", "arm": "normalized", "case": "synthetic:4", "snapshot": 1}
+{"step": "cosine_search", "elapsed_ms": 0.065, "status": "ok", "arm": "normalized", "case": "synthetic:4", "snapshot": 1}
+{"step": "snapshot_total", "case": "synthetic:4", "snapshot": 1, "elapsed_ms": 1124.531}
+{"step": "query_embedding", "elapsed_ms": 8.895, "status": "ok", "arm": "raw", "case": "synthetic:4", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.065, "status": "ok", "arm": "raw", "case": "synthetic:4", "snapshot": 2}
+{"step": "builder_llm", "elapsed_ms": 1068.533, "status": "ok", "case": "synthetic:4", "snapshot": 2}
+{"step": "query_embedding", "elapsed_ms": 9.363, "status": "ok", "arm": "normalized", "case": "synthetic:4", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.059, "status": "ok", "arm": "normalized", "case": "synthetic:4", "snapshot": 2}
+{"step": "snapshot_total", "case": "synthetic:4", "snapshot": 2, "elapsed_ms": 1091.872}
+{"step": "query_embedding", "elapsed_ms": 4.493, "status": "ok", "arm": "raw", "case": "synthetic:5", "snapshot": 0}
+{"step": "cosine_search", "elapsed_ms": 0.08, "status": "ok", "arm": "raw", "case": "synthetic:5", "snapshot": 0}
+{"step": "builder_llm", "elapsed_ms": 1784.189, "status": "ok", "case": "synthetic:5", "snapshot": 0}
+{"step": "snapshot_total", "case": "synthetic:5", "snapshot": 0, "elapsed_ms": 1790.163}
+{"step": "query_embedding", "elapsed_ms": 4.822, "status": "ok", "arm": "raw", "case": "synthetic:5", "snapshot": 1}
+{"step": "cosine_search", "elapsed_ms": 0.061, "status": "ok", "arm": "raw", "case": "synthetic:5", "snapshot": 1}
+{"step": "builder_llm", "elapsed_ms": 1005.844, "status": "ok", "case": "synthetic:5", "snapshot": 1}
+{"step": "snapshot_total", "case": "synthetic:5", "snapshot": 1, "elapsed_ms": 1012.439}
+{"step": "query_embedding", "elapsed_ms": 9.529, "status": "ok", "arm": "raw", "case": "synthetic:5", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.06, "status": "ok", "arm": "raw", "case": "synthetic:5", "snapshot": 2}
+{"step": "builder_llm", "elapsed_ms": 1088.105, "status": "ok", "case": "synthetic:5", "snapshot": 2}
+{"step": "query_embedding", "elapsed_ms": 16.87, "status": "ok", "arm": "normalized", "case": "synthetic:5", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.059, "status": "ok", "arm": "normalized", "case": "synthetic:5", "snapshot": 2}
+{"step": "snapshot_total", "case": "synthetic:5", "snapshot": 2, "elapsed_ms": 1116.537}
+{"step": "query_embedding", "elapsed_ms": 4.295, "status": "ok", "arm": "raw", "case": "synthetic:6", "snapshot": 0}
+{"step": "cosine_search", "elapsed_ms": 0.1, "status": "ok", "arm": "raw", "case": "synthetic:6", "snapshot": 0}
+{"step": "builder_llm", "elapsed_ms": 1019.703, "status": "ok", "case": "synthetic:6", "snapshot": 0}
+{"step": "snapshot_total", "case": "synthetic:6", "snapshot": 0, "elapsed_ms": 1024.942}
+{"step": "query_embedding", "elapsed_ms": 8.767, "status": "ok", "arm": "raw", "case": "synthetic:6", "snapshot": 1}
+{"step": "cosine_search", "elapsed_ms": 0.052, "status": "ok", "arm": "raw", "case": "synthetic:6", "snapshot": 1}
+{"step": "builder_llm", "elapsed_ms": 977.859, "status": "ok", "case": "synthetic:6", "snapshot": 1}
+{"step": "query_embedding", "elapsed_ms": 7.789, "status": "ok", "arm": "normalized", "case": "synthetic:6", "snapshot": 1}
+{"step": "cosine_search", "elapsed_ms": 0.056, "status": "ok", "arm": "normalized", "case": "synthetic:6", "snapshot": 1}
+{"step": "snapshot_total", "case": "synthetic:6", "snapshot": 1, "elapsed_ms": 996.689}
+{"step": "query_embedding", "elapsed_ms": 6.58, "status": "ok", "arm": "raw", "case": "synthetic:6", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.05, "status": "ok", "arm": "raw", "case": "synthetic:6", "snapshot": 2}
+{"step": "builder_llm", "elapsed_ms": 975.636, "status": "ok", "case": "synthetic:6", "snapshot": 2}
+{"step": "query_embedding", "elapsed_ms": 64.722, "status": "ok", "arm": "normalized", "case": "synthetic:6", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.075, "status": "ok", "arm": "normalized", "case": "synthetic:6", "snapshot": 2}
+{"step": "snapshot_total", "case": "synthetic:6", "snapshot": 2, "elapsed_ms": 1051.812}
+{"step": "query_embedding", "elapsed_ms": 6.829, "status": "ok", "arm": "raw", "case": "synthetic:7", "snapshot": 0}
+{"step": "cosine_search", "elapsed_ms": 0.084, "status": "ok", "arm": "raw", "case": "synthetic:7", "snapshot": 0}
+{"step": "builder_llm", "elapsed_ms": 1480.622, "status": "ok", "case": "synthetic:7", "snapshot": 0}
+{"step": "snapshot_total", "case": "synthetic:7", "snapshot": 0, "elapsed_ms": 1489.0}
+{"step": "query_embedding", "elapsed_ms": 16.387, "status": "ok", "arm": "raw", "case": "synthetic:7", "snapshot": 1}
+{"step": "cosine_search", "elapsed_ms": 0.082, "status": "ok", "arm": "raw", "case": "synthetic:7", "snapshot": 1}
+{"step": "builder_llm", "elapsed_ms": 966.842, "status": "ok", "case": "synthetic:7", "snapshot": 1}
+{"step": "query_embedding", "elapsed_ms": 21.324, "status": "ok", "arm": "normalized", "case": "synthetic:7", "snapshot": 1}
+{"step": "cosine_search", "elapsed_ms": 0.101, "status": "ok", "arm": "normalized", "case": "synthetic:7", "snapshot": 1}
+{"step": "snapshot_total", "case": "synthetic:7", "snapshot": 1, "elapsed_ms": 1007.048}
+{"step": "query_embedding", "elapsed_ms": 8.885, "status": "ok", "arm": "raw", "case": "synthetic:7", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.053, "status": "ok", "arm": "raw", "case": "synthetic:7", "snapshot": 2}
+{"step": "builder_llm", "elapsed_ms": 1130.677, "status": "ok", "case": "synthetic:7", "snapshot": 2}
+{"step": "query_embedding", "elapsed_ms": 8.053, "status": "ok", "arm": "normalized", "case": "synthetic:7", "snapshot": 2}
+{"step": "cosine_search", "elapsed_ms": 0.112, "status": "ok", "arm": "normalized", "case": "synthetic:7", "snapshot": 2}
+{"step": "snapshot_total", "case": "synthetic:7", "snapshot": 2, "elapsed_ms": 1149.492}

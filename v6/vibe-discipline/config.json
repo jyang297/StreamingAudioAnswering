@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "profile": "development",
+  "active_packages": [
+    "vibe-discipline/spec/spec-for-livekit-feature-multi-table-sql-day-20260913"
+  ],
+  "commands": {
+    "integration": [
+      "python",
+      "-m",
+      "pytest",
+      "-q"
+    ]
+  },
+  "development_learning": "auto"
+}

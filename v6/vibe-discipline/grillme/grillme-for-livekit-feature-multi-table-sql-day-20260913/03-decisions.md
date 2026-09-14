@@ -1,0 +1,7 @@
+# Decisions
+ADR-001 ACTIVE: separate v6/multitable_poc and reuse unchanged v5 SQLPipeline/v4 timing and scheduler. Roll back by selecting v5. Owner: agent implementation choice under user request.
+ADR-002 ACTIVE: database ID and schema fingerprint bind each query. Model outputs SQL only; application owns routing. A local checker scope gate runs before model selection. Revisit when authorized tenancy/data-version scope becomes available.
+ADR-003 ACTIVE: SQLite SELECT/set-query roots, no writes/ATTACH/PRAGMA/multiple statements/parameters; actual SQLite EXPLAIN under a table/function authorizer resolves names and scopes. Read-only execution retains timeout/cancellation/output bounds. No assumption that AST validity proves request fidelity.
+ADR-004 ACTIVE: retain original validated SQL text for execution; do not append LIMIT, optimize predicates or transliterate SQL dialects. Positional output preserves duplicate column names. Bounds report failure instead of presenting truncated output as complete.
+ADR-005 ACTIVE: include complete schema and corrected descriptions for the selected database, with explicit evidence on/off. Gold SQL stays outside model payloads. Fixture oracle replay is a wiring test, not model accuracy.
+ADR-006 ACTIVE: retain independent final Builder then Checker as v5 baseline; no claim this removes final generation latency. Cache creation and speculative policy redesign remain separate changes.
